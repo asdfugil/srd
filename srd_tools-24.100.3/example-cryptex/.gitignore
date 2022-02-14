@@ -8,3 +8,5 @@ sdk-graft
 src/*/sdk-graft
 *.dstroot
 *.cptx
+*.cxbd.signed
+*.cxbd
