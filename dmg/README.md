@@ -8,11 +8,11 @@ FRI 11 FEB 2022 at 1830 US EST: Current Build Target 21E5206e | 13E5086k
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
 | PR 42  21E5206e T8101            | PASS          | PASS          | FAIL          | FAIL
-| PR 48  21E5206e T8101            | PASS          | PASS          | FAIL          | FAIL
-| PR 49  21E5206e T8101            | PASS          | PASS          | FAIL          | FAIL
-| Build macOS 12.3 21E5206e T8101  | PASS          | PASS          | FAIL          | FAIL
+| PR 48  21E5206e T8101            | PASS          | FAIL          | FAIL          | FAIL
+| PR 49  21E5206e T8101            | PASS          | FAIL         | FAIL          | FAIL
+| Build macOS 12.3 21E5206e T8101  | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 11 19E5219e    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 19E5219e    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5219e    | PASS          | PASS          | PASS          | PASS 
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
 ### Resources
