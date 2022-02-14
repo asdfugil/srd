@@ -36,7 +36,7 @@ codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/he
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/simple-server > /private/tmp/dst-simple-server.xml
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/nvram > /private/tmp/dst-nvram.xml
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/cryptex-run > /private/tmp/dst-cryptex-run.xml
-codesign --display --entitlements - --xml com/example.cryptex.dstroot/usr/bin/libclang_rt.asan_ios_dynamic.dylib > /private/tmp/dst-libclang_rt.asan_ios_dynamic.dylib.xml
+codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/libclang_rt.asan_ios_dynamic.dylib > /private/tmp/dst-libclang_rt.asan_ios_dynamic.dylib.xml
 echo "diff the entitlements... if anything different check Console Log.. cryptex install has failed if the entitlements aren't the same.."
 echo "Check for frida-agent"
 diff /private/tmp/src-frida-agent.xml /private/tmp/dst-frida-agent.xml
