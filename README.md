@@ -170,7 +170,7 @@ System Integrity Protection status: disabled.
 make clean
 make install
 ```
-### Results
+### Results using iPhone 12
 
 ```
 default	10:22:00.585464-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.USWFhH/usr/bin/debugserver' is adhoc signed.
