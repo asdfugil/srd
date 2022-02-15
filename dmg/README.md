@@ -541,25 +541,6 @@ ps -Ac | sed 's,\s*\([0-9][0-9]*\) .*[0-9]*:[0-9]*\.[0-9]* \(.*\), 00000000.0  0
 
 ```
 ## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12 and IPSW 15.4_19E5219e
-Sun Feb 13 17:28:48 EST 2022
-```
-kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
-kern.osversion: 21D62
-kern.iossupportversion: 15.3
-kern.osproductversion: 12.2.1
-kern.osproductversioncompat: 10.16
-kern.osproductversioncompat: 10.16
-/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
-udid                           name       build      BORD       CHIP       ECID
-00008030-001538D03C40012E      SRD0009    19E5219e   0x4        0x8030     0x1538d03c40012e
-00008101-001418DA3CC0013A      SRD0037    19E5219e   0xc        0x8101     0x1418da3cc0013a
-Apple clang version 13.1.6 (clang-1316.0.20.6)
-Target: x86_64-apple-darwin21.3.0
-InstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-Darwin Cryptex Management Interface Version 2.0.0: Sun Dec 19 22:28:12 PST 2021; root:libcryptex_executables-169.80.2~9/cryptexctl/WEN_ETA_X86_64
-machdep.cpu.brand_string: Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz
-System Integrity Protection status: disabled.
-```
 
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
@@ -577,7 +558,7 @@ System Integrity Protection status: disabled.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
-### Manual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
+### Reproduction Case  1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
 
 ```
 make clean
@@ -592,7 +573,7 @@ default	10:22:00.585630-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ### Picture at Left showing the make and install process for ./example-cryptex/ with Picture at Right showing the SRD iPhone 12 Console Log
 <img src="https://xss.cx/2022/02/15/img/srd0037-cryptex-install-debugserver-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
 
-## Reproduction Case #2: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ ASAN Dylib using iPhone 12
+## Reproduction Case  2: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ ASAN Dylib using iPhone 12
 
 ```
 default	10:33:07.038976-0500	kernel	/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ZKfbpw/usr/bin/hello[2467] ==> debugserver
@@ -606,7 +587,7 @@ default	10:33:17.074337-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ### Picture at Left showing the make and install process for ./example-cryptex + hello + asan.dylib with Picture at Right showing the SRD iPhone 12 Console Log
 <img src="https://xss.cx/2022/02/15/img/srd0037-cryptex-install-hello-ubsan-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log with ASAN" style="height: 800px; width:1000px;"/>
 
-## Reproduction Case #3: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ UBSAN Dylib using iPhone 12
+## Reproduction Case 3: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ UBSAN Dylib using iPhone 12
 
 ```
 error	10:37:14.650327-0500	kernel	Sandbox: hello(2520) deny(1) file-map-executable /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.sYr3Iw/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib
@@ -644,7 +625,7 @@ default	10:37:24.672394-0500	ReportCrash	ASI found [dyld] (sensitive) 'Library n
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
 
-### Manual Reproduction Case #1: Build the example-cryptex with macOS Version 12.3 Beta (21E5206e) on M1 T8101
+### Manual Reproduction Case 1: Build the example-cryptex with macOS Version 12.3 Beta (21E5206e) on M1 T8101
 
 ```
 make clean
@@ -666,10 +647,7 @@ default	13:18:36.008584-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 default	13:18:36.008703-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.3WMvnj/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
 
-
-<img src="https://xss.cx/2022/02/15/img/srd0009-cryptex-install-debugserver-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
-
-## Reproduction Case #2: Build ./example/cryptex/ and hello sample code with macOS Version 12.3 Beta (21E5206e) on M1 T8101 __and__ ASAN Dylib using iPhone 11
+## Reproduction Case  2: Build ./example/cryptex/ and hello sample code with macOS Version 12.3 Beta (21E5206e) on M1 T8101 __and__ ASAN Dylib using iPhone 11
 
 ```
 default	13:18:36.008584-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.3WMvnj/usr/bin/debugserver' is adhoc signed.
@@ -680,7 +658,7 @@ default	13:18:45.809300-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 
 <img src="https://xss.cx/2022/02/15/img/srd0009-cryptex-install-hello-asan-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process for ASAN with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
 
-## Reproduction Case #3: Build ./example/cryptex/ and hello sample code with macOS Version 12.3 Beta (21E5206e) on M1 T8101 __and__ UBSAN Dylib using iPhone 11
+## Reproduction Case 3: Build ./example/cryptex/ and hello sample code with macOS Version 12.3 Beta (21E5206e) on M1 T8101 __and__ UBSAN Dylib using iPhone 11
 
 ```
 default	13:41:29.533740-0500	kernel	/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.SschPE/usr/bin/hello[5267] ==> debugserver
