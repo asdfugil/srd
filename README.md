@@ -5,7 +5,7 @@ MON 14 FEB 2022 at 1700 US EST
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
 This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49.
-## SRD Example DMG, PR 42,48,49 Build & Installation Status
+## SRD Example DMG, PR 42,48,49 Build & Installation Status when using iOS 15.4_19E5225g
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
@@ -69,7 +69,7 @@ The above means that from X86_64 and/or M1 ARM the SRD IPSW has been installed w
 
 Makefile
 -----
-21C39 https://github.com/xsscx/srd/blob/main/SecurityResearchTools_21C39/example-cryptex/Makefile
+https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/Makefile
 
 XNU Export
 ---
