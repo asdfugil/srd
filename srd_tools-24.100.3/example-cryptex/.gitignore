@@ -1,5 +1,6 @@
 example-cryptex
 com.example.cryptex
+com.example.cryptex.dstroot
 *.dmg
 include/
 *.tar.gz
@@ -8,3 +9,5 @@ sdk-graft
 src/*/sdk-graft
 *.dstroot
 *.cptx
+*.cxbd.signed
+*.cxbd
