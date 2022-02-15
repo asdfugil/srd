@@ -1,5 +1,5 @@
 # Welcome to Hoyt's SRD Repo
-MON 14 FEB 2022 at 1700 US EST
+TUE 15 FEB 2022 at 1540 US EST
 ## SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
