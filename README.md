@@ -127,7 +127,7 @@ How-To Compile for iOS
 xcrun -sdk iphoneos clang -g -O2  -mios-version-min=14.3 -DDEBUG=0  -Wall -Wpedantic -Wno-gnu -Werror -Wunused-variable -o a.out code.s
 ```
 
-## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12
+## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12 with 15.4_19E5219e
 Sun Feb 13 17:28:48 EST 2022
 ```
 kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
