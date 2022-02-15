@@ -217,7 +217,7 @@ com.example.cryptex
   mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.yobZuo
   ```
 
-## ## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64
+## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64
 Sun Feb 13 17:28:48 EST 2022
 ```
 kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
