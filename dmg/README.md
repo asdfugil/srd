@@ -563,17 +563,17 @@ System Integrity Protection status: disabled.
 
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
-#### Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
+#### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh)"
 ```
 
-#### Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
+#### Case 2: Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
 ```
 
-#### Build ./example/cryptex/ and UBSAN Dylib linked to hello sample code
+#### Case 3: Build ./example/cryptex/ and UBSAN Dylib linked to hello sample code
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
