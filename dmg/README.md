@@ -66,7 +66,7 @@ cryptexctl.research:   [5] = --persist
 cryptexctl.research:   [6] = --print-info
 cryptexctl.research:   [7] = ./com.example.cryptex.cxbd.signed
 ```
-## How To Build toybox unstripped DMG and Install to SRD
+## How To Build SRD Universal Cryptex DMG with frida, toybox unstripped, debugserver and Install to SRD
 ```
 cd example-cryptex
 make clean
