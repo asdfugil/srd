@@ -58,7 +58,7 @@ echo "Check for nvram"
 diff /private/tmp/src-nvram.xml /private/tmp/dst-nvram.xml
 echo "Check for cryptex-run"
 diff /private/tmp/src-cryptex-run.xml /private/tmp/dst-cryptex-run.xml
-echo "Check for libclang_rt.ubsan_ios_dynamic.dylib"
+echo "Check for libclang_rt.asan_ios_dynamic.dylib"
 diff /private/tmp/src-libclang_rt.asan_ios_dynamic.dylib.xml /private/tmp/dst-libclang_rt.asan_ios_dynamic.dylib.xml
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
