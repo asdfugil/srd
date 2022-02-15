@@ -55,11 +55,11 @@ diff /private/tmp/src-hello.xml /private/tmp/dst-hello.xml
 echo "Check for simple-server"
 diff /private/tmp/src-simple-server.xml /private/tmp/dst-simple-server.xml
 echo "Check for nvram"
-diff /private/tmp/src-nvram.xml /private/tmp/dst-nvram.xml
+diff /private/tmp/src-nvram.git diff /private/tmp/dst-nvram.git diff
 echo "Check for cryptex-run"
-diff /private/tmp/src-cryptex-run.xml /private/tmp/dst-cryptex-run.xml
+diff /private/tmp/src-cryptex-run.git diff /private/tmp/dst-cryptex-run.git diff
 echo "Check for libclang_rt.ubsan_ios_dynamic.dylib"
-diff /private/tmp/src-libclang_rt.ubsan_ios_dynamic.dylib.xml /private/tmp/dst-libclang_rt.ubsan_ios_dynamic.dylib.xml
+diff /private/tmp/src-libclang_rt.ubsan_ios_dynamic.dylib.git diff /private/tmp/dst-libclang_rt.ubsan_ios_dynamic.dylib.git diff
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
 rm srd-universal-cryptex.dmg

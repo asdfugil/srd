@@ -35,27 +35,27 @@ codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/he
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/simple-server > /private/tmp/dst-simple-server.xml
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/nvram > /private/tmp/dst-nvram.xml
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/cryptex-run > /private/tmp/dst-cryptex-run.xml
-echo "diff the entitlements... if anything different check Console Log.. cryptex install has failed if the entitlements aren't the same.."
+echo "diff the entitlements... if anything git different check Console Log.. cryptex install has failed if the entitlements aren't the same.."
 echo "Check for frida-agent"
-diff /private/tmp/src-frida-agent.xml /private/tmp/dst-frida-agent.xml
+git diff /private/tmp/src-frida-agent.xml /private/tmp/dst-frida-agent.xml
 echo "Check for frida-server"
-diff /private/tmp/src-frida-server.xml /private/tmp/dst-frida-server.xml
+git diff /private/tmp/src-frida-server.xml /private/tmp/dst-frida-server.xml
 echo "Check for dropbear"
-diff /private/tmp/src-dropbear.xml /private/tmp/dst-dropbear.xml
+git diff /private/tmp/src-dropbear.xml /private/tmp/dst-dropbear.xml
 echo "Check for toybox"
-diff /private/tmp/src-toybox.xml /private/tmp/dst-toybox.xml
+git diff /private/tmp/src-toybox.xml /private/tmp/dst-toybox.xml
 echo "Check for simple-server"
-diff /private/tmp/src-simple-server.xml /private/tmp/dst-simple-server.xml
+git diff /private/tmp/src-simple-server.xml /private/tmp/dst-simple-server.xml
 echo "Check for debugserver"
-diff /private/tmp/src-debugserver.xml /private/tmp/dst-debugserver.xml
+git diff /private/tmp/src-debugserver.xml /private/tmp/dst-debugserver.xml
 echo "Check for hello"
-diff /private/tmp/src-hello.xml /private/tmp/dst-hello.xml
+git diff /private/tmp/src-hello.xml /private/tmp/dst-hello.xml
 echo "Check for simple-server"
-diff /private/tmp/src-simple-server.xml /private/tmp/dst-simple-server.xml
+git diff /private/tmp/src-simple-server.xml /private/tmp/dst-simple-server.xml
 echo "Check for nvram"
-diff /private/tmp/src-nvram.xml /private/tmp/dst-nvram.xml
+git diff /private/tmp/src-nvram.xml /private/tmp/dst-nvram.xml
 echo "Check for cryptex-run"
-diff /private/tmp/src-cryptex-run.xml /private/tmp/dst-cryptex-run.xml
+git diff /private/tmp/src-cryptex-run.xml /private/tmp/dst-cryptex-run.xml
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
 rm srd-universal-cryptex.dmg
