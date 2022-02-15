@@ -63,7 +63,7 @@ diff /private/tmp/src-libclang_rt.asan_ios_dynamic.dylib.xml /private/tmp/dst-li
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
 rm srd-universal-cryptex.dmg
-echo "FIXUP for ubsan dylib in attempt to silence AMFI, the entitlements aren't making it thru all the time in Makefile so this line is the FIXUP and TODO........"
+echo "FIXUP for asan dylib in attempt to silence AMFI, the entitlements aren't making it thru all the time in Makefile so this line is the FIXUP and TODO........"
 codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello
 echo "\n Must check this entitlement visually... codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello that attempts to setup use of libclang_rt.ubsan_ios_dynamic.dylib\n"
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello
