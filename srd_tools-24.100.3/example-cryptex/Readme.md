@@ -250,7 +250,7 @@ System Integrity Protection status: disabled.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
 ```
 
-#### Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
+#### Build ./example/cryptex/ and UBSAN Dylib linked to hello sample code
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
