@@ -2,7 +2,7 @@
 echo "unmounting com.example.cryptex"
 cryptexctl uninstall com.example.cryptex
 echo "Start asan build"
-cp src/hello/Makefile.asan src/hello/Makefile
+cp src/hello/Makefile.san src/hello/Makefile
 make clean
 make all
 echo "Start of entitlement checks....."
