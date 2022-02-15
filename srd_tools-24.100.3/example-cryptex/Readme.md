@@ -238,7 +238,24 @@ machdep.cpu.brand_string: Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz
 System Integrity Protection status: disabled.
 ```
 
-### Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
+### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
+
+#### Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh)"
+```
+
+#### Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
+```
+
+#### Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
+```
+### Manual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
+
 ```
 make clean
 make install
