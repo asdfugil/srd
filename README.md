@@ -164,7 +164,7 @@ System Integrity Protection status: disabled.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
-### MAnual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
+### Manual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
 
 ```
 make clean
