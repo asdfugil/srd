@@ -217,7 +217,7 @@ com.example.cryptex
   mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.yobZuo
   ```
 
-## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64
+## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12
 Sun Feb 13 17:28:48 EST 2022
 ```
 kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
@@ -254,13 +254,13 @@ System Integrity Protection status: disabled.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
-### Manual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64
+### Manual Reproduction Case #1: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64  using iPhone 12
 
 ```
 make clean
 make install
 ```
-### Results
+### Results using iPhone 12
 
 ```
 default	10:22:00.585464-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.USWFhH/usr/bin/debugserver' is adhoc signed.
@@ -269,7 +269,7 @@ default	10:22:00.585630-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ### Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log
 <img src="https://xss.cx/2022/02/15/img/srd0037-cryptex-install-debugserver-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
 
-## Reproduction Case #2: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ ASAN Dylib
+## Reproduction Case #2: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ ASAN Dylib using iPhone 12
 
 ```
 default	10:33:07.038976-0500	kernel	/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ZKfbpw/usr/bin/hello[2467] ==> debugserver
@@ -280,7 +280,7 @@ default	10:33:17.074069-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 default	10:33:17.074337-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ZKfbpw/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
 
-## Reproduction Case #3: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ UBSAN Dylib
+## Reproduction Case #3: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ UBSAN Dylib using iPhone 12
 
 ```
 error	10:37:14.650327-0500	kernel	Sandbox: hello(2520) deny(1) file-map-executable /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.sYr3Iw/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib
