@@ -251,6 +251,7 @@ default	10:22:00.585630-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 ### Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log
 <img src="https://xss.cx/2022/02/15/img/srd0037-cryptex-install-debugserver-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
+
 ## Reproduction Case #2: Build the example-cryptex with macOS 12.2.1 (21D62) on X86_64 __and__ ASAN Dylib
 
 ```
