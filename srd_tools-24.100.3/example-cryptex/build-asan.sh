@@ -67,7 +67,7 @@ echo "FIXUP for asan dylib in attempt to silence AMFI, the entitlements aren't m
 codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello
 echo "\n Must check this entitlement visually... codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello that attempts to setup use of libclang_rt.asan_ios_dynamic.dylib\n"
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello
-echo "\n\n Now making the SRD Example ASAN DMG containing Friday, debugserver, toyboxunstripped and the example hello linked to asan.dylib..\n"
+echo "\n\n Now making the SRD Example ASAN DMG containing Frida, debugserver, toyboxunstripped and the example hello linked to asan.dylib..\n"
 hdiutil create -fs hfs+ -srcfolder com.example.cryptex.dstroot srd-universal-cryptex.dmg
 cryptexctl ${CRYPTEXCTL_FLAGS} create --research --replace ${CRYPTEXCTL_CREATE_FLAGS} --identifier=com.example.cryptex --version=1.3.3.7 --variant=research srd-universal-cryptex.dmg
 cryptexctl ${CRYPTEXCTL_PERSONALIZE_FLAGS} personalize --replace  --variant=research com.example.cryptex.cxbd
