@@ -1,8 +1,4 @@
 # This larger version is at URL https://raw.githubusercontent.com/xsscx/Commodity-Injection-Signatures/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
-#
-launch your executable with the environment variable MALLOC_PERMIT_INSANE_REQUESTS set to any value to circumvent this check
-#
-#
 (os/kern)
 (os/kern) failure (0x5)
 0.0.0.0
