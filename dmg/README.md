@@ -23,6 +23,7 @@ TUE 15 FEB 2022 at 1540 US EST: Current Build Target 21E5206e | 13E5086k
 - UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
+- Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 ## SRD DMG Testing
 - Universal cryptex for iPhone 11 and iPhone 12 SRD Models 
 - Tested on the iPhone 11 for all IPSW from the iOS 14.3 floor for the iPhone 11 up to the latest iOS 15.4 Beta 
