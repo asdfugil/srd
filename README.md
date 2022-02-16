@@ -25,6 +25,7 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 - UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
+- Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 - IPSW & Cryptex Installations 
     -  Build Info, Issue Tracker
     -  Summary & Workarounds 
