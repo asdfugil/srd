@@ -138,6 +138,53 @@ default	13:41:39.579556-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 <img src="https://xss.cx/2022/02/15/img/srd0009-cryptex-install-hello-ubsan-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process for UBSAN with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
 
 ### macOS 12.2.1 (21D62) on X86_64 on WED 11 FEB 2022 at 1100 US EST for iPhone 11 when using iOS 15.4_19E5225g
+#### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh)"
+```
+
+##### Result for Build ./example/cryptex/ on the SRD iPhone 11 when using iOS 15.4_19E5225g - Includes PR48 + PR49
+
+```
+default	11:18:56.917251-0500	kernel	hfs: mounted com.example.cryptex.dstroot on device disk2s1
+default	11:18:56.927124-0500	MobileStorageMounter	cryptex mount point = <private>
+default	11:18:56.927226-0500	MobileStorageMounter	Posting notification: com.apple.mobile.cryptex_mounted
+default	11:18:56.929575-0500	installd	0x16afa3000 main_block_invoke_2: event: <OS_xpc_dictionary: <dictionary: 0x105604f50> { count = 4, transaction: 0, voucher = 0x105604480, contents =
+	"UserInfo" => <dictionary: 0x10530b5a0> { count = 2, transaction: 0, voucher = 0x0, contents =
+		"DiskImageType" => <string: 0x10530b8d0> { length = 7, contents = "Cryptex" }
+		"DiskImageMountPath" => <string: 0x1053060e0> { length = 75, contents = "/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS" }
+	}
+	"Name" => <string: 0x105306640> { length = 35, contents = "com.apple.mobile.disk_image_mounted" }
+	"Object" => <string: 0x105305f90> { length = 20, contents = "MobileStorageMounter" }
+	"XPCEventName" => <string: 0x10530b4c0> { length = 35, contents = "com.apple.mobile.disk_image_mounted" }
+}>
+default	11:18:56.952966-0500	installd	0x16afa3000 -[MIDeveloperDiskImageTracker imageMounted:]: received notification: file:///private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/Applications/
+default	11:18:56.953097-0500	installd	0x16afa3000 -[MIDeveloperDiskImageTracker checkMountPoint:]_block_invoke: /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/Applications is not present now or before
+error	11:18:57.031265-0500	kernel	1 duplicate report for Sandbox: MobileStorageMou(519) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+error	11:18:57.031332-0500	kernel	Sandbox: mobile_storage_p(516) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+error	11:18:57.119971-0500	simple-shell	I'm about to listen on fd: 3
+default	11:18:57.122471-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/debugserver' is adhoc signed.
+default	11:18:57.122595-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
+error	11:18:57.123411-0500	simple-server	Hello! I'm simple-server from the example cryptex!
+error	11:18:57.123532-0500	simple-server	I'm about to bind to 0.0.0.0:7777
+error	11:18:57.123934-0500	simple-server	I'm about to listen on fd: 3
+error	11:18:57.124028-0500	simple-server	Waiting for a client to connect...
+error	11:18:57.131742-0500	kernel	1 duplicate report for Sandbox: mobile_storage_p(516) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+error	11:18:57.131860-0500	kernel	Sandbox: hello(682) deny(1) file-map-executable /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib
+error	11:18:57.134337-0500	dropbear	send failed: Invalid argument
+error	11:18:57.134426-0500	dropbear	send failed: Invalid argument
+error	11:18:57.134463-0500	dropbear	send failed: Invalid argument
+default	11:18:57.135406-0500	ReportCrash	ASI found [dyld] (sensitive) 'Library not loaded: @rpath/libclang_rt.ubsan_ios_dynamic.dylib
+  Referenced from: /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/hello
+  Reason: tried: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib' (file system sandbox blocked mmap() of '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib'), '/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.ubsan_ios_dynamic.dylib' (no such file), '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib' (file system sandbox blocked mmap() of '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib'), '/Applications/Xcode-beta.app/Contents/Developer/Toolchains<…>'
+default	11:19:07.146106-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/debugserver' is adhoc signed.
+default	11:19:07.146220-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
+default	11:19:07.156826-0500	ReportCrash	ASI found [dyld] (sensitive) 'Library not loaded: @rpath/libclang_rt.ubsan_ios_dynamic.dylib
+  Referenced from: /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/hello
+  Reason: tried: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib' (file system sandbox blocked mmap() of '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib'), '/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.ubsan_ios_dynamic.dylib' (no such file), '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib' (file system sandbox blocked mmap() of '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.mNUrPS/usr/bin/libclang_rt.ubsan_ios_dynamic.dylib'), '/Applications/Xcode-beta.app/Contents/Developer/Toolchains<…>'
+```
+
+### macOS 12.2.1 (21D62) on X86_64 on WED 11 FEB 2022 at 1100 US EST for iPhone 11 when using iOS 15.4_19E5225g
 #### Case 2: Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
 
 ```
