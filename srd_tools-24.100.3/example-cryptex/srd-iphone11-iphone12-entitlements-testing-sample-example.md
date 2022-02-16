@@ -137,12 +137,15 @@ default	13:41:39.579556-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 
 <img src="https://xss.cx/2022/02/15/img/srd0009-cryptex-install-hello-ubsan-ct-rejected-example-001.png" alt="Picture at Left showing the make and install process for UBSAN with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
 
-#### Case 2: Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
 ### macOS 12.2.1 (21D62) on X86_64 on WED 11 FEB 2022 at 1100 US EST for iPhone 11 when using iOS 15.4_19E5225g
+#### Case 2: Build ./example/cryptex/ and ASAN Dylib linked to hello sample code
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
 ```
+
 ##### Result for Build ./example/cryptex/ and ASAN Dylib linked to hello sample code on the SRD iPhone 11 when using iOS 15.4_19E5225g
+
 ```
 default	11:14:55.685646-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver' is adhoc signed.
 default	11:14:55.685749-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
@@ -159,13 +162,15 @@ default	11:15:15.729290-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 
 ```
 
-
 ### macOS 12.2.1 (21D62) on X86_64 on WED 11 FEB 2022 at 1100 US EST for iPhone 11 when using iOS 15.4_19E5225g
 #### Case 3: Build ./example/cryptex/ and UBSAN Dylib linked to hello sample code
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-ubsan.sh)"
 ```
+
 ##### Result for Build ./example/cryptex/ and UBSAN Dylib linked to hello sample code on the SRD iPhone 11 when using iOS 15.4_19E5225g
+
 ```
 error	11:09:55.004194-0500	dropbear	send failed: Invalid argument
 error	11:09:55.004306-0500	dropbear	send failed: Invalid argument
