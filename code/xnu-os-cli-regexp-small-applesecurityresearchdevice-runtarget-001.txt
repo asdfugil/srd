@@ -102,12 +102,6 @@ x26
 x27
 x28
 x8
-xss@mini example-cryptex %
-xss@mini example-cryptex % cat sortme.txt| sort > sorted-uniq.txt
-xss@mini example-cryptex % git diff sorted.txt sorted-uniq.txt
-xss@mini example-cryptex % cat sortme.txt| sort | uniq > sorted-uniq.txt
-xss@mini example-cryptex % git diff sorted.txt sorted-uniq.txt
-xss@mini example-cryptex % cat sorted.txt
 (os/kern)
 (os/kern) failure (0x5)
 0.0.0.0
