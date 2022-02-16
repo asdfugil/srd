@@ -73,7 +73,6 @@ mmap()
 no-op
 os/kern
 pc
-pc
 platform/device
 port right
 rdar://
