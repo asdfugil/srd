@@ -164,37 +164,24 @@ Please note, you will need to keep the cryptex nonce in sync. The nonce hash is 
 with the `--BNCH` flag on `cryptexctl create`, and can be retrieved from the device
 with the `cryptexctl nonce` subcommand.
 
-# Troubleshooting
-
-## Cryptexes
-
-The man pages for cryptexctl are broken up into a man page for each subcommand.
-The root cryptexctl(1) man page links to the others, which follow the format:
-cryptexctl-${SUBCOMMAND}.
-
-There is a troubleshooting section in `cryptexctl-install(1)` which is particularly
-helpful. The gist of it is included below:
-
-```sh
-# Enable verbose logging with -v, -d and redirect from the system log to stderr with -ldt
+#@ Troubleshooting
+##@ Log Collection
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/SecurityResearchTools_21C39/example-cryptex/srd-cryptex-troubleshooter.sh)"
+```
+### Enable verbose logging with -v, -d and redirect from the system log to stderr with -ldt
 cryptexctl -v9 -d9 -ldt install --print-info ./com.example.cryptex.cptx (20C80)
 OR 
 cryptexctl -v4 -d4  install --variant=research --persist --print-info ./com.example.cryptex.cxbd.signed (21C39)
 
-# Collect logs from the device. The -E is so we capture the CRYPTEXCTL_UDID env var.
-# You can alternativly specify --udid on the command line
+### Collect logs from the device. The -E is so we capture the CRYPTEXCTL_UDID env var.
 sudo -E cryptexctl log collect
-# View the logs from the archive
+### View the logs from the archive
 cryptexctl log show -- --archive ./system_logs.logarchive
-```
-## Log Collection
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/SecurityResearchTools_21C39/example-cryptex/srd-cryptex-troubleshooter.sh)"
-```
+
 ## Building
 
-If you get errors about missing SDKs or headers, double check that you've selected your
-Xcode install with `xcode-select(1)` or install the pre-built SRD Example DMG Cryptex as shown below.
+This Repo does the Build and Published DMG's containing Examples. Add a PR or Issue to Merge
 
 ## Example SRD DMG Install Audit Trail
 ```
