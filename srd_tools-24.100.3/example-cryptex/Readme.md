@@ -1,5 +1,5 @@
 # SRD Example Cryptex & DMG Source Build Repo for SRT 24.100.3
-TUE 15 FEB 2022 at 1540 US EST
+THU 17 FEB 2022 at 0700 US EST
 ---
 This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49.
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
