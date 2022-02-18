@@ -15,6 +15,9 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 | Build macOS 12.3 19E5225g T8101  | PASS          | FAIL          | FAIL          | FAIL
 | Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
+
+Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. 
+
 ## Prerequisites 
 - Security Research Tools https://github.com/apple/security-research-device
 ## Resources
