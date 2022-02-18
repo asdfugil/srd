@@ -15,7 +15,9 @@ TUE 15 FEB 2022 at 1540 US EST: Current Build Target 21E5206e | 13E5086k
 | Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
 
 #### Build 'n Fiddle 
-Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results. Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. 
+Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results. 
+
+Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. For a deeper dive see https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md.
 
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
