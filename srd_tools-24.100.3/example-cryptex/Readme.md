@@ -13,7 +13,7 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
 
-Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. For a deeper dive see https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md.
+Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. For a deeper dive see https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md. Entitlement & Build Issues are normal, with each IPSW, there is the potential for breaking changes and the Workaround is to keep SRT 20C80 available, and/or use CryptexManager https://github.com/pinauten/CryptexManager.
 
 ## Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
