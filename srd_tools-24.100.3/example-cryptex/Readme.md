@@ -6,10 +6,10 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
-| PR 42  19E5225g T8101            | PASS          | PASS          | PASS          | PASS
+| PR 42  19E5225g T8101            | PASS          | FAIL          | FAIL          | FAIL
 | PR 48  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
 | PR 49  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| Build macOS 12.3 19E5225g T8101  | PASS          | PASS          | PASS          | PASS
+| Build macOS 12.3 19E5225g T8101  | PASS          | FAIL          | FAIL          | FAIL
 | Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
 ## Resources
