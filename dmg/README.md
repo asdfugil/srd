@@ -24,6 +24,10 @@ TUE 15 FEB 2022 at 1540 US EST: Current Build Target 21E5206e | 13E5086k
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 - Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
+- 
+### Build 'n Fiddle 
+This section is only in the DMG Info. Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results due to library differences in Beta train.
+
 ## SRD DMG Testing
 - Universal cryptex for iPhone 11 and iPhone 12 SRD Models 
 - Tested on the iPhone 11 for all IPSW from the iOS 14.3 floor for the iPhone 11 up to the latest iOS 15.4 Beta 
