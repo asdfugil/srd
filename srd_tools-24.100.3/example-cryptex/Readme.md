@@ -12,6 +12,9 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | Build macOS 12.3 19E5225g T8101  | PASS          | FAIL          | FAIL          | FAIL
 | Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
+
+Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. 
+
 ## Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
 - PR42: https://github.com/apple/security-research-device/pull/42
