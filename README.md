@@ -8,7 +8,7 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status when using iOS 15.4_19E5225g
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
 | PR 42  19E5225g T8101            | PASS          | FAIL          | FAIL          | FAIL
 | PR 48  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
 | PR 49  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
