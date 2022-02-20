@@ -551,3 +551,11 @@ ps -Ac | sed 's,\s*\([0-9][0-9]*\) .*[0-9]*:[0-9]*\.[0-9]* \(.*\), 00000000.0  0
 ```
 ## SRD PR 42, 48, 49 when using iOS 15.4_19E5225g | Drilling Down on Entitlement Issues 
 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
+
+When using a regexp to find Console Log Messages, these Files may be helpful:
+- https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
+- https://github.com/xsscx/Commodity-Injection-Signatures/blob/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-002.txt
+
+If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
+- https://srd.cx/possible-pointer-authentication-failure-data-abort/
+- https://srd.cx/debugserver-installation-configuration/
