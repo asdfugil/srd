@@ -207,3 +207,11 @@ com.example.cryptex
   device = /dev/disk2s1
   mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.yobZuo
   ```
+
+When using a regexp to find Console Log Messages, these Files may be helpful:
+- https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
+- https://github.com/xsscx/Commodity-Injection-Signatures/blob/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-002.txt
+
+If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
+- https://srd.cx/possible-pointer-authentication-failure-data-abort/
+- https://srd.cx/debugserver-installation-configuration/
