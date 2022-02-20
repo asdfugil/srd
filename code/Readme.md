@@ -1,5 +1,5 @@
 # Code
-FRI 4 FEB 2022: Current Build Target 19E5209h | 13E5086k 
+SUN 20 FEB 2022
 # SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
@@ -14,6 +14,10 @@ FRI 4 FEB 2022: Current Build Target 19E5209h | 13E5086k
 - Sample Code for the SRD
 - Register Fuzzing, Assembler, Hello World, Code Coverage Tests & more.
 
-Read about Pointer Authentication Failure at URL https://srd.cx/possible-pointer-authentication-failure-data-abort/
+When using a regexp to find Console Log Messages, these Files may be helpful:
+- https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
+- https://github.com/xsscx/Commodity-Injection-Signatures/blob/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-002.txt
 
-Read about debugserver for SRD at URL https://srd.cx/debugserver-installation-configuration/
+If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
+- https://srd.cx/possible-pointer-authentication-failure-data-abort/
+- https://srd.cx/debugserver-installation-configuration/
