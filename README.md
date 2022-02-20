@@ -94,14 +94,16 @@ How-To Compile for iOS
 xcrun -sdk iphoneos clang -g -O2  -mios-version-min=14.3 -DDEBUG=0  -Wall -Wpedantic -Wno-gnu -Werror -Wunused-variable -o a.out code.s
 ```
 
+When using a regexp to find Console Log Messages, these Files may be helpful:
+- https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
+- https://github.com/xsscx/Commodity-Injection-Signatures/blob/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-002.txt
+
+If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
+- https://srd.cx/possible-pointer-authentication-failure-data-abort/
+- https://srd.cx/debugserver-installation-configuration/
+
 * To ALL - Open a Discussion, PR or Issue with Suggestions, Comments, Bugs, Feedback, Tips etc..
 * Collaborative Research
 * All Code and Questions are Welcome 
 * When you see Code Errors, Fails or LOL's.. Please Open an Issue... Thanks!
-
-Read about Pointer Authentication Failure at URL https://srd.cx/possible-pointer-authentication-failure-data-abort/
-
-Read about debugserver for SRD at URL https://srd.cx/debugserver-installation-configuration/
-
-Follow this Repo and read URL https://srd.cx/srd-cryptex-installation/
 
