@@ -7,8 +7,8 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
 | PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
-| PR 48  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| PR 49  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
+| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
+| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
 | Build macOS 12.3 21E5222a T8101  | PASS          | FAIL          | FAIL          | FAIL
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
