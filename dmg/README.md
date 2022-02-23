@@ -6,13 +6,13 @@ TUE 15 FEB 2022 at 1540 US EST: Current Build Target 21E5206e | 13E5086k
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
-| PR 42  19E5225g T8101            | PASS          | PASS          | PASS          | PASS
-| PR 48  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| PR 49  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| Build macOS 12.3 19E5225g T8101  | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
+| macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
+| PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
+| PR 48  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
+| PR 49  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
+| Build macOS 12.3 19E5235a T8101  | PASS          | FAIL          | FAIL          | FAIL
+| Install to iPhone 11 19E5235a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5235a    | PASS          | PASS          | PASS          | PASS 
 
 #### Build 'n Fiddle 
 Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results. 
