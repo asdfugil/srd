@@ -1,20 +1,20 @@
 # Welcome to Hoyt's SRD Repo
-TUE 15 FEB 2022 at 1540 US EST
+WED 23 FEB 2022 at 1515 US EST
 ## SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
 This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49.
-## SRD Example DMG, PR 42,48,49 Build & Installation Status when using iOS 15.4_19E5225g
+## SRD Example DMG, PR 42,48,49 Build & Installation Status when using iOS 15.4_19E5235a
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
-| PR 42  19E5225g T8101            | PASS          | FAIL          | FAIL          | FAIL
-| PR 48  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| PR 49  19E5225g T8101            | FAIL          | FAIL          | FAIL          | FAIL
-| Build macOS 12.3 19E5225g T8101  | PASS          | FAIL          | FAIL          | FAIL
-| Install to iPhone 11 19E5225g    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 19E5225g    | PASS          | PASS          | PASS          | PASS 
+| PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
+| PR 48  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
+| PR 49  19E5235a T8101            | FAIL          | FAIL          | FAIL          | FAIL
+| Build macOS 12.3 19E5235a T8101  | PASS          | FAIL          | FAIL          | FAIL
+| Install to iPhone 11 19E5235a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5235a    | PASS          | PASS          | PASS          | PASS 
 
 Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. For a deeper dive see https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md. Entitlement & Build Issues are normal, with each IPSW, there is the potential for breaking changes and the Workaround is to keep SRT 20C80 available, and/or use CryptexManager https://github.com/pinauten/CryptexManager.
 
@@ -66,8 +66,8 @@ SRD Cryptex Log Collector
 ```
 Signed File: iPhone11,8,iPhone12,1_15.3_19D50_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)' 
 Signed File: iPhone13,2,iPhone13,3_15.3_19D50_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)'
-Signed File: iPhone12,8,iPhone12,1_15.4_19E5225g_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
-Signed File: iPhone13,2,iPhone13,3_15.4_19E5225g_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
+Signed File: iPhone12,8,iPhone12,1_15.4_19E5235a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
+Signed File: iPhone13,2,iPhone13,3_15.4_19E5235a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
 ```
 The above means that from X86_64 and/or M1 ARM the SRD IPSW has been installed with cryptex personalization verified as shown below.
 
