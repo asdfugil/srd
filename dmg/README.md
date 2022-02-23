@@ -2,7 +2,7 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
-TUE 15 FEB 2022 at 1540 US EST: Current Build Target 21E5206e | 13E5086k
+WED 23 FEB 2022 at 1515 US EST
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
