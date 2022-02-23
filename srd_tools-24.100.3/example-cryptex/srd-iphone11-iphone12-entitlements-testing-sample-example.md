@@ -2,6 +2,17 @@
 
 ## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12 when using iOS 15.4_19E5225g
 
+## SRD Example DMG, PR 42,48,49 Build & Installation Status
+| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
+| -------------------------------- | ------------- | ------------- | ------------- | -------------
+| macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
+| PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
+| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
+| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
+| Build macOS 12.3 21E5222a T8101  | PASS          | FAIL          | FAIL          | FAIL
+| Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
+
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
