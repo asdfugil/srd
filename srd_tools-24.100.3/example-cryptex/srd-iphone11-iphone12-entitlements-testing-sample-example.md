@@ -3,8 +3,6 @@
 This is a Live Document being updated during the day of THU 24 FEB 2022
 -----
 
-## Deeper Dive into Build & Entitlement Issues using macOS 12.2.1 (21D62) on X86_64 using iPhone 12 when using iOS 15.4_19E5225g
-
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
