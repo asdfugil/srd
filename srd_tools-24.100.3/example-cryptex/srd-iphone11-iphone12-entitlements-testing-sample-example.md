@@ -1,6 +1,6 @@
 ## SRD PR42, 48, 49 when using iOS 15.4_19E5225g | Drilling Down | https://github.com/apple/security-research-device/pull/42
 
-This is a Live Document being updated during the day of THU 24 FEB 2022
+This is a Live Document being updated during the day of THU 24 FEB 2022. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom.
 -----
 
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
@@ -259,7 +259,7 @@ default	11:10:35.079694-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 default	11:10:35.079823-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
 
-### macOS 12.2.1 (21D62) on X86_64 on THU 24 FEB 2022 at 0500 US EST for iPhone 11 when using iOS io/s 15.4_19E5235a
+### macOS 12.2.1 (21D62) on X86_64 on THU 24 FEB 2022 at 0500 US EST for iPhone 11 when using iOS_15.4_19E5235a
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
