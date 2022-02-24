@@ -105,14 +105,17 @@ SDK Targets
 ---
 ```  
  SDK Path: "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5209h) arm64e"
- SDK Roots: [ 0] "Developer/Xcode/iOS DeviceSupport/15.3 (19D49) arm64e"
- SDK Roots: [ 1] "Developer/Xcode/iOS DeviceSupport/15.3 (19D50) arm64e"
- SDK Roots: [ 2] "Developer/Xcode/iOS DeviceSupport/14.7.1 (18G82) arm64e"
- SDK Roots: [ 3] "Developer/Xcode/iOS DeviceSupport/15.4 (19E5209h) arm64e"
- SDK Roots: [ 4] "Developer/Xcode/iOS DeviceSupport/15.2.1 (19C63) arm64e"
- SDK Roots: [ 5] "Developer/Xcode/iOS DeviceSupport/14.8 (18H17) arm64e"
- SDK Roots: [ 6] "Developer/Xcode/iOS DeviceSupport/15.3 (19D5026g) arm64e"
- SDK Roots: [ 7] "eveloper/Xcode/iOS DeviceSupport/15.2 (19C56) arm64e"
+ SDK Roots: [ 0] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.3 (19D49) arm64e"
+ SDK Roots: [ 1] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.3 (19D50) arm64e"
+ SDK Roots: [ 2] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/14.7.1 (18G82) arm64e"
+ SDK Roots: [ 3] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5209h) arm64e"
+ SDK Roots: [ 4] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.2.1 (19C63) arm64e"
+ SDK Roots: [ 5] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5225g) arm64e"
+ SDK Roots: [ 6] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5235a) arm64e"
+ SDK Roots: [ 7] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/14.8 (18H17) arm64e"
+ SDK Roots: [ 8] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5219e) arm64e"
+ SDK Roots: [ 9] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.3 (19D5026g) arm64e"
+ SDK Roots: [10] "/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.2 (19C56) arm64e"
 ```
 Run Targets
 ---
