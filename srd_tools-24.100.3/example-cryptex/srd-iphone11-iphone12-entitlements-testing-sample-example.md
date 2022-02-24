@@ -313,5 +313,16 @@ Sections for '/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5225
   0x00000400 container        [0x0000000102bec000-0x0000000102c24000)  r--  0x00070000 0x000356f0 0x00000000 dyld.__LINKEDIT
 ```
 
+#### Results for UBSAN dylib and hello.c example
+```
+default	10:07:52.191668-0500	debugserver	debugserver will use ASL for internal logging.
+default	10:07:52.191746-0500	debugserver	debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
+ for arm64.
+default	10:07:52.191785-0500	debugserver	Listening to port 2345 for a connection from 0.0.0.0...
+default	10:08:02.176695-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello' is adhoc signed.
+default	10:08:02.176819-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello': unsuitable CT policy 0 for this platform/device, rejecting signature.
+default	10:08:12.190854-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello' is adhoc signed.
+default	10:08:12.190975-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello': unsuitable CT policy 0 for this platform/device, rejecting signature.
 
+```
 
