@@ -123,6 +123,8 @@ Run Targets
 SRD's - iPhone 11 and iPhone 12
 iPhone 12 Pro Max
 iPad 12 Pro
+X86_64 mini
+M1 T8101
 ```
 How-To Compile for iOS
 -----
