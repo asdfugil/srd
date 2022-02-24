@@ -6,11 +6,11 @@ WED 23 FEB 2022 at 1515 US EST
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
-| PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
-| PR 48  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
-| PR 49  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
-| Build macOS 12.3 21E5222a T8101  | PASS          | FAIL          | FAIL          | FAIL
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | FAIL          
+| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
+| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
+| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
+| Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | FAIL
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
