@@ -260,23 +260,58 @@ default	11:10:35.079823-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 
 ### macOS 12.2.1 (21D62) on X86_64 on THU 24 FEB 2022 at 0500 US EST for iPhone 11 when using iOS_15.4_19E5235a
-#### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
+#### Case 2: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
 ```
 
-##### Result for Build ./example/cryptex/ on macOS 12.2.1 (21D62) on X86_64 using the SRD iPhone 11 with iOS 15.4_19E5225g - Includes PR48 + PR49
+### Result == Works
+```
+(lldb) image dump sections
+Dumping sections for 2 modules.
+Sections for '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.pU5TsF/usr/bin/hello(0x00000001029c8000)' (arm64e):
+  SectID     Type             Load Address                             Perm File Off.  File Size  Flags      Section Name
+  ---------- ---------------- ---------------------------------------  ---- ---------- ---------- ---------- ----------------------------
+  0x00000100 container        [0x0000000000000000-0x0000000100000000)* ---  0x00000000 0x00000000 0x00000000 hello.__PAGEZERO
+  0x00000200 container        [0x00000001029c8000-0x00000001029d4000)  r-x  0x00000000 0x0000c000 0x00000000 hello.__TEXT
+  0x00000001 code             [0x00000001029cf96c-0x00000001029cfdec)  r-x  0x0000796c 0x00000480 0x80000400 hello.__TEXT.__text
+  0x00000002 code             [0x00000001029cfdec-0x00000001029cfebc)  r-x  0x00007dec 0x000000d0 0x80000408 hello.__TEXT.__auth_stubs
+  0x00000003 regular          [0x00000001029cfebc-0x00000001029cfec0)  r-x  0x00007ebc 0x00000004 0x00000016 hello.__TEXT.__init_offsets
+  0x00000004 regular          [0x00000001029cfec0-0x00000001029cff60)  r-x  0x00007ec0 0x000000a0 0x00000000 hello.__TEXT.__asan_cstring
+  0x00000005 data-cstr        [0x00000001029cff60-0x00000001029cff8f)  r-x  0x00007f60 0x0000002f 0x00000002 hello.__TEXT.__cstring
+  0x00000006 regular          [0x00000001029cff8f-0x00000001029cff97)  r-x  0x00007f8f 0x00000008 0x00000000 hello.__TEXT.__const
+  0x00000007 compact-unwind   [0x00000001029cff98-0x00000001029cffe8)  r-x  0x00007f98 0x00000050 0x00000000 hello.__TEXT.__unwind_info
+  0x00000008 data-cstr        [0x00000001029d0000-0x00000001029d001e)  r-x  0x00008000 0x0000001e 0x00000002 hello.__TEXT.__oslogstring
+  0x00000300 container        [0x00000001029d4000-0x00000001029d8000)  rw-  0x0000c000 0x00004000 0x00000010 hello.__DATA_CONST
+  0x00000009 data-ptrs        [0x00000001029d4000-0x00000001029d4068)  rw-  0x0000c000 0x00000068 0x00000006 hello.__DATA_CONST.__auth_got
+  0x0000000a data-ptrs        [0x00000001029d4068-0x00000001029d4080)  rw-  0x0000c068 0x00000018 0x00000006 hello.__DATA_CONST.__got
+  0x0000000b data-ptrs        [0x00000001029d4080-0x00000001029d4088)  rw-  0x0000c080 0x00000008 0x0000000a hello.__DATA_CONST.__mod_term_func
+  0x0000000c regular          [0x00000001029d4088-0x00000001029d40b8)  rw-  0x0000c088 0x00000030 0x00000000 hello.__DATA_CONST.__const
+  0x00000400 container        [0x00000001029d8000-0x00000001029dc000)  rw-  0x00010000 0x00004000 0x00000000 hello.__DATA
+  0x0000000d regular          [0x00000001029d8000-0x00000001029d80c0)  rw-  0x00010000 0x000000c0 0x00000000 hello.__DATA.__asan_globals
+  0x0000000e regular          [0x00000001029d80c0-0x00000001029d80f0)  rw-  0x000100c0 0x00000030 0x00000000 hello.__DATA.__asan_liveness
+  0x0000000f zero-fill        [0x00000001029d80f0-0x00000001029d80f8)  rw-  0x00000000 0x00000000 0x00000001 hello.__DATA.__common
+  0x00000500 container        [0x00000001029dc000-0x00000001029e4000)  r--  0x00014000 0x00005150 0x00000000 hello.__LINKEDIT
+Sections for '/Users/xss/Library/Developer/Xcode/iOS DeviceSupport/15.4 (19E5225g) arm64e/Symbols/usr/lib/dyld' (arm64e):
+  SectID     Type             Load Address                             Perm File Off.  File Size  Flags      Section Name
+  ---------- ---------------- ---------------------------------------  ---- ---------- ---------- ---------- ----------------------------
+  0x00000100 container        [0x0000000102b7c000-0x0000000102bd4000)  r-x  0x00000000 0x00058000 0x00000000 dyld.__TEXT
+  0x00000001 code             [0x0000000102b7d000-0x0000000102bca3bc)  r-x  0x00001000 0x0004d3bc 0x80000400 dyld.__TEXT.__text
+  0x00000002 regular          [0x0000000102bca3c0-0x0000000102bcb2f0)  r-x  0x0004e3c0 0x00000f30 0x00000000 dyld.__TEXT.__const
+  0x00000003 data-cstr        [0x0000000102bcb2f0-0x0000000102bd385a)  r-x  0x0004f2f0 0x0000856a 0x00000002 dyld.__TEXT.__cstring
+  0x00000004 compact-unwind   [0x0000000102bd385c-0x0000000102bd3b70)  r-x  0x0005785c 0x00000314 0x00000000 dyld.__TEXT.__unwind_info
+  0x00000200 container        [0x0000000102bd4000-0x0000000102be8000)  rw-  0x00058000 0x00014000 0x00000010 dyld.__DATA_CONST
+  0x00000005 regular          [0x0000000102bd4000-0x0000000102bd4070)  rw-  0x00058000 0x00000070 0x00000000 dyld.__DATA_CONST.__auth_ptr
+  0x00000006 regular          [0x0000000102bd4070-0x0000000102bd7c98)  rw-  0x00058070 0x00003c28 0x00000000 dyld.__DATA_CONST.__const
+  0x00000007 regular          [0x0000000102bd7c98-0x0000000102be7c98)  rw-  0x0005bc98 0x00010000 0x00000000 dyld.__DATA_CONST.__bss
+  0x00000300 container        [0x0000000102be8000-0x0000000102bec000)  rw-  0x0006c000 0x00004000 0x00000000 dyld.__DATA
+  0x00000008 data             [0x0000000102be8000-0x0000000102be813c)  rw-  0x0006c000 0x0000013c 0x00000000 dyld.__DATA.__data
+  0x00000009 regular          [0x0000000102be8140-0x0000000102be82b0)  rw-  0x0006c140 0x00000170 0x00000000 dyld.__DATA.__all_image_info
+  0x0000000a regular          [0x0000000102be82b0-0x0000000102be82f0)  rw-  0x0006c2b0 0x00000040 0x00000000 dyld.__DATA.__crash_info
+  0x0000000b zero-fill        [0x0000000102be8300-0x0000000102be9cf8)  rw-  0x00000000 0x00000000 0x00000001 dyld.__DATA.__common
+  0x0000000c zero-fill        [0x0000000102be9cf8-0x0000000102bea1dc)  rw-  0x00000000 0x00000000 0x00000001 dyld.__DATA.__bss
+  0x00000400 container        [0x0000000102bec000-0x0000000102c24000)  r--  0x00070000 0x000356f0 0x00000000 dyld.__LINKEDIT
+```
 
-PR42
-----
-```
-default	05:52:37.587949-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.YaEcnw/usr/bin/hello' is adhoc signed.
-default	05:52:37.588143-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.YaEcnw/usr/bin/hello': unsuitable CT policy 0 for this platform/device, rejecting signature.
-```
 
-PR48 + PR49
-----
-```
-default	05:52:37.618797-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.YaEcnw/usr/bin/debugserver' is adhoc signed.
-default	05:52:37.618899-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.YaEcnw/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
-```
+
