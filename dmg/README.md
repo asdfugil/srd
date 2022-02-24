@@ -8,11 +8,11 @@ WED 23 FEB 2022 at 1515 US EST
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | FAIL          | FAIL          | FAIL          
 | PR 42  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
-| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
-| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS
+| PR 48  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
+| PR 49  19E5235a T8101            | PASS          | FAIL          | FAIL          | FAIL
 | Build macOS 12.3 21E5222a T8101  | PASS          | FAIL          | FAIL          | FAIL
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS  
+| Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
 #### Build 'n Fiddle 
 Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results. 
