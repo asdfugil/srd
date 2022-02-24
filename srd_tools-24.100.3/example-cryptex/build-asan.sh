@@ -63,8 +63,10 @@ git diff /private/tmp/src-libclang_rt.asan_ios_dynamic.dylib.xml /private/tmp/ds
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
 rm srd-universal-cryptex.dmg
-echo "FIXUP for asan dylib in attempt to silence AMFI, the entitlements aren't making it thru all the time in Makefile so this line is the FIXUP and TODO........"
-codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello
+# Removing this --force which is just for experimentation, this is meant to generate AMFI Noise.....
+# echo "FIXUP for asan dylib in attempt to silence AMFI, the entitlements aren't making it thru all the time in Makefile so this line is the FIXUP and TODO........"
+# codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello
+#
 echo "\n Must check this entitlement visually... codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello that attempts to setup use of libclang_rt.asan_ios_dynamic.dylib\n"
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello
 echo "\n\n Now making the SRD Example ASAN DMG containing Frida, debugserver, toyboxunstripped and the example hello linked to asan.dylib..\n"
