@@ -262,7 +262,7 @@ default	11:10:35.079823-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ### macOS 12.2.1 (21D62) on X86_64 on THU 24 FEB 2022 at 0500 US EST for iPhone 11 when using iOS io/s 15.4_19E5235a
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build-asan.sh)"
 ```
 
 ##### Result for Build ./example/cryptex/ on macOS 12.2.1 (21D62) on X86_64 using the SRD iPhone 11 with iOS 15.4_19E5225g - Includes PR48 + PR49
