@@ -1,16 +1,15 @@
-## SRD PR42, 48, 49 when using iOS 15.4_19E5225g | Drilling Down | https://github.com/apple/security-research-device/pull/42
+## SRD PR42
 
-This is a Live Document being updated during the day of THU 24 FEB 2022. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom.
------
+There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom.
 
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | FAIL          
-| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | FAIL
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | PASS 
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
