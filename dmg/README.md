@@ -2,22 +2,18 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
-WED 23 FEB 2022 at 1515 US EST
+FRI 25 FEB 2022 at 0900 US EST
+
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | FAIL          
-| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | FAIL
-| Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | FAIL
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | PASS 
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
-
-#### Build 'n Fiddle 
-Debugserver, ASAN. & UBSAN can be fiddled with to potentially make work. Remove all the directories in src __except__ cryptex-run and debugserver. You may find that by Fiddling you can make debugserver work. Fiddling a bit more you may find that ASAN & UBSAN build too. You're Mileage May Vary. T8010 with macOS Beta and Xcode Beta have best results. macOS Retail on X86_64 provided slightly different results. 
-
-Apple needs to Resolve the Issues with PR https://github.com/apple/security-research-device/pull/48 & PR https://github.com/apple/security-research-device/pull/49. For a deeper dive see https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md. Entitlement & Build Issues are normal, with each IPSW, there is the potential for breaking changes and the Workaround is to keep SRT 20C80 available, and/or use CryptexManager https://github.com/pinauten/CryptexManager.
 
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
