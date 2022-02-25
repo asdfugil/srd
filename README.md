@@ -1,11 +1,12 @@
 # Welcome to Hoyt's SRD Repo
-THU 24 FEB 2022 at 1800 US EST
+FRI 25 FEB 2022 at 0900 US EST
 # SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
 This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49.
-## SRD Example DMG, PR 42,48,49 Build & Installation Status
+
+### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
@@ -15,6 +16,8 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 | Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | PASS 
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
+
+
 ## Prerequisites 
 - Security Research Tools https://github.com/apple/security-research-device
 ## Resources
