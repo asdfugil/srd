@@ -328,9 +328,6 @@ default	10:08:12.190975-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 
 AMFI Research complains about __debugserver__:
 ```
-
-Like this:
-```
 default	11:10:35.079694-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver' is adhoc signed.
 default	11:10:35.079823-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
@@ -343,4 +340,5 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 
 ### Visual Representation of the Issue(s)
+
 <img src="https://xss.cx/2022/02/25/img/srd0037-iphone12-debugserver-adhoc_signed-ct-coretrust-rejected-amfi_research-example-001.png" alt="Picture at Left showing the make and install process for debugserver with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
