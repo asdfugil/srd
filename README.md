@@ -1,5 +1,8 @@
 # Welcome to Hoyt's SRD Repo
 FRI 25 FEB 2022 at 0900 US EST
+---
+This Repo provides Makefiles and Example DMG's for the Apple Security Research Device. There is the baseline Example DMG built from the Source Code in the Repo which is always _ahead_ of the Apple Repo. There are Example DMG's for the baseline cryptex, then for the Example ASAN & UBSAN Builds.  Total Installation less than 30 seconds. There are additional PoC's on the DMG's for use when Regression Testing. 
+
 # SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
