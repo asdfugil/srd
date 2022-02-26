@@ -20,7 +20,7 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
-** Build 'n Fiddle to make everything work. As noted throughout this Repo, Apple has an Entitlement Issue with CoreTrust | AMFI Research that is a work-in-progress.
+** Build 'n Fiddle to make everything work. As noted throughout this Repo, Apple has an Entitlement Issue with CoreTrust | AMFI Research that is a work-in-progress. If AMFI complains about debugserver, or the SAN dylibs, just try again with make install. 
 
 ## Prerequisites 
 - Security Research Tools https://github.com/apple/security-research-device
