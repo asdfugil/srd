@@ -1,6 +1,6 @@
 ## SRD PR42
 
-There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom.
+There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom. Apple needs to Resolve the AMFI | CoreTrust issues for the SRD so Debugging Tools like Frida and debugserver need Entitlements to work as expected and provide provable data.
 
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
