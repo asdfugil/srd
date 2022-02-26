@@ -322,48 +322,25 @@ default	10:08:02.176695-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 default	10:08:02.176819-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello': unsuitable CT policy 0 for this platform/device, rejecting signature.
 default	10:08:12.190854-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello' is adhoc signed.
 default	10:08:12.190975-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.LCIv75/usr/bin/hello': unsuitable CT policy 0 for this platform/device, rejecting signature.
-
 ```
 
 ## Observation
 
-AMFI Research complains about __debugserver__ _when_ __hello__ is signed with:
+AMFI Research complains about __debugserver__:
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>com.apple.backboardd.debugapplications</key>
-	<true/>
-	<key>com.apple.backboardd.launchapplications</key>
-	<true/>
-	<key>com.apple.frontboard.debugapplications</key>
-	<true/>
-	<key>com.apple.frontboard.launchapplications</key>
-	<true/>
-	<key>com.apple.private.cs.debugger</key>
-	<true/>
-	<key>com.apple.private.logging.diagnostic</key>
-	<true/>
-	<key>com.apple.private.memorystatus</key>
-	<true/>
-	<key>com.apple.private.security.no-container</key>
-	<true/>
-	<key>com.apple.security.network.client</key>
-	<true/>
-	<key>com.apple.security.network.server</key>
-	<true/>
-	<key>com.apple.springboard.debugapplications</key>
-	<true/>
-	<key>research.com.apple.license-to-operate</key>
-	<true/>
-	<key>task_for_pid-allow</key>
-	<true/>
-</dict>
-</plist>
-```
+
 Like this:
 ```
 default	11:10:35.079694-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver' is adhoc signed.
 default	11:10:35.079823-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.7rGwkO/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
+
+## SAT 26 FEB 2022 Spot Check
+
+```
+default	10:10:51.684679-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.y2awNR/usr/bin/debugserver' is adhoc signed.
+default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.y2awNR/usr/bin/debugserver': unsuitable CT policy 0 for this platform/device, rejecting signature.
+```
+
+### Visual Representation of the Issue(s)
+<img src="https://xss.cx/2022/02/25/img/srd0037-iphone12-debugserver-adhoc_signed-ct-coretrust-rejected-amfi_research-example-001.png" alt="Picture at Left showing the make and install process for debugserver with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
