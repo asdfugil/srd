@@ -3,6 +3,8 @@ echo "unmounting com.example.cryptex"
 cryptexctl uninstall com.example.cryptex
 echo "Start the Build"
 cp src/hello/Makefile.dist src/hello/Makefile
+echo "AMFI complains on T8101 XNU macOS and doesn't always make clean, aka the clean bug..."
+sudo xattr -c * src/* src/*/*
 make clean
 make all
 echo "Start of entitlement checks..... for example-cryptex with debugserver and latest entitlements from PR48 + PR49....."
