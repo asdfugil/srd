@@ -68,6 +68,11 @@ default	18:03:13.865431-0500	dropbear	Starting shell: '/private/var/run/com.appl
 default	18:03:13.867017-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox' is adhoc signed.
 default	18:03:13.867125-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox': unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
+#### Comment
+```
+If you've gotten this far, you too probably realize this is a long-cycle problem for Resolution.
+```
+
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
