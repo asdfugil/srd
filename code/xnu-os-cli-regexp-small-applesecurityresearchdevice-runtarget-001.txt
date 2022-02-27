@@ -127,6 +127,7 @@ input buffer bad size
 internal event
 Invalid argument
 is adhoc signed
+Is this a developer issue? Please file a radar...
 kauth_membership_check
 kernel
 key
