@@ -13,60 +13,61 @@ There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 show
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
-## Entitlement Issues with Build System
+### Entitlement Issues with CoreTrust | AMFI research
 
-Note that in this Makefile for UBSAN, there are NO ENTITLEMENTS specified by Apple Feedback, yet, as can plainly be seen, there are Entitlements attached to hello __when__ linked with uBSAN or ASAN sporadically.
-
-Often, Entitlements are assigned when none are commanded or expected, example for ubsan, asan and debugserver.
-
-This Slot 7 message causes AMFI Research to complain, apparently:
-
+Fiddle 'n Twiddle the Magic Bits
+-------
 ```
-Found unsupported codesign slot 0x7, please notify author
-File Details:
-	Magic: 64-bit MachO
-	Type: Exec
-	CPU: AARCH64, ARM64e (ARMv8.3) caps: PAC00
-	Commands: 22 (Size: 1624)
-	Flags: NoUndefs, DyldLink, TwoLevel, PIE
-	UUID: 57DFD476-68DC-35E5-96DE-44873663A080
-File imports 2 libraries:
-	0: "@rpath/libclang_rt.ubsan_ios_dynamic.dylib"
-	1: "/usr/lib/libSystem.B.dylib"
-File has 22 load commands. Interesting commands:
-	Load 12 (LC_SOURCE_VERSION): 0.0.0.0.0
-	Load 14 (LC_ENCRYPTION_INFO_64): Offset: 0x4000, Size: 0x4000 (not-encrypted yet)
-Binary has 1 Code Directory:
-	CodeDirectory 0:
-		Ident: "hello-5555494457dfd47668dc35e596de44873663a080"
-		CD Hash: 121a2d02a79fc0775801940640040e3172c31b7bc5fc86996b073f193d535a56
-		Code slots: 21
-		Special slots: 7
-			Special Slot   7 0x7:	1fe6dfd705a29ce741aa9d1f083d275f8c843fed01a6f0eb371c5c2d966ff216
-			Special Slot   6 0x6:	Not Bound
-			Special Slot   5 Entitlements Blob:	db8a320ad812e9dee3de4a65003a06715e5aa64ef829b613138c875d60e0e746
-			Special Slot   4 Application Specific:	Not Bound
-			Special Slot   3 Resource Directory:	Not Bound
-			Special Slot   2 Requirements Blob:	987920904eab650e75788c054aa0b0524e6a80bfc71aa32df8d237a61743f986
-			Special Slot   1 Bound Info.plist:	Not Bound
-Binary has 1 requirement:
-	Requirement 0 (0x0): empty requirement set
-Binary has 10 boolean entitlements:
-	com.apple.private.cs.debugger: true
-	com.apple.private.memorystatus: true
-	com.apple.security.network.client: true
-	com.apple.security.network.server: true
-	com.apple.private.logging.diagnostic: true
-	com.apple.backboardd.debugapplications: true
-	com.apple.frontboard.debugapplications: true
-	com.apple.backboardd.launchapplications: true
-	com.apple.frontboard.launchapplications: true
-	com.apple.springboard.debugapplications: true
-Binary has 1 string array entitlement:
-	0 seatbelt-profiles: ["debugserver"]
-2022/02/27 12:08:45 Fin.
+hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
+0000000 cf fa ed fe
 ```
-
+Next, change the magic bits and watch your SRD Console Log, Search == cryptex
+```
+hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
+0000000 ca fe ba be
+```
+### AMFI Complaint
+```
+default	17:58:05.812913-0500	MobileStorageMounter	cryptex mount point = <private>
+default	17:58:05.813328-0500	MobileStorageMounter	Posting notification: com.apple.mobile.cryptex_mounted
+default	17:58:05.814496-0500	installd	0x16b223000 main_block_invoke_2: event: <OS_xpc_dictionary: <dictionary: 0x105205500> { count = 4, transaction: 0, voucher = 0x105206730, contents =
+	"UserInfo" => <dictionary: 0x105206db0> { count = 2, transaction: 0, voucher = 0x0, contents =
+		"DiskImageType" => <string: 0x105205330> { length = 7, contents = "Cryptex" }
+		"DiskImageMountPath" => <string: 0x105207170> { length = 75, contents = "/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt" }
+	}
+	"Name" => <string: 0x105205ae0> { length = 35, contents = "com.apple.mobile.disk_image_mounted" }
+	"Object" => <string: 0x105205b10> { length = 20, contents = "MobileStorageMounter" }
+	"XPCEventName" => <string: 0x105206c50> { length = 35, contents = "com.apple.mobile.disk_image_mounted" }
+}>
+default	17:58:05.840151-0500	installd	0x16b223000 -[MIDeveloperDiskImageTracker imageMounted:]: received notification: file:///private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/Applications/
+default	17:58:05.840190-0500	installd	0x16b223000 -[MIDeveloperDiskImageTracker checkMountPoint:]_block_invoke: /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/Applications is not present now or before
+error	17:58:05.882616-0500	kernel	1 duplicate report for Sandbox: MobileStorageMou(257) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+error	17:58:05.882647-0500	kernel	Sandbox: mobile_storage_p(255) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+error	17:58:05.996618-0500	simple-server	Hello! I'm simple-server from the example cryptex!
+error	17:58:05.996860-0500	simple-server	I'm about to bind to 0.0.0.0:7777
+error	17:58:05.997100-0500	simple-server	I'm about to listen on fd: 3
+error	17:58:05.997172-0500	simple-server	Waiting for a client to connect...
+error	17:58:06.006463-0500	simple-shell	I'm about to listen on fd: 3
+error	17:58:06.008274-0500	dropbear	send failed: Invalid argument
+error	17:58:06.008343-0500	dropbear	send failed: Invalid argument
+error	17:58:06.008388-0500	dropbear	send failed: Invalid argument
+default	17:58:06.022066-0500	debugserver	debugserver will use ASL for internal logging.
+default	17:58:06.022135-0500	debugserver	debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
+ for arm64.
+default	17:58:06.022167-0500	debugserver	Listening to port 2345 for a connection from 0.0.0.0...
+default	18:03:08.004506-0500	dropbear	Password auth succeeded for 'root' from 192.168.3.83:52544
+default	18:03:08.026880-0500	dropbear	CRYPTEX_SHELL specified. User shell is now '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/sh'
+default	18:03:08.029665-0500	dropbear	Setting PATH to '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/sbin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/bin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin:/sbin:/bin:/usr/bin'
+default	18:03:08.031774-0500	dropbear	Starting shell: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/sh'
+default	18:03:08.048146-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox' is adhoc signed.
+default	18:03:08.048203-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox': unsuitable CT policy 0 for this platform/device, rejecting signature.
+default	18:03:13.841078-0500	dropbear	Password auth succeeded for 'root' from 192.168.3.83:52545
+default	18:03:13.860867-0500	dropbear	CRYPTEX_SHELL specified. User shell is now '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/sh'
+default	18:03:13.863580-0500	dropbear	Setting PATH to '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/sbin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/bin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin:/sbin:/bin:/usr/bin'
+default	18:03:13.865431-0500	dropbear	Starting shell: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/sh'
+default	18:03:13.867017-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox' is adhoc signed.
+default	18:03:13.867125-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.anYnBt/usr/bin/toybox': unsuitable CT policy 0 for this platform/device, rejecting signature.
+```
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
