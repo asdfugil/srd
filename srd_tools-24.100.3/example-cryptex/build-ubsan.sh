@@ -65,9 +65,9 @@ git diff /private/tmp/src-libclang_rt.ubsan_ios_dynamic.dylib.xml /private/tmp/d
 echo "End of entitlement checks....."
 echo "Delete srd-universal-cryptex.dmg"
 rm srd-universal-cryptex.dmg
-echo "FIXUP for ubsan dylib in attempt to silence AMFI based on the suggestion in PR42 and examples in PR48 + PR49"
-codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello 
-echo "\n The previous Entitlement Check is based on PR 48 + PR 49 https://github.com/apple/security-research-device/pull/48, and make sure its in dstroot too...\n"
+# echo "FIXUP for ubsan dylib in attempt to silence AMFI, the entitlements aren't making it thru all the time in Makefile so this line is the FIXUP and TODO........"
+# codesign --force -s - --entitlements src/hello/entitlements.plist com.example.cryptex.dstroot/usr/bin/hello
+echo "\n Must check this entitlement visually... NO ENTITLEMENTS or BUG in BUILD TOOLS ....   codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello that attempts to setup use of libclang_rt.ubsan_ios_dynamic.dylib\n"
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/hello
 echo "\n\n Now making the SRD Example UBSAN DMG containing Frida, debugserver, toyboxunstripped and the example hello linked to ubsan.dylib..\n"
 otool -L com.example.cryptex.dstroot/usr/bin/hello | grep san
