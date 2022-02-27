@@ -21,7 +21,7 @@ Fiddle 'n Twiddle the Magic Bits
 hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
 0000000 cf fa ed fe
 ```
-Next, change the magic bits and watch your SRD Console Log, Search == cryptex
+Next, change the magic bits, rebuild the DMG, Install the cryptex and watch your SRD Console Log, Search == cryptex
 ```
 hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
 0000000 ca fe ba be
