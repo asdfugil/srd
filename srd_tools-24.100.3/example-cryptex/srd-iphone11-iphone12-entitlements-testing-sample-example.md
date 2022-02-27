@@ -13,6 +13,60 @@ There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 show
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
+## Entitlement Issues with Build System
+
+Note that in this Makefile for UBSAN, there are NO ENTITLEMENTS specified by Apple Feedback, yet, as can plainly be seen, there are Entitlements attached to hello __when__ linked with uBSAN or ASAN sporadically.
+
+Often, Entitlements are assigned when none are commanded or expected, example for ubsan, asan and debugserver.
+
+This Slot 7 message causes AMFI Research to complain, apparently:
+
+```
+Found unsupported codesign slot 0x7, please notify author
+File Details:
+	Magic: 64-bit MachO
+	Type: Exec
+	CPU: AARCH64, ARM64e (ARMv8.3) caps: PAC00
+	Commands: 22 (Size: 1624)
+	Flags: NoUndefs, DyldLink, TwoLevel, PIE
+	UUID: 57DFD476-68DC-35E5-96DE-44873663A080
+File imports 2 libraries:
+	0: "@rpath/libclang_rt.ubsan_ios_dynamic.dylib"
+	1: "/usr/lib/libSystem.B.dylib"
+File has 22 load commands. Interesting commands:
+	Load 12 (LC_SOURCE_VERSION): 0.0.0.0.0
+	Load 14 (LC_ENCRYPTION_INFO_64): Offset: 0x4000, Size: 0x4000 (not-encrypted yet)
+Binary has 1 Code Directory:
+	CodeDirectory 0:
+		Ident: "hello-5555494457dfd47668dc35e596de44873663a080"
+		CD Hash: 121a2d02a79fc0775801940640040e3172c31b7bc5fc86996b073f193d535a56
+		Code slots: 21
+		Special slots: 7
+			Special Slot   7 0x7:	1fe6dfd705a29ce741aa9d1f083d275f8c843fed01a6f0eb371c5c2d966ff216
+			Special Slot   6 0x6:	Not Bound
+			Special Slot   5 Entitlements Blob:	db8a320ad812e9dee3de4a65003a06715e5aa64ef829b613138c875d60e0e746
+			Special Slot   4 Application Specific:	Not Bound
+			Special Slot   3 Resource Directory:	Not Bound
+			Special Slot   2 Requirements Blob:	987920904eab650e75788c054aa0b0524e6a80bfc71aa32df8d237a61743f986
+			Special Slot   1 Bound Info.plist:	Not Bound
+Binary has 1 requirement:
+	Requirement 0 (0x0): empty requirement set
+Binary has 10 boolean entitlements:
+	com.apple.private.cs.debugger: true
+	com.apple.private.memorystatus: true
+	com.apple.security.network.client: true
+	com.apple.security.network.server: true
+	com.apple.private.logging.diagnostic: true
+	com.apple.backboardd.debugapplications: true
+	com.apple.frontboard.debugapplications: true
+	com.apple.backboardd.launchapplications: true
+	com.apple.frontboard.launchapplications: true
+	com.apple.springboard.debugapplications: true
+Binary has 1 string array entitlement:
+	0 seatbelt-profiles: ["debugserver"]
+2022/02/27 12:08:45 Fin.
+```
+
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
