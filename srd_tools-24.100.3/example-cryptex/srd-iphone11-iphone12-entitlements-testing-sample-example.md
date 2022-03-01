@@ -414,7 +414,10 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 
 ## Testing iOS 15.4_19E5241a
 ```
-15.4_19E5241a Testing in Progress .. AMFI still looks to complain.....
-and...
-Updating to macOS 12.3 Beta 5
+15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12
+```
+
+### Suggestion
+```
+Do Not Install macOS 12.3 Beta 5
 ```
