@@ -1,5 +1,12 @@
 # CoreTrust | AMFI | Magic Number | Malformed Mach-o file | Cryptex
 
+### Error Sample
+```
+2022-03-01 11:37:10.295422-0500 0xf733c    Error       0x0                  49038  0    cryptexctl.research: [com.apple.libcryptex:mach-object] [anonymous]: fat file: 0xbebafeca: [79: Inappropriate file type or format]
+2022-03-01 11:37:10.308664-0500 0xf733c    Error       0x0                  49038  0    cryptexctl.research: [com.apple.libcryptex:mach-object] [anonymous]: fat file: 0xbebafeca: [79: Inappropriate file type or format]
+2022-03-01 11:37:10.310252-0500 0xf733c    Error       0x0                  49038  0    cryptexctl.research: [com.apple.libcryptex:mach-object] [anonymous]: fat file: 0xbebafeca: [79: Inappropriate file type or format]
+```
+
 ### Magic Number Samples
 ```
 hexdump -n 4 hello
