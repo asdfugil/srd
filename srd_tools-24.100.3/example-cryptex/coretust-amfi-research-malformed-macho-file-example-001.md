@@ -1,4 +1,42 @@
-### CoreTrust | AMFI | Magic Number | Malformed Mach-o file
+# CoreTrust | AMFI | Magic Number | Malformed Mach-o file | Cryptex
+
+### Magic Number Samples
+```
+hexdump -n 4 hello
+0000000 cf fa ed fe
+
+hexdump -n 4 cryptex-run
+0000000 cf fa ed fe
+
+hexdump -n 4 debugserver
+0000000 ca fe ba be
+
+hexdump -n 4 dropbear
+0000000 cf fa ed fe
+
+hexdump -n 4 frida-server
+0000000 cf fa ed fe
+
+hexdump -n 4 hello
+0000000 cf fa ed fe
+
+hexdump -n 4 nvram
+0000000 cf fa ed fe
+
+hexdump -n 4 simple-server
+0000000 cf fa ed fe
+
+hexdump -n 4 simple-shell
+0000000 cf fa ed fe
+
+hexdump -n 4 toybox
+0000000 cf fa ed fe
+
+hexdump -n 4 usr/lib/frida/frida-agent.dylib
+0000000 ca fe ba be
+```
+
+
 
 ```
 2022-03-01 11:49:37.356385-0500 0xfec8f    Debug       0x0                  65665  0    cryptexctl.research: [com.apple.libcryptex:hdi] mntfd fd[11]: type = S_IFDIR, size = 64, flags = <private>, path = <private>
