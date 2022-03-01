@@ -1,13 +1,12 @@
 # Welcome to Hoyt's SRD Repo
-FRI 25 FEB 2022 at 0900 US EST
+TUE 1 MAR 2022 at 1345 US EST
 ---
-This Repo provides Makefiles and Example DMG's for the Apple Security Research Device. There is the baseline Example DMG built from the Source Code in the Repo which is always _ahead_ of the Apple Repo. There are Example DMG's for the baseline cryptex, then for the Example ASAN & UBSAN Builds.  Total Installation less than 30 seconds. There are additional PoC's on the DMG's for use when Regression Testing. 
 
 # SRD DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
-This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49. Debugging Tools like Frida and debugserver need the correct Entitlements from Apple to work as expected and provide provable data. See URL https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md.
+
 
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
@@ -20,7 +19,6 @@ This SRD Example DMG Repo is __1 PR__ https://github.com/apple/security-research
 | Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
-** Build 'n Fiddle to make everything work. As noted throughout this Repo, Apple has an Entitlement Issue with CoreTrust | AMFI Research that is a work-in-progress. If AMFI complains about debugserver, or the SAN dylibs, just try again with make clean; make install. 
 
 ## Prerequisites 
 - Security Research Tools https://github.com/apple/security-research-device
