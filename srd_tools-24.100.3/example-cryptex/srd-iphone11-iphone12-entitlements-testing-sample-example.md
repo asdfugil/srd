@@ -420,3 +420,7 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ## SAT 26 FEB 2022 Spot Check - ubsan _not_ working iPhone 12
 
 <img src="https://xss.cx/2022/02/25/img/srd0037-ubsan-not_working-macos_1221_example-no-entitlements-sample-001.png" alt="Picture at Left showing the make and install process for debugserver with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
+
+## MON 28 FEB 2022 Spot Check - asan working iPhone 11
+
+<img src="https://xss.cx/2022/02/28/img/srd0009-applesecurityresearchdevice-debugserver-amfi-research-working-entitlement-example-001.png" alt="Picture at Left showing the make and install process for debugserver with Picture at Right showing the SRD iPhone 12 Console Log" style="height: 800px; width:1000px;"/>
