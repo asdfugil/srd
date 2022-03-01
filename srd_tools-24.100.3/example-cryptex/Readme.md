@@ -7,12 +7,12 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
-| PR 42  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
-| PR 48  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
-| PR 49  19E5235a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 42  19E5241a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 48  19E5241a T8101            | PASS          | PASS          | PASS          | PASS 
+| PR 49  19E5241a T8101            | PASS          | PASS          | PASS          | PASS 
 | Build macOS 12.3 21E5222a T8101  | PASS          | PASS          | PASS          | PASS 
-| Install to iPhone 11 21E5222a    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
+| Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
 
 ## Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
@@ -24,7 +24,7 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 - Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 ## Prerequisites
-- macOS 12.2.1 (21D62) or macOS 12.3 Beta (21E5206e)
+- macOS 12.2.1 (21D62) or macOS 12.3 Beta
 - Xcode Version 13.3 beta  
 - Security Research Tools https://github.com/apple/security-research-device
 - brew install gnu-sed automake
