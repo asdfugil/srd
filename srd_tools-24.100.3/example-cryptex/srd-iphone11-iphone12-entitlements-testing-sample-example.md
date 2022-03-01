@@ -14,7 +14,6 @@ There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 show
 | Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
 
 
-```
 ### AMFI Complaint
 ```
 default	17:58:05.812913-0500	MobileStorageMounter	cryptex mount point = <private>
