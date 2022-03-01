@@ -416,5 +416,5 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 15.4_19E5241a Testing in Progress .. AMFI still looks to complain.....
 and...
-Updating to macOS 12.3 Bata 4
+Updating to macOS 12.3 Beta 5
 ```
