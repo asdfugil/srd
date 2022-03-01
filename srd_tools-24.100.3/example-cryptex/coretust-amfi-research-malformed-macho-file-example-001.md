@@ -1,4 +1,4 @@
-# CoreTrust | AMFI | Magic Number | Malformed Mach-o file | Cryptex
+# macOS 12.3 Beta 5 | 21E5227a | CoreTrust | AMFI | Magic Number | Malformed Mach-o file | Cryptex
 
 ### Error Sample
 ```
