@@ -1,6 +1,9 @@
 #!/bin/sh
 echo "Running Clean, Build, Install for iPhone 11"
 export CRYPTEXCTL_UDID=00008030-001538D03C40012E
+#!/bin/sh
+echo "Running Clean, Build, Install for iPhone 12"
+export CRYPTEXCTL_UDID=00008101-001418DA3CC0013A
 echo "DMG Backup"
 backup_files="srd-universal-cryptex.dmg"
 dest="/Users/xss/security-research-device-main/example-cryptex/dmg-backup"
@@ -30,6 +33,9 @@ codesign --force -s - --entitlements src/toybox/entitlements.plist  src/toybox/t
 sudo cp src/toybox/toybox-src/generated/unstripped/toybox com.example.cryptex.dstroot/usr/bin
 codesign --force -s -  com.example.cryptex.dstroot/usr/bin/toybox
 codesign --force -s - --entitlements src/toybox/entitlements.plist com.example.cryptex.dstroot/usr/bin/toybox
+sudo purge
+echo "Codesign Ad Hoc"
+codesign --force -s -  com.example.cryptex.dstroot/usr/bin/toybox
 sudo purge
 echo "Delete the old DMG"
 rm srd-universal-cryptex.dmg
