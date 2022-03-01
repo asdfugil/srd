@@ -1,9 +1,6 @@
 #!/bin/sh
 echo "Running Clean, Build, Install for iPhone 11"
 export CRYPTEXCTL_UDID=00008030-001538D03C40012E
-#!/bin/sh
-echo "Running Clean, Build, Install for iPhone 12"
-export CRYPTEXCTL_UDID=00008101-001418DA3CC0013A
 echo "DMG Backup"
 backup_files="srd-universal-cryptex.dmg"
 dest="/Users/xss/security-research-device-main/example-cryptex/dmg-backup"
