@@ -1,10 +1,10 @@
-# SRD Example DMG Install with ASAN & UBSAN
+# SRD Example DMG Install
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
-FRI 25 FEB 2022 at 0900 US EST
+TUE 1 MAR 2022 at 1400 US EST
 ----
-Debugging Tools like Frida and debugserver need the correct Entitlements from Apple to work as expected and provide provable data.
+
 
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
