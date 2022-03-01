@@ -13,19 +13,7 @@ There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 show
 | Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
 
-### Malformed mach-o file type log sample
-At URL https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/coretust-amfi-research-malformed-macho-file-example-001.md
 
-Fiddle 'n Twiddle the Magic Bits
--------
-```
-hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
-0000000 cf fa ed fe
-```
-Next, change the magic bits, rebuild the DMG, Install the cryptex and watch your SRD Console Log, Search == cryptex
-```
-hexdump -n 4 /Users/xss/example-cryptex/com.example.cryptex.dstroot/usr/bin/hello
-0000000 ca fe ba be
 ```
 ### AMFI Complaint
 ```
