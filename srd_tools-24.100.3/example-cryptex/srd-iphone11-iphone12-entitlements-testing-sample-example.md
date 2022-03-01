@@ -14,6 +14,7 @@ There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 show
 | Install to iPhone 12 21E5222a    | PASS          | PASS          | PASS          | PASS 
 
 ### Entitlement Issues with CoreTrust | AMFI research
+Read more at URL https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/coretust-amfi-research-malformed-macho-file-example-001.md
 
 Fiddle 'n Twiddle the Magic Bits
 -------
