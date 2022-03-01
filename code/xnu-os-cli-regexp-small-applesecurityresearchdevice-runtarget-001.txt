@@ -25,53 +25,105 @@ Successfully loaded a new image4 v1 trust cache
 AMFI
 AMSupportPlatformCreateBufferFromNativeFilePath
 ASI found
+application-identifier
+keychain-access-groups
 aslr_offset
 ASSERT
 AppleMobileFileIntegrity_research
 Assert
 Attempting excessively
+Attempting to write jetsam report
 bad base
 BREAK
 BUG IN CLIENT
+copy_parent_certificates
 CFOpenDirectory
+Client has neither
 Cache
 Conflicting
+create_symbol_owner_data
 DATA
 Decode HEIC request
 Details:
+Device connection interrupted
+Error Domain
+entitlements
 EXC_
+EXC_RESOURCE
+EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR 
 Explicitly trapping into debugger
 Error while reading
+EXITED
+exited due to SIGBUS
+exited
+exceeded
+exited with exit reason
+Failed to convert signature from
+failed to warn
+Failed
+Fail
 File system sandbox blocked
+Formulating
+Formulating fatal
+Got xpc error message
 HEAP Stats
+Host connection
 IPConfiguration
 If this is expected behavior
 If you run under the debugger
+internal event: PETRIFIED, code = 0
 Invalid argument
+killing_specific_process
+killed by jetsam reason per-process-limit
 LOAD
+Log limit exceeded
 Library not loaded:
+memorystatus_on_ledger_footprint_exceeded
+memorystatus_available_pages
 Missing Description
+MissingIntermediate
 MIDeveloperDiskImageTracker
 Method
 NASM
+ncmhost
 NSThread
 No match
+numberOfErrorsDeep
 OS_REASON_DYLD
+OS_REASON_EXEC
+OS_REASON
 Object
+PETRIFIED
 Please file a bug for
 Please file a radar
 Please migrate to
 Please specify the bundleID
+process exited in a dirty state
 Reason
+removing service
+Report of type
 Report Crash
 ReportMemoryException
+result FAILED
+Sandbox
 SDK
 SOURCE_ATTACH
 SPAWNED
 Sandbox
+Sending response
 SecKeyVerifySignature failed
+service state
+service has crashed
+sensitive
+SIGTERM
+SIGTERMed
+SIGKILLed
+SIGBUS
 SystemCache
 TARGETED_DEVICE_FAMILY
+times in a row
+Trying to create CR directory structure as root
+The optional requiredEntitlements method was implemented, but no entitlements were provided.
 Unable to get short BSD proc info
 Unable to obtain
 Unable to obtain a task name port right for
@@ -80,6 +132,7 @@ Variant
 WILL_SPAWN
 Waiting for a client to connect
 Warning Denying process assertion
+XPC_ERROR_CONNECTION_INVALID
 [dyld] (sensitive)
 __opaque__
 appsandbox.cold
@@ -90,9 +143,11 @@ break
 bt all
 build
 bundleID is invalid
+Bundle info cannot be fetched
 but it had no actions
 but never started
 cached-account-with-identifier
+code signature validation failed
 com.apple.secinitd
 com.example.cryptex
 com.apple.security.cryptexd
@@ -106,6 +161,7 @@ disabled
 dstroot
 duplicate report for Sandbox:
 dyld
+elided platform fast path
 esr
 exception
 exited
@@ -113,6 +169,7 @@ exited with exit reason
 failed to assign builtin profile
 Failed to fetch
 Failed to resolve
+failed to
 failure
 far
 file
@@ -120,6 +177,7 @@ file-map-executable
 file-read-metadata
 for pid
 fp
+Hit the server for a process handle
 hook..execve()
 hfs
 IDENTITY_ATTRIBUTION
@@ -128,6 +186,7 @@ internal event
 Invalid argument
 is adhoc signed
 Is this a developer issue? Please file a radar...
+implicit endpoint
 kauth_membership_check
 kernel
 key
@@ -140,6 +199,7 @@ lr
 main_block_invoke
 mask.hash
 mach-lookup
+mach
 mmap()
 mount point
 namespace
@@ -164,12 +224,13 @@ SFP Assert
 sp
 stop reason
 subsystem
+Successfully loaded a new image4 v1 trust cache
 sweeping
 system-wide
 target-id
 task name
-The optional requiredEntitlements method was implemented, but no entitlements were provided.
 tss request
+uncorking domain
 unmount failed
 unrestricted anchor source
 unsuitable CT policy 0
