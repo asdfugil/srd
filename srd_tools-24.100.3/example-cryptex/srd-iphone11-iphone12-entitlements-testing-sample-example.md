@@ -379,6 +379,19 @@ PR42 should be Merged because is suffers from the same CT | AMFI Research Issues
 ### DATAPOINT WED 2 MAR 2022
 UBSAN working on iPhone 11 iOS 15.4_19E5241a with personalization from macOS 12.2.1 (21D62) X86_64
 ```
+./debugserver 192.168.3.83:1921 ./hello
+debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
+ for arm64.
+Listening to port 1921 for a connection from 192.168.3.83...
+Got a connection, launched process ./hello (pid = 821).
+Exiting.
+date
+Wed Mar  2 10:10:49 EST 2022
+uname -a
+Darwin SRD0009 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 22:46:43 PST 2022; root:xnu-8020.102.3~2/RELEASE_ARM64_T8030 iPhone12,1 Toybox
+```
+### SRD Console Log iPhone 11
+```
 default	10:01:26.111783-0500	debugserver	debugserver will use ASL for internal logging.
 default	10:01:26.111870-0500	debugserver	debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
  for arm64.
