@@ -418,3 +418,34 @@ default	10:05:17.871484-0500	debugserver	networkd_settings_read_from_file initia
 default	10:05:17.871836-0500	debugserver	networkd_settings_read_from_file initialized networkd settings by reading plist directly
 default	10:05:50.634277-0500	debugserver	[LaunchAttach] Successfully launched ./hello (pid = 821).
 ```
+
+### DATAPOINT WED 2 MAR 2022
+UBSAN working on iPhone 12 iOS 15.4_19E5241a with personalization from macOS 12.2.1 (21D62) X86_64
+```
+./debugserver 192.168.3.83:1921 ./hello
+debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
+ for arm64.
+Listening to port 1921 for a connection from 192.168.3.83...
+Got a connection, launched process ./hello (pid = 567).
+Exiting.
+date
+Wed Mar  2 10:13:34 EST 2022
+uname -a
+Darwin SRD0037 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 22:46:42 PST 2022; root:xnu-8020.102.3~2/RELEASE_ARM64_T8101 iPhone13,2 Toybox
+```
+
+### SRD Console Log
+```
+default	10:05:17.844341-0500	debugserver	[LaunchAttach] (820) Completed ptrace(PT_ATTACHEXC, 821) == 0
+default	10:05:17.871484-0500	debugserver	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	10:05:17.871836-0500	debugserver	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	10:05:50.634277-0500	debugserver	[LaunchAttach] Successfully launched ./hello (pid = 821).
+default	10:10:45.753757-0500	debugserver	Got a 'k' packet, killing the inferior process.
+default	10:10:45.753904-0500	debugserver	Sending ptrace PT_KILL to terminate inferior process pid 821.
+default	10:10:45.754116-0500	debugserver	1 +0.000000 sec [0334/0103]: error: ::ptrace (request = PT_THUPDATE, pid = 0x0335, tid = 0x2103, signal = 0) err = Resource busy (0x00000010)
+default	10:10:45.754523-0500	debugserver	2 +0.000474 sec [0334/0103]: error: ::task_resume ( target_task = 0x1603 ) err = (os/kern) failure (0x00000005)
+default	10:10:45.754950-0500	debugserver	Waited 0 ms for process to be reaped (state = Exited)
+default	10:10:45.755254-0500	debugserver	debugserver's process monitoring thread has exited.
+default	10:10:45.755379-0500	debugserver	debugserver about to shut down packet communications to lldb.
+default	10:10:45.755552-0500	debugserver	3 +0.001083 sec [0334/1807]: error: ::read ( 8, 0x16b386b18, 1024 ) => -1 err = Bad file descriptor (0x00000009)
+```
