@@ -1,6 +1,5 @@
 ## SRD PR42
-
-There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom. 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12, consider not Chasing the Latest macOS Beta.
+iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom. Consider not Chasing the Latest macOS Beta.
 
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
