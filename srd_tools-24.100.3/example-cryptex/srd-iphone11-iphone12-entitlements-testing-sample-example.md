@@ -375,3 +375,33 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 PR42 should be Merged because is suffers from the same CT | AMFI Research Issues in PR48 & PR49 which is that a binary in the SRD Trust Cache is adhoc signed, unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
+
+### DATAPOINT WED 2 MAR 2022
+UBSAN working on iPhone 11 iOS 15.4_19E5241a with personalization from macOS 12.2.1 (21D62) X86_64
+```
+default	10:01:26.111783-0500	debugserver	debugserver will use ASL for internal logging.
+default	10:01:26.111870-0500	debugserver	debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1316.2.4.16
+ for arm64.
+default	10:01:26.111913-0500	debugserver	Listening to port 2345 for a connection from 0.0.0.0...
+default	10:04:54.313806-0500	dropbear	Password auth succeeded for 'root' from 192.168.3.83:59300
+default	10:04:54.342422-0500	dropbear	CRYPTEX_SHELL specified. User shell is now '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.xEXHz4/usr/bin/sh'
+default	10:04:54.346293-0500	dropbear	Setting PATH to '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.xEXHz4/sbin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.xEXHz4/bin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.xEXHz4/usr/bin:/sbin:/bin:/usr/bin'
+default	10:04:54.349047-0500	dropbear	Starting shell: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.xEXHz4/usr/bin/sh'
+error	10:04:59.318826-0500	kernel	1 duplicate report for Sandbox: mobile_storage_p(281) deny(1) file-read-metadata /private/var/run/com.apple.security.cryptexd/codex.system/live/com.example.cryptex/cpxd
+default	10:05:17.714731-0500	debugserver	debugserver will use ASL for internal logging.
+default	10:05:17.720081-0500	debugserver	[LaunchAttach] (820) about to task_for_pid(821)
+default	10:05:17.720256-0500	debugserver	[LaunchAttach] (820) successfully task_for_pid(821)'ed
+default	10:05:17.722193-0500	debugserver	[LaunchAttach] (820) About to ptrace(PT_ATTACHEXC, 821)...
+default	10:05:17.722981-0500	debugserver	Initializing connection
+default	10:05:17.724328-0500	debugserver	Removing all cached process handles
+default	10:05:17.725372-0500	debugserver	Sending handshake request attempt #1 to server
+default	10:05:17.725578-0500	debugserver	Creating connection to com.apple.runningboard
+default	10:05:17.739305-0500	debugserver	Handshake succeeded
+default	10:05:17.739913-0500	debugserver	Identity resolved as anon<debugserver>
+default	10:05:17.743817-0500	debugserver	BKSApplicationStateMonitor updated with invalid process
+default	10:05:17.747795-0500	debugserver	BKSApplicationStateMonitor updated with invalid process
+default	10:05:17.844341-0500	debugserver	[LaunchAttach] (820) Completed ptrace(PT_ATTACHEXC, 821) == 0
+default	10:05:17.871484-0500	debugserver	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	10:05:17.871836-0500	debugserver	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	10:05:50.634277-0500	debugserver	[LaunchAttach] Successfully launched ./hello (pid = 821).
+```
