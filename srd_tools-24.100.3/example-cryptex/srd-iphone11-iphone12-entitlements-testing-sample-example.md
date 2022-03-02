@@ -1,5 +1,5 @@
 ## SRD PR42
-iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS shown at bottom. Consider not Chasing the Latest macOS Beta.
+iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS __shown at bottom__. _Consider not Chasing the Latest macOS Beta_.
 
 ## SRD Example DMG, PR 42,48,49 Build & Installation Status
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
@@ -12,7 +12,7 @@ iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12
 
 #### Comment
 ```
-macOS 12.2.1 (21D62) X86_64 is the preferred Host to avoid Chasing the Latest Beta
+macOS 12.2.1 (21D62) X86_64 is the preferred Host
 ```
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
