@@ -371,7 +371,7 @@ default	10:10:51.684818-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12
 ```
 
-### Suggestion
+## SUMMARY
 ```
-Do Not Install macOS 12.3 Beta 5
+PR42 should be Merged because is suffers from the same CT | AMFI Research Issues in PR48 & PR49 which is that a binary in the SRD Trust Cache is adhoc signed, unsuitable CT policy 0 for this platform/device, rejecting signature.
 ```
