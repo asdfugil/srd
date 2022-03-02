@@ -55,7 +55,7 @@ default	18:03:13.867125-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 ```
 #### Comment
 ```
-If you've gotten this far, you too probably realize this is a long-cycle problem for Resolution.
+macOS 12.2.1 (21D62) X86_64 is the preferred Host to avoid Chasing the Latest Beta
 ```
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
