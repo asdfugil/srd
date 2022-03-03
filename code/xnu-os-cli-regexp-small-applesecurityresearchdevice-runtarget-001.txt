@@ -18,6 +18,8 @@ internal event: PETRIFIED, code = 0
 Successfully loaded a new image4 v1 trust cache
 (os/kern)
 (os/kern) failure (0x5)
+/private/var/
+/private/var/root
 0.0.0.0
 17.
 ==> debugserver
@@ -25,223 +27,287 @@ Successfully loaded a new image4 v1 trust cache
 AMFI
 AMSupportPlatformCreateBufferFromNativeFilePath
 ASI found
-application-identifier
-keychain-access-groups
-aslr_offset
 ASSERT
+About to ptrace
+AppleImage4
 AppleMobileFileIntegrity_research
 Assert
 Attempting excessively
+Attempting to write dictionary
 Attempting to write jetsam report
-bad base
+BAD mmap base metadata
 BREAK
 BUG IN CLIENT
-copy_parent_certificates
+Bad file descriptor
+Bundle info cannot be fetched
 CFOpenDirectory
-Client has neither
+CMPOSIXUser
 Cache
+Client has neither
+Committing user settings
+Completed ptrace
 Conflicting
-create_symbol_owner_data
+Corpse released
+Could not find system user settings
+Could not read data from path
+Could not set F_SETSTATICCONTENT
+Created new POSIX user
+CFSM dynamic blacklist
+DARWIN
 DATA
+debugserver
 Decode HEIC request
 Details:
 Device connection interrupted
-Error Domain
-entitlements
 EXC_
+EXC_BAD_ACCESS
+EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR
 EXC_RESOURCE
-EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR 
-Explicitly trapping into debugger
-Error while reading
 EXITED
-exited due to SIGBUS
-exited
-exceeded
-exited with exit reason
-Failed to convert signature from
-failed to warn
-Failed
+Encountered an invalid header
+Error Domain
+Error while reading
+Explicitly trapping into debugger
 Fail
+Failed
+Failed to convert signature from
+Failed to fetch
+Failed to resolve
 File system sandbox blocked
 Formulating
 Formulating fatal
 Got xpc error message
 HEAP Stats
+Hit the server for a process handle
 Host connection
+IDENTITY_ATTRIBUTION
+IMG4
+IODeviceTree
 IPConfiguration
+ISP FD netorks remmapped surface
 If this is expected behavior
 If you run under the debugger
-internal event: PETRIFIED, code = 0
 Invalid argument
-killing_specific_process
-killed by jetsam reason per-process-limit
+Is this a developer issue? Please file a radar...
+JETSAM_REASON_MEMORY_PERPROCESSLIMIT
 LOAD
-Log limit exceeded
 Library not loaded:
-memorystatus_on_ledger_footprint_exceeded
-memorystatus_available_pages
-Missing Description
-MissingIntermediate
+Log limit exceeded
 MIDeveloperDiskImageTracker
 Method
+Missing Description
+MissingIntermediate
 NASM
-ncmhost
 NSThread
+NVRAM
+NVRAM variable
 No match
-numberOfErrorsDeep
+OS_REASON
 OS_REASON_DYLD
 OS_REASON_EXEC
-OS_REASON
 Object
 PETRIFIED
+PROGRAM:
+PROJECT:
+PT_ATTACHEXC
+Permanent update volume present
 Please file a bug for
 Please file a radar
 Please migrate to
 Please specify the bundleID
-process exited in a dirty state
 Reason
-removing service
-Report of type
+Refusing executable path
+Removing nag
 Report Crash
+Report of type
 ReportMemoryException
-result FAILED
-Sandbox
+ReportMemoryException client connection
+Runtime violation
 SDK
-SOURCE_ATTACH
-SPAWNED
-Sandbox
-Sending response
-SecKeyVerifySignature failed
-service state
-service has crashed
-sensitive
+SFP Assert
+SIGBUS
+SIGBUSKERN_MEMORY_ERROR
+SIGKILLed
 SIGTERM
 SIGTERMed
-SIGKILLed
-SIGBUS
+SOURCE_ATTACH
+SPAWNED
+SUBMITTING
+Sandbox
+SecKeyVerifySignature failed
+Secure area is not present
+Sending response
+StabilityCrash
+Starting OTACrashCopier
+Successfully loaded a new image4 v1 trust cache
 SystemCache
 TARGETED_DEVICE_FAMILY
-times in a row
-Trying to create CR directory structure as root
 The optional requiredEntitlements method was implemented, but no entitlements were provided.
+Trying to create CR directory structure as root
 Unable to get short BSD proc info
 Unable to obtain
 Unable to obtain a task name port right for
+Unable to resolve candidate path based on calling process entitlement
+Using fixed (injected) offsets
+VOC
+VREF
 ValidityPeriodMaximums
 Variant
 WILL_SPAWN
 Waiting for a client to connect
 Warning Denying process assertion
+We had an entry for
 XPC_ERROR_CONNECTION_INVALID
+Xcode
+[CoreSymbolication] (sensitive)
 [dyld] (sensitive)
 __opaque__
+_cryptex_bundle_find_cryptex_elm
+about to
+about to task_for_pid
+adhoc signed
+application-identifier
 appsandbox.cold
+aslr_offset
 asm
 assert
+bad base
+bad file
 bind
 break
 bt all
 build
 bundleID is invalid
-Bundle info cannot be fetched
 but it had no actions
 but never started
 cached-account-with-identifier
+caller not entitled
 code signature validation failed
+com.apple.private
+com.apple.private.security
 com.apple.secinitd
-com.example.cryptex
 com.apple.security.cryptexd
+com.example.cryptex
+complies with restrictions
+copy_parent_certificates
+create_symbol_owner_data
 cryptex mount point
 definition
 deny(1) file-map-executable
 deny(1) file-read-metadata
-denying executable
 denying
+denying executable
+descriptor
 disabled
 dstroot
 duplicate report for Sandbox:
 dyld
 elided platform fast path
+entitlements
 esr
+exceeded
+exceeded mem limit
 exception
 exited
+exited due to SIGBUS
 exited with exit reason
-failed to assign builtin profile
-Failed to fetch
-Failed to resolve
 failed to
+failed to assign builtin profile
+failed to find research
+failed to warn
 failure
+falling back on naive access() check
 far
 file
 file-map-executable
 file-read-metadata
 for pid
 fp
-Hit the server for a process handle
-hook..execve()
 hfs
-IDENTITY_ATTRIBUTION
+homeDirectoryURL
+hook..execve()
+img4
+implicit endpoint
+incomplete work
 input buffer bad size
 internal event
-Invalid argument
+internal event: PETRIFIED, code = 0
 is adhoc signed
-Is this a developer issue? Please file a radar...
-implicit endpoint
 kauth_membership_check
 kernel
 key
+keychain-access-groups
+killed by jetsam reason per-process-limit
 killing
+killing_specific_process
 launch your executable with the environment variable MALLOC_PERMIT_INSANE_REQUESTS set to any value to circumvent this check
 libsystem_malloc.dylib`free
 libsystem_secinit.dylib
 listen
 lr
+mach
+mach-lookup
 main_block_invoke
 mask.hash
-mach-lookup
-mach
+memorystatus_available_pages
+memorystatus_on_ledger_footprint_exceeded
 mmap()
+mmap buffer
+mmap failed
+mmap-ing base metadata
 mount point
 namespace
+ncmhost
 no match
 no-op
+numberOfErrorsDeep
 open failed
 os/kern
+passcode
 pc
 platform/device
 port right
+process exited in a dirty state
 rdar://
-Refusing executable path
 re re --all
+reading plist directly
 recording malloc
 rejecting signature
+removing service
 replacing non ev reject score
-Runtime violation
+resolves to factor pack set
+result FAILED
 sdk
-Secure area is not present
 send failed
-SFP Assert
+sensitive
+service has crashed
+service state
+servicePublished done
 sp
 stop reason
 subsystem
-Successfully loaded a new image4 v1 trust cache
+successfully task_for_pid
 sweeping
 system-wide
 target-id
 task name
+task_for_pid
+terminationReasonExceptionCode
+terminationReasonNamespace
+times in a row
 tss request
 uncorking domain
+uncorking exec source upfront
 unmount failed
 unrestricted anchor source
+unsuitable CT policy
 unsuitable CT policy 0
-Using fixed (injected) offsets
+updated with invalid process
 variant
-VREF
-VOC
 verification failed
-We had an entry for
 which is not a bundle
 will be removed in this release
+will use ASL
 x16
 x17
 x18
@@ -250,6 +316,5 @@ x26
 x27
 x28
 x8
-Xcode
 xpcproxy
 12345__2021-SRD-COHORT__67890
