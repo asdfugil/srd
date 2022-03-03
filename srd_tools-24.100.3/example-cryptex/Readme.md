@@ -176,7 +176,9 @@ OR
 cryptexctl -v4 -d4  install --variant=research --persist --print-info ./com.example.cryptex.cxbd.signed (21C39)
 ```
 ### Collect logs from the device. The -E is so we capture the CRYPTEXCTL_UDID env var.
+```
 sudo -E cryptexctl log collect
+```
 ### View the logs from the archive
 ```
 cryptexctl log show -- --archive ./system_logs.logarchive
