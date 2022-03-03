@@ -29,6 +29,7 @@ AMSupportPlatformCreateBufferFromNativeFilePath
 ASI found
 ASSERT
 About to ptrace
+Age verification state
 AppleImage4
 AppleMobileFileIntegrity_research
 Assert
@@ -37,25 +38,30 @@ Attempting to write dictionary
 Attempting to write jetsam report
 BAD mmap base metadata
 BREAK
+BSD Name
 BUG IN CLIENT
 Bad file descriptor
 Bundle info cannot be fetched
 CFOpenDirectory
+CFSM dynamic blacklist
 CMPOSIXUser
 Cache
 Client has neither
 Committing user settings
 Completed ptrace
+Compressor failed 
+Compressor failed a blocking pager_get
 Conflicting
 Corpse released
 Could not find system user settings
 Could not read data from path
 Could not set F_SETSTATICCONTENT
+Couldn't open parent path
 Created new POSIX user
-CFSM dynamic blacklist
 DARWIN
 DATA
-debugserver
+DTFetchSymbols
+Darwin Image4 Validator Version
 Decode HEIC request
 Details:
 Device connection interrupted
@@ -67,15 +73,19 @@ EXITED
 Encountered an invalid header
 Error Domain
 Error while reading
+Error while writing verifier file
 Explicitly trapping into debugger
 Fail
 Failed
 Failed to convert signature from
 Failed to fetch
 Failed to resolve
+Falling back to regular open()
+Fault hit memory shortage
 File system sandbox blocked
 Formulating
 Formulating fatal
+Full mode capture 0 0 d 0 t 1 f_f 0 f_r 0
 Got xpc error message
 HEAP Stats
 Hit the server for a process handle
@@ -90,6 +100,7 @@ If you run under the debugger
 Invalid argument
 Is this a developer issue? Please file a radar...
 JETSAM_REASON_MEMORY_PERPROCESSLIMIT
+Kernel Triage
 LOAD
 Library not loaded:
 Log limit exceeded
@@ -98,6 +109,7 @@ Method
 Missing Description
 MissingIntermediate
 NASM
+NBSM entry
 NSThread
 NVRAM
 NVRAM variable
@@ -163,6 +175,7 @@ Xcode
 [dyld] (sensitive)
 __opaque__
 _cryptex_bundle_find_cryptex_elm
+a blocking pager_get
 about to
 about to task_for_pid
 adhoc signed
@@ -192,6 +205,7 @@ complies with restrictions
 copy_parent_certificates
 create_symbol_owner_data
 cryptex mount point
+debugserver
 definition
 deny(1) file-map-executable
 deny(1) file-read-metadata
@@ -200,8 +214,11 @@ denying executable
 descriptor
 disabled
 dstroot
+due to failed file-read-data check
 duplicate report for Sandbox:
 dyld
+dyld_shared_cache_arm64e
+dyld_shared_cache_arm64e.symbols
 elided platform fast path
 entitlements
 esr
@@ -214,18 +231,22 @@ exited with exit reason
 failed to
 failed to assign builtin profile
 failed to find research
+failed to read nvram property
 failed to warn
+failed with resource shortage
 failure
 falling back on naive access() check
 far
 file
 file-map-executable
+file-read-data
 file-read-metadata
 for pid
 fp
 hfs
 homeDirectoryURL
 hook..execve()
+iBoot version
 img4
 implicit endpoint
 incomplete work
@@ -251,9 +272,9 @@ main_block_invoke
 mask.hash
 memorystatus_available_pages
 memorystatus_on_ledger_footprint_exceeded
-mmap()
 mmap buffer
 mmap failed
+mmap()
 mmap-ing base metadata
 mount point
 namespace
@@ -266,6 +287,8 @@ os/kern
 passcode
 pc
 platform/device
+pmap_enter 
+pmap_enter failed with resource shortage
 port right
 process exited in a dirty state
 rdar://
