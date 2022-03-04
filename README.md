@@ -25,6 +25,7 @@ TUE 1 MAR 2022 at 1640 US EST
 - Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
 - ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
 - UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
+- XNU-8019.41.5 Universal DMG https://xss.cx/srd/dmg/srd-universal-cryptex.xnu-8019.41.5.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 - IPSW & Cryptex Installations 
