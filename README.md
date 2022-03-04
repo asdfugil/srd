@@ -19,17 +19,28 @@ TUE 1 MAR 2022 at 1640 US EST
 
 ## Prerequisites 
 - Security Research Tools https://github.com/apple/security-research-device
-## Resources
+### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-7195.141.2 
+| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
+| -------------------------------- | ------------- | ------------- | ------------- | -------------
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| Build macOS 12.3 21E5227a T8101  | PASS          | FAIL          | FAIL          | FAIL 
+| Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
+
+## Prerequisites
+- Security Research Tools https://github.com/apple/security-research-device
+### Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
 - PR42: https://github.com/apple/security-research-device/pull/42
-- Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
-- ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
-- UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
+- XNU-7195.141.2 Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
+- XNU-7195.141.2 ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
+- XNU-7195.141.2 UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
 - XNU-8019.41.5 Universal DMG https://xss.cx/srd/dmg/srd-universal-cryptex.xnu-8019.41.5.dmg
 - XNU-8019.41.5 Universal ASAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-asan.xnu-8019.41.5.dmg
 - XNU-8019.41.5 Universal UBSAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-ubsan.xnu-8019.41.5.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
+- Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 - IPSW & Cryptex Installations 
     -  Build Info, Issue Tracker
     -  Summary & Workarounds 
