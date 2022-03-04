@@ -79,6 +79,7 @@ XNU Export
 ---
 ```
 export XNU_VERSION=xnu-7195.141.2
+export XNU_VERSION=xnu-8019.41.5
 ```
 # Hosts
 X86_64
