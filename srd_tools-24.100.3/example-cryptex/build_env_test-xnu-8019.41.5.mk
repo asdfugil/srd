@@ -79,9 +79,6 @@ ${LOCAL_INCLUDE_DIR}/IOKit/%.h: ${MACOS_SDK_PATH}/System/Library/Frameworks/IOKi
 # export XNU_VERSION=xnu-6153.81.5
 # export XNU_VERSION=xnu-7195.141.2
 #
-# TEST for export XNU_VERSION=xnu-8019.41.5 which needs Makefile Changes to fix
-# make[1]: *** No rule to make target `/Users/xss/iphone11/sdk-graft/downloads/xnu-8019.41.5/iokit/IOKit/IOKitKeysPrivate.h'
-#
 
 export XNU_VERSION=xnu-8019.41.5
 
@@ -89,12 +86,15 @@ export XNU_VERSION=xnu-8019.41.5
 gather-xnu-headers: ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}
 
 ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}: ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz
-	cd ${SDK_GRAFT_DOWNLOADS} && tar -xf ${XNU_VERSION}.tar.gz
+#	cd ${SDK_GRAFT_DOWNLOADS} && tar -xf ${XNU_VERSION}.tar.gz
+# Do this manually, works fine
+
 
 ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz:
 	@$(log_download)
-	mkdir -p ${SDK_GRAFT_DOWNLOADS}
-	curl -sSL -o ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz https://opensource.apple.com/tarballs/xnu/${XNU_VERSION}.tar.gz
+#	mkdir -p ${SDK_GRAFT_DOWNLOADS}
+#	curl -sSL -o ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz https://opensource.apple.com/tarballs/xnu/${XNU_VERSION}.tar.gz
+# DO THIS MANUALLY - Works fine
 
 sdk-graft-clean:
 	rm -rf ${SDK_GRAFT_DIR}
