@@ -1,5 +1,5 @@
 # Welcome to Hoyt's SRD Repo
-TUE 1 MAR 2022 at 1640 US EST
+FRI 4 MAR 2022 at 1140 US EST
 ---
 
 # SRD DMG Install
