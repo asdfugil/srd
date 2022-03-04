@@ -2,7 +2,7 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
-TUE 1 MAR 2022 at 1400 US EST
+FRI 4 MAR 2022 at 1200 US EST
 ----
 
 
