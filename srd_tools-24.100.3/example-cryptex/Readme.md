@@ -17,6 +17,9 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 - Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
 - ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
 - UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
+- XNU-8019.41.5 Universal DMG https://xss.cx/srd/dmg/srd-universal-cryptex.xnu-8019.41.5.dmg
+- XNU-8019.41.5 Universal ASAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-asan.xnu-8019.41.5.dmg
+- XNU-8019.41.5 Universal UBSAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-ubsan.xnu-8019.41.5.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 - Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
