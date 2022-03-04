@@ -1,3 +1,8 @@
+# This ugly hack is to make xnu-8019.41.5 work for building the SRD Universal DMG.
+# Download the Source for https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-8019.41.5.tar.gz
+# Setup the sdk-graft/include by hand; I'll be updating the Repo to make all this work automagically with updated build and make files
+# There are 3 directories and 24 files in xnu-8019.41.5 that we need to make the DMG, simple, easy and no magic
+#
 # Set up all the variables we need to compile command line iOS applications
 export PROJECT_PATH ?= $(dir $(realpath $(firstword ${MAKEFILE_LIST})))
 
@@ -94,7 +99,10 @@ ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz:
 	@$(log_download)
 #	mkdir -p ${SDK_GRAFT_DOWNLOADS}
 #	curl -sSL -o ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz https://opensource.apple.com/tarballs/xnu/${XNU_VERSION}.tar.gz
-# DO THIS MANUALLY - Works fine
+# DO THIS MANUALLY - Works fine 
+# Get https://github.com/apple-oss-distributions/xnu/archive/refs/tags/xnu-8019.41.5.tar.gz
+# create the sdk-graft/include manually for now.. push ugly hack Makefile later
 
 sdk-graft-clean:
-	rm -rf ${SDK_GRAFT_DIR}
+# don't rm you graft, keep this, xnu-8019.41.5
+#	rm -rf ${SDK_GRAFT_DIR}
