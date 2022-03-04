@@ -3,7 +3,7 @@ WED 23 FEB 2022 at 1515 US EST
 ---
 This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex and _includes_ PR https://github.com/apple/security-research-device/pull/48 and PR https://github.com/apple/security-research-device/pull/49. Debugging Tools like Frida and debugserver need the correct Entitlements from Apple to work as expected and provide provable data.
 
-## SRD Example DMG, PR 42,48,49 Build & Installation Status
+### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-7195.141.2 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
@@ -11,18 +11,21 @@ This SRT 24.100.3 Example DMG Repo is __1 PR__ https://github.com/apple/security
 | Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
 
-## Resources
+## Prerequisites
+- Security Research Tools https://github.com/apple/security-research-device
+### Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
 - PR42: https://github.com/apple/security-research-device/pull/42
-- Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
-- ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
-- UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
+- XNU-7195.141.2 Universal DMG: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
+- XNU-7195.141.2 ASAN Beta DMG: https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
+- XNU-7195.141.2 UBSAN Beta DMG: https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
 - XNU-8019.41.5 Universal DMG https://xss.cx/srd/dmg/srd-universal-cryptex.xnu-8019.41.5.dmg
 - XNU-8019.41.5 Universal ASAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-asan.xnu-8019.41.5.dmg
 - XNU-8019.41.5 Universal UBSAN DMG https://xss.cx/srd/dmg/srd-universal-cryptex-ubsan.xnu-8019.41.5.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 - Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
+
 ## Prerequisites
 - macOS 12.2.1 (21D62)
 - Xcode Version 13.3 beta  
