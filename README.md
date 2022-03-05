@@ -1,6 +1,13 @@
 # Welcome to Hoyt's SRD Repo
 FRI 4 MAR 2022 at 2000 US EST
 ---
+
+## SRD DMG Install
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
+```
+SUMMARY
+----
 This Repo is __ahead__ of the Apple Repo and provides a greater level of detail to understand the Entitlement Issues. IF you've got an SRD and are using iOS 15, pair with XNU-8019.41.5, not XNU-7195.141.2 or lesser Version as Coded into the default Makefiles for iOS14. 
 
 PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
@@ -22,10 +29,6 @@ PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve 
 - Opened: Apple Feedback Case ID FB9903967 | file system sandbox blocked
 - Opened: Apple Feedback Case ID FB9904294: Springboard, runningboardd: Unable to obtain a task name port right: (os/kern) failure (0x5), prior Report of FB9643887 
 
-# SRD DMG Install
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
-```
 
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-7195.141.2 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
