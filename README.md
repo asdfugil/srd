@@ -13,8 +13,8 @@ This Repo is __ahead__ of the Apple Repo and provides a greater level of detail 
 PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
 
 ### Prior Fixes
-- https://github.com/apple/security-research-device/pull/48
-- https://github.com/apple/security-research-device/pull/49
+- https://github.com/apple/security-research-device/pull/48 - debugserver: unsuitable CT policy
+- https://github.com/apple/security-research-device/pull/49 - debugserver: unsuitable CT policy
 - FB9643887 15.1_19B5042h SpringBoard Unable to obtain a task name port right for pid xxx: (os/kern) failure (0x5)
 
 ### Knowledgebase
