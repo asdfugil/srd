@@ -1,10 +1,6 @@
 # Welcome to Hoyt's SRD Repo
 FRI 4 MAR 2022 at 2000 US EST
 ---
-** Resolved the Install Script Issue by dumping CDN at FRI 4 MAR 2022 at 2021 US Eastern
-```
---2022-03-04 20:18:19--  https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
-```
 
 ## SRD DMG Install
 ```
