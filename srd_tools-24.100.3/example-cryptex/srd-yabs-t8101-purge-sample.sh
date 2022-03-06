@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "SRD yet another build script srd-yabs.... "  
 echo "targets the t8101 bugs making purge the most speculative path..., but helpful on X86_64 too.... "
-echo "Starting the default Build for the ./example-cryptex build ...."
+echo "Starting the default DMG Install for the ./example-cryptex build ...."
 sudo purge
 cryptexctl uninstall com.example.cryptex
 sudo purge
@@ -17,7 +17,7 @@ cryptexctl install --variant=research --persist com.example.cryptex.cxbd.signed
 sudo purge
 cryptexctl list
 sudo purge
-echo "finished the ./example-cryptex build, moving to ASAN...."
+echo "finished the example DMG install, moving to ASAN DMG...."
 sudo purge
 sleep 1
 cryptexctl uninstall com.example.cryptex
@@ -46,7 +46,7 @@ sleep 1
 cryptexctl list
 sleep 1
 sudo purge
-echo "finished the ASAN ./example-cryptex build, moving to UBSAN...."
+echo "finished the ASAN ./example-cryptex DMG, moving to UBSAN DMG...."
 sudo purge
 sleep 1
 cryptexctl uninstall com.example.cryptex
