@@ -1,5 +1,5 @@
 # Welcome to Hoyt's SRD Repo
-FRI 4 MAR 2022 at 2000 US EST
+MON 7 MAR 2022 at 1000 US EST
 ---
 
 ## SRD DMG Install
@@ -12,7 +12,7 @@ SUMMARY
 - This Repo provides a greater level of detail to understand the Entitlement Issues
 - This Repo corrects older Documentation used for Monterey and iOS 14
 - This Repo updates the XNU and other Settings for iOS 15
-- aka PR42 https://github.com/apple/security-research-device/pull/42 
+- This Repo aka PR42 https://github.com/apple/security-research-device/pull/42 
 
 PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
 
@@ -35,6 +35,14 @@ PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve 
 
 
 ### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-7195.141.2 
+| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
+| -------------------------------- | ------------- | ------------- | ------------- | -------------
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| Build macOS 12.3 21E5227a T8101  | PASS          | FAIL          | FAIL          | FAIL 
+| Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
+
+### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
