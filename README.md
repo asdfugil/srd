@@ -11,7 +11,8 @@ SUMMARY
 - This Repo is __ahead__ of the Apple Repo 
 - This Repo provides a greater level of detail to understand the Entitlement Issues
 - This Repo corrects older Documentation used for Monterey and iOS 14
-- This Repo correctly changes the XNU and other Settings for iOS 15 
+- This Repo updates the XNU and other Settings for iOS 15
+- aka PR42 https://github.com/apple/security-research-device/pull/42 
 
 PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
 
