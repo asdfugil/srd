@@ -8,7 +8,9 @@ FRI 4 MAR 2022 at 2000 US EST
 ```
 SUMMARY
 ----
-This Repo is __ahead__ of the Apple Repo and provides a greater level of detail to understand the Entitlement Issues. IF you've got an SRD and are using iOS 15, pair with XNU-8019.41.5, not XNU-7195.141.2 or lesser Version as Coded into the default Makefiles for iOS14. 
+This Repo is __ahead__ of the Apple Repo and provides a greater level of detail to understand the Entitlement Issues, corrects older Documentation used for Monterey and iOS 14 and correctly changes the XNU and other Settings for iOS 15. 
+
+- IF you've got an SRD and are using iOS 15, pair with XNU-8019.41.5, not XNU-7195.141.2 or lesser Version as Coded into the default Makefiles for iOS14. 
 
 PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
 
