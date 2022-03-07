@@ -1,7 +1,15 @@
 ## SRD PR42
 iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS __shown at bottom__. _Consider not Chasing the Latest macOS Beta_.
 
-## SRD Example DMG, PR 42,48,49 Build & Installation Status
+### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-7195.141.2 
+| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
+| -------------------------------- | ------------- | ------------- | ------------- | -------------
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| Build macOS 12.3 21E5227a T8101  | PASS          | FAIL          | FAIL          | FAIL 
+| Install to iPhone 11 19E5241a    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E5241a    | PASS          | PASS          | PASS          | PASS 
+
+### SRD Example DMG, PR 42,48,49 Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
