@@ -4,7 +4,7 @@ iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12
 ### SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (19E241) X86_64      | PASS          | PASS          | PASS          | PASS          
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
 | Build macOS 12.3 (21E230) T8101  | PASS          | FAIL          | FAIL          | FAIL 
 | Install to iPhone 11 19E241    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E241    | PASS          | PASS          | PASS          | PASS 
