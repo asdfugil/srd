@@ -16,12 +16,12 @@ hexdump -n 4 com.example.cryptex.dstroot/usr/bin/debugserver >> srd-cryptex-file
 otool -L  com.example.cryptex.dstroot/usr/bin/debugserver >> srd-cryptex-file-attribute-collector.log 2>&1
 xcrun dyldinfo -rebase -bind  com.example.cryptex.dstroot/usr/bin/debugserver >> srd-cryptex-file-attribute-collector.log 2>&1
 machodump -i com.example.cryptex.dstroot/usr/bin/debugserver >> srd-cryptex-file-attribute-collector.log 2>&1
-codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/frida >> srd-cryptex-file-attribute-collector.log 2>&1
-codesign -dvvv /Users/xss/example-cryptex/src/frida >> srd-cryptex-file-attribute-collector.log 2>&1
-hexdump -n 4 com.example.cryptex.dstroot/usr/bin/frida >> srd-cryptex-file-attribute-collector.log 2>&1
-otool -L  com.example.cryptex.dstroot/usr/bin/frida >> srd-cryptex-file-attribute-collector.log 2>&1
-xcrun dyldinfo -rebase -bind  com.example.cryptex.dstroot/usr/bin/frida >> srd-cryptex-file-attribute-collector.log 2>&1
-machodump -i com.example.cryptex.dstroot/usr/bin/frida >> srd-cryptex-file-attribute-collector.log 2>&1
+codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
+codesign -dvvv /Users/xss/example-cryptex/src/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
+hexdump -n 4 com.example.cryptex.dstroot/usr/bin/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
+otool -L  com.example.cryptex.dstroot/usr/bin/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
+xcrun dyldinfo -rebase -bind  com.example.cryptex.dstroot/usr/bin/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
+machodump -i com.example.cryptex.dstroot/usr/bin/frida-server >> srd-cryptex-file-attribute-collector.log 2>&1
 codesign --display --entitlements - --xml com.example.cryptex.dstroot/usr/bin/nvram >> srd-cryptex-file-attribute-collector.log 2>&1
 codesign -dvvv /Users/xss/example-cryptex/src/nvram >> srd-cryptex-file-attribute-collector.log 2>&1
 hexdump -n 4 com.example.cryptex.dstroot/usr/bin/nvram >> srd-cryptex-file-attribute-collector.log 2>&1
