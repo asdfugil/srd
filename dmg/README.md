@@ -11,8 +11,6 @@
 | Install to iPhone 11 19E241    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E241    | PASS          | PASS          | PASS          | PASS 
 
-** Note that personalizing a Cryptex with Xcode Version 13.3 RC results in AMFI: rejecting signature
-
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
 ### Resources
