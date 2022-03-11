@@ -1,7 +1,7 @@
 ## SRD PR42
 iOS 15.4_19E5241a looks fine from macOS 12.2.1 (21D62) for iPhone 11 & iPhone 12. There are multiple Versions of macOS and iOS Tested using M1 T8101 & X86_64 shown below, the most recent iOS and macOS __shown at bottom__. _Consider not Chasing the Latest macOS RC_.
 
-** Note that personalizing a Cryptex with macOS 12.3 (21E230) on M1 T8101 with Xcode Version 13.3 RC results in AMFI: rejecting signature
+** ** Note that personalizing a Cryptex with Xcode Version 13.3 RC results in AMFI: rejecting signature
 
 ### SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
