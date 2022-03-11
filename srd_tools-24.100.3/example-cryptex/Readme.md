@@ -20,8 +20,8 @@ This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple
 - Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 
 ## Prerequisites
-- macOS 12.2.1 (21D62)
-- Xcode Version 13.3 RC  
+- macOS 12.2.1 (21D62) X86_64 or M1 T8101 macOS 12.3 (21E230)
+- Xcode Version 13.3 (13E113)
 - Security Research Tools https://github.com/apple/security-research-device
 - brew install gnu-sed automake
 # SRD Source Build example-cryptex with toybox unstripped
