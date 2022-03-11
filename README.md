@@ -15,8 +15,6 @@ SUMMARY
 - This Repo updates the XNU and other Settings for iOS 15
 - This Repo aka PR42 https://github.com/apple/security-research-device/pull/42 
 
-PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve the Issue for Debugging Entitlements.
-
 ### Prior Fixes
 - https://github.com/apple/security-research-device/pull/48 - debugserver: unsuitable CT policy
 - https://github.com/apple/security-research-device/pull/49 - debugserver: unsuitable CT policy
@@ -49,7 +47,7 @@ PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve 
 - DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
-- Build  Entitlements Issues for PR 42, 48, 49 https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
+
 - IPSW & Cryptex Installations 
     -  Build Info, Issue Tracker
     -  Summary & Workarounds 
