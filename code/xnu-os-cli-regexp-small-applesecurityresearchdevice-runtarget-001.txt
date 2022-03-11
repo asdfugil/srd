@@ -14,6 +14,8 @@ strncpy_s:
 trace:
 sensor:
 radr:
+kernel: 
+(AppleMobileFileIntegrity_research) Invalid denylist
 internal event: PETRIFIED, code = 0
 Successfully loaded a new image4 v1 trust cache
 (os/kern)
