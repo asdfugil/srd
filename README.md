@@ -1,5 +1,5 @@
 # Welcome to Hoyt's SRD Repo
-FRI 11 MAR 2022 at 0900 US EST
+FRI 11 MAR 2022 at 1700 US EST
 ---
 Note that personalizing a Cryptex from M1 T8101 with macOS 12.3 + Xcode Version 13.3 RC appears to want SIP _enabled_.
 
@@ -38,7 +38,7 @@ PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
 | macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
-| Build macOS 12.3 (21E230) T8101  | PASS          | FAIL          | FAIL          | FAIL 
+| Build macOS 12.3 (21E230) T8101  | PASS          | PASS          | PASS          | PASS 
 | Install to iPhone 11 19E241    | PASS          | PASS          | PASS          | PASS
 | Install to iPhone 12 19E241    | PASS          | PASS          | PASS          | PASS 
 
