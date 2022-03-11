@@ -92,9 +92,9 @@ machdep.cpu.brand_string: Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz
 ```
 ```
 clang -v
-Apple clang version 13.1.6 (clang-1316.0.20.6)
+Apple clang version 13.1.6 (clang-1316.0.21.2)
 Target: x86_64-apple-darwin21.3.0
-InstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 ```
 M1 Apple Silicon
 ---
