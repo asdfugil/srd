@@ -1,6 +1,7 @@
 # Welcome to Hoyt's SRD Repo
-WED 9 MAR 2022 at 1735 US EST
+FRI 11 MAR 2022 at 0900 US EST
 ---
+** Note that personalizing a Cryptex with Xcode Version 13.3 RC results in AMFI: rejecting signature
 
 ## SRD DMG Install
 ```
