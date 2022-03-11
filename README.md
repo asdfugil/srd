@@ -1,7 +1,6 @@
 # Welcome to Hoyt's SRD Repo
 FRI 11 MAR 2022 at 1700 US EST
 ---
-Note that personalizing a Cryptex from M1 T8101 with macOS 12.3 + Xcode Version 13.3 RC appears to want SIP _enabled_.
 
 ## SRD DMG Install
 ```
