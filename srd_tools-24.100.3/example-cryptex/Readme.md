@@ -21,7 +21,7 @@ This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple
 
 ## Prerequisites
 - macOS 12.2.1 (21D62)
-- Xcode Version 13.3 beta  
+- Xcode Version 13.3 RC  
 - Security Research Tools https://github.com/apple/security-research-device
 - brew install gnu-sed automake
 # SRD Source Build example-cryptex with toybox unstripped
