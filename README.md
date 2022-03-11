@@ -92,12 +92,11 @@ The above means that from X86_64 and/or M1 ARM the SRD IPSW has been installed w
 
 Makefile
 -----
-21C39 https://github.com/xsscx/srd/blob/main/SecurityResearchTools_21C39/example-cryptex/Makefile
+Hoyt's Makefile https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/Makefile
 
 XNU Export
 ---
 ```
-export XNU_VERSION=xnu-7195.141.2
 export XNU_VERSION=xnu-8019.41.5
 ```
 # Hosts
