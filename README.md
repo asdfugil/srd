@@ -31,8 +31,8 @@ PR42 is Closed, and Apple Feedback Case ID FB9903967 has been Opened to Resolve 
 - https://github.com/apple/security-research-device/issues/48
 - https://github.com/apple/security-research-device/issues/49
 - https://github.com/apple/security-research-device/issues/50
-- Opened: Apple Feedback Case ID FB9903967 | file system sandbox blocked
-- Opened: Apple Feedback Case ID FB9904294: Springboard, runningboardd: Unable to obtain a task name port right: (os/kern) failure (0x5), prior Report of FB9643887 
+- Apple Feedback Case ID FB9903967 | file system sandbox blocked
+- Apple Feedback Case ID FB9904294: Springboard, runningboardd: Unable to obtain a task name port right: (os/kern) failure (0x5), prior Report of FB9643887 
 
 ### SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
