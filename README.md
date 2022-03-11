@@ -1,7 +1,7 @@
 # Welcome to Hoyt's SRD Repo
 FRI 11 MAR 2022 at 0900 US EST
 ---
-** Note that personalizing a Cryptex with Xcode Version 13.3 RC results in AMFI: rejecting signature
+** Note that personalizing a Cryptex from M1 T8101 with macOS 12.3 + Xcode Version 13.3 RC results in AMFI: rejecting signature
 
 ## SRD DMG Install
 ```
