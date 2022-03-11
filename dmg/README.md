@@ -539,8 +539,6 @@ ofile=~/${1:-ipc.raw}
 ps -Ac | sed 's,\s*\([0-9][0-9]*\) .*[0-9]*:[0-9]*\.[0-9]* \(.*\), 00000000.0  0.0(0.0)  proc_exec  \1 0 0 0 0 0  \2,' > "${ofile}.txt"
 
 ```
-## SRD PR 42, 48, 49 when using iOS 15.4_19E5225g | Drilling Down on Entitlement Issues 
-https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/srd-iphone11-iphone12-entitlements-testing-sample-example.md
 
 When using a regexp to find Console Log Messages, these Files may be helpful:
 - https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
