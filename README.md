@@ -15,23 +15,6 @@ SUMMARY
 - This Repo updates the XNU and other Settings for iOS 15
 - This Repo aka PR42 https://github.com/apple/security-research-device/pull/42 
 
-### Prior Fixes
-- https://github.com/apple/security-research-device/pull/48 - debugserver: unsuitable CT policy
-- https://github.com/apple/security-research-device/pull/49 - debugserver: unsuitable CT policy
-- FB9643887 15.1_19B5042h SpringBoard Unable to obtain a task name port right for pid xxx: (os/kern) failure (0x5)
-
-### Knowledgebase
-- https://github.com/apple/security-research-device/issues/27
-- https://github.com/apple/security-research-device/issues/43
-- https://github.com/apple/security-research-device/issues/44
-- https://github.com/apple/security-research-device/issues/46
-- https://github.com/apple/security-research-device/issues/47
-- https://github.com/apple/security-research-device/issues/48
-- https://github.com/apple/security-research-device/issues/49
-- https://github.com/apple/security-research-device/issues/50
-- Apple Feedback Case ID FB9903967 | file system sandbox blocked
-- Apple Feedback Case ID FB9904294: Springboard, runningboardd: Unable to obtain a task name port right: (os/kern) failure (0x5), prior Report of FB9643887 
-
 ### SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
 | -------------------------------- | ------------- | ------------- | ------------- | -------------
@@ -42,6 +25,7 @@ SUMMARY
 
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
+
 ### Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
 - DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
