@@ -16,8 +16,10 @@ October 25, 2021: In iOS 15.1 Apple added a new entitlement called research.com.
 In Progress Testing as of SAT 12 MAR 2022 for iPhone 11 SRD
 ------
 ```
-s3_5_c15_c10_1      : 0x0000000000000000
-s3_6_c15_c1_6       : 0x2020000030200000
+Flipped Register s3_5_c15_c10_1 bit 00
+Flipped Register s3_5_c15_c10_1 bit 01
+Read Register s3_6_c15_c1_6 
+Read Register s3_6_c15_c1_5
 ```
 
 In Progress Testing as of SAT 12 MAR 2022 for iPhone 12 SRD
