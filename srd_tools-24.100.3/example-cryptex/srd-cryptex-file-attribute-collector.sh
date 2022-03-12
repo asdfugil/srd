@@ -68,7 +68,7 @@ nm -a com.example.cryptex.dstroot/usr/bin/dropbear >> srd-cryptex-file-nm-collec
 echo "==========================================" >> srd-cryptex-file-nm-collector.log 2>&1
 echo "frida" >> srd-cryptex-file-nm-collector.log 2>&1
 echo "==========================================" >> srd-cryptex-file-nm-collector.log 2>&1
-nm -a com.example.cryptex.dstroot/usr/bin/frida	>> srd-cryptex-file-nm-collector.log 2>&1
+nm -a com.example.cryptex.dstroot/usr/bin/frida-server	>> srd-cryptex-file-nm-collector.log 2>&1
 echo "==========================================" >> srd-cryptex-file-nm-collector.log 2>&1
 echo "hello" >> srd-cryptex-file-nm-collector.log 2>&1
 echo "==========================================" >> srd-cryptex-file-nm-collector.log 2>&1
