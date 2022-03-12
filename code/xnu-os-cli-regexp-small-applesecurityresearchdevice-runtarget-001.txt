@@ -30,14 +30,30 @@ AMFI
 AMSupportPlatformCreateBufferFromNativeFilePath
 ASI found
 ASSERT
+(os/kern)
+(os/kern) failure (0x5)
+/private/var/
+/private/var/root
+0.0.0.0
+17.
+==> debugserver
+@rpath
+AMFI
+(AppleMobileFileIntegrity_research) Invalid denylist
+AMSupportPlatformCreateBufferFromNativeFilePath
+ASI found
+ASSERT
 About to ptrace
 Age verification state
+apply-protobox
 AppleImage4
 AppleMobileFileIntegrity_research
 Assert
 Attempting excessively
 Attempting to write dictionary
 Attempting to write jetsam report
+because inefficient
+because incomplete work
 BAD mmap base metadata
 BREAK
 BSD Name
@@ -54,6 +70,7 @@ Completed ptrace
 Compressor failed 
 Compressor failed a blocking pager_get
 Conflicting
+Corpse allowed
 Corpse released
 Could not find system user settings
 Could not read data from path
@@ -72,11 +89,15 @@ EXC_BAD_ACCESS
 EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR
 EXC_RESOURCE
 EXITED
+exited due to
+exited with exit reason
 Encountered an invalid header
 Error Domain
 Error while reading
 Error while writing verifier file
+exceeded mem limit
 Explicitly trapping into debugger
+fatal
 Fail
 Failed
 Failed to convert signature from
@@ -95,14 +116,19 @@ Host connection
 IDENTITY_ATTRIBUTION
 IMG4
 IODeviceTree
+InactiveHard
 IPConfiguration
 ISP FD netorks remmapped surface
 If this is expected behavior
 If you run under the debugger
+Invalid
 Invalid argument
+Invalid denylist
 Is this a developer issue? Please file a radar...
 JETSAM_REASON_MEMORY_PERPROCESSLIMIT
+kernel: (AppleMobileFileIntegrity_research) Invalid denylist
 Kernel Triage
+kernel(Sandbox)
 LOAD
 Library not loaded:
 Log limit exceeded
@@ -137,6 +163,7 @@ Report of type
 ReportMemoryException
 ReportMemoryException client connection
 Runtime violation
+Sandbox
 SDK
 SFP Assert
 SIGBUS
@@ -207,6 +234,7 @@ complies with restrictions
 copy_parent_certificates
 create_symbol_owner_data
 cryptex mount point
+Client has neither
 debugserver
 definition
 deny(1) file-map-executable
@@ -235,6 +263,7 @@ failed to assign builtin profile
 failed to find research
 failed to read nvram property
 failed to warn
+failed to warn the current task
 failed with resource shortage
 failure
 falling back on naive access() check
@@ -283,6 +312,7 @@ namespace
 ncmhost
 no match
 no-op
+NonEmptySubject
 numberOfErrorsDeep
 open failed
 os/kern
@@ -308,7 +338,9 @@ sensitive
 service has crashed
 service state
 servicePublished done
+signaled service
 sp
+spawn_xpc_service_block_invoke
 stop reason
 subsystem
 successfully task_for_pid
@@ -317,6 +349,7 @@ system-wide
 target-id
 task name
 task_for_pid
+Terminated
 terminationReasonExceptionCode
 terminationReasonNamespace
 times in a row
