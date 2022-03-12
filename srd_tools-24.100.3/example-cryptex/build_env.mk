@@ -1,8 +1,8 @@
 # Set up all the variables we need to compile command line iOS applications
 export PROJECT_PATH ?= $(dir $(realpath $(firstword ${MAKEFILE_LIST})))
 
-export TOOLCHAIN ?= iOS15.0
-export MACOS_TOOLCHAIN ?= MacOSX12.0
+export TOOLCHAIN ?= iOS14.0
+export MACOS_TOOLCHAIN ?= MacOSX11.0
 
 export ARCH:=arm64e
 export SDK:=iphoneos
@@ -76,19 +76,21 @@ ${LOCAL_INCLUDE_DIR}/IOKit/%.h: ${MACOS_SDK_PATH}/System/Library/Frameworks/IOKi
 
 # --------------
 # This section deals with grabbing XNU and extracting headers from it
-# export XNU_VERSION=xnu-6153.81.5
-export XNU_VERSION=xnu-7195.141.2
+export XNU_VERSION=xnu-6153.81.5
 
 .PHONY: gather-xnu-headers
 gather-xnu-headers: ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}
 
 ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}: ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz
-	cd ${SDK_GRAFT_DOWNLOADS} && tar -xf ${XNU_VERSION}.tar.gz
+	# Ensure the name of the destination directory is ${XNU_VERSION}
+	cd ${SDK_GRAFT_DOWNLOADS} && \
+	mkdir ${XNU_VERSION} && \
+	tar -xf ${XNU_VERSION}.tar.gz -C ${XNU_VERSION} --strip-components 1
 
 ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz:
 	@$(log_download)
 	mkdir -p ${SDK_GRAFT_DOWNLOADS}
-	curl -sSL -o ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz https://opensource.apple.com/tarballs/xnu/${XNU_VERSION}.tar.gz
+	curl -sSL -o ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}.tar.gz https://github.com/apple-oss-distributions/xnu/archive/${XNU_VERSION}.tar.gz
 
 sdk-graft-clean:
 	rm -rf ${SDK_GRAFT_DIR}

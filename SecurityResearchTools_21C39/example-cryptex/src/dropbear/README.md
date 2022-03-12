@@ -13,3 +13,9 @@ We apply a simple diff to dropbear to make it cryptex aware:
 
 - Connect with: `ssh -vvv` and check for a banner.
 - Open `Console.app` and search for "dropbear" or "cryptex"
+
+COMMENT
+----
+THURSDAY 5 MAY 2022
+
+ADDED a working binary for dropbear due to foobar

@@ -1,15 +1,16 @@
-.PHONY: all clean install gather-headers
+.PHONY: all clean install gather-headers fix-iokitlib
 
 all: nvram
 
 include ../../logging.mk
 include ../../build_env.mk
 
-SYSTEM_CMDS_VERSION=system_cmds-854.40.2
+SYSTEM_CMDS_VERSION=system_cmds-880.60.2
 LDFLAGS+= -framework CoreFoundation -framework IOKit
 
-nvram: ${SYSTEM_CMDS_VERSION} gather-headers
+nvram: ${SYSTEM_CMDS_VERSION} gather-headers fix-iokitlib
 	@$(log_build)
+	sed -i -e "s/IOMasterPort(/IOMainPort(/g" ${SYSTEM_CMDS_VERSION}/nvram.tproj/nvram.c
 	$(CC) ${CFLAGS} ${LDFLAGS} ${SYSTEM_CMDS_VERSION}/nvram.tproj/nvram.c -o nvram
 	codesign -s - nvram
 
@@ -18,7 +19,7 @@ ${SYSTEM_CMDS_VERSION}: ${SYSTEM_CMDS_VERSION}.tar.gz
 
 ${SYSTEM_CMDS_VERSION}.tar.gz:
 	@$(log_download)
-	curl -sSL -O https://opensource.apple.com/tarballs/system_cmds/${SYSTEM_CMDS_VERSION}.tar.gz
+	curl -sSL -O https://github.com/apple-oss-distributions/system_cmds/archive/${SYSTEM_CMDS_VERSION}.tar.gz
 
 clean:
 	rm -rf nvram*
@@ -40,3 +41,6 @@ gather-xnu-headers: ${LOCAL_INCLUDE_DIR}/IOKit/IOKitKeysPrivate.h
 ${LOCAL_INCLUDE_DIR}/IOKit/IOKitKeysPrivate.h: ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}/iokit/IOKit/IOKitKeysPrivate.h
 	mkdir -p ${LOCAL_INCLUDE_DIR}/IOKit/
 	cp ${SDK_GRAFT_DOWNLOADS}/${XNU_VERSION}/iokit/IOKit/IOKitKeysPrivate.h ${LOCAL_INCLUDE_DIR}/IOKit/
+
+fix-iokitlib: ${LOCAL_INCLUDE_DIR}/IOKit/IOKitLib.h
+	sed -i -e "s/#define __UNAVAILABLE_PUBLIC_IOS __API_AVAILABLE(macos(1.0)) __API_UNAVAILABLE(ios, macCatalyst)/#define __UNAVAILABLE_PUBLIC_IOS/g" ${LOCAL_INCLUDE_DIR}/IOKit/IOKitLib.h

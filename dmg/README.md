@@ -1,91 +1,66 @@
-# SRD Example DMG Install
+# SRD Example DMG Installation
+
+## SUMMARY | TUE 29 NOV 2022 at 0715 EST
+- This Repo is __ahead__ of the Apple Repo
+- Built on macOS 13.x with X86_64 and arm64e
+- The SRD Example DMG's are all Built with XNU-8792.60.55 and options Targeting for iOS 16
+
+Install SRD example DMG
+----
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
 ```
 
-## SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
-| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
-| -------------------------------- | ------------- | ------------- | ------------- | -------------
-| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
-| Build macOS 12.3 (21E230) T8101  | PASS          | PASS          | PASS          | PASS 
-| Install to iPhone 11 19E241    | PASS          | PASS          | PASS          | PASS
-| Install to iPhone 12 19E241    | PASS          | PASS          | PASS          | PASS 
-
-### Lastest IPSW + Cryptex Installations 
+Audit Trail
+----
 ```
-Signed File: iPhone11,8,iPhone12,1_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)' 
-Signed File: iPhone13,2,iPhone13,3_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)'
-Signed File: iPhone12,8,iPhone12,1_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
-Signed File: iPhone13,2,iPhone13,3_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
-```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
+--2022-11-29 07:35:02--  https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
+Resolving github.com (github.com)... 140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/xsscx/srd/main/dmg/srd-universal-cryptex.dmg [following]
+--2022-11-29 07:35:03--  https://raw.githubusercontent.com/xsscx/srd/main/dmg/srd-universal-cryptex.dmg
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 24854157 (24M) [application/octet-stream]
+Saving to: ‘srd-universal-cryptex.dmg’
 
+srd-universal-cryptex.dmg                                           100%[===================================================================================================================================================================>]  23.70M  82.1MB/s    in 0.3s
+
+2022-11-29 07:35:03 (82.1 MB/s) - ‘srd-universal-cryptex.dmg’ saved [24854157/24854157]
+
+com.example.cryptex
+  version = 1.3.3.7
+  device = /dev/disk3s1
+  mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.dYJjm9
+  
+ssh -l root 192.168.1.25
+uname -a
+Darwin iPhone 22.2.0 Darwin Kernel Version 22.2.0: Tue Nov  8 21:14:57 PST 2022; root:xnu-8792.60.55.132.1~1/RELEASE_ARM64_T8030 iPhone12,1 Toybox
+date
+Tue Nov 29 08:57:31 EST 2022
+  ```
+  
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
 
+
 ### Resources
-- DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
+- SRD DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
+- SRD Beta: https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
+- SRD UBSAN DMG https://xss.cx/srd/dmg/srd-ubsan-cryptex-beta.dmg
+- SRD ASAN DMG https://xss.cx/srd/dmg/srd-asan-cryptex-beta.dmg
 
-## SRD DMG Testing
-- Universal cryptex for iPhone 11 and iPhone 12 SRD Models 
-- Tested on the iPhone 11 for all IPSW from the iOS 14.3 floor for the iPhone 11 up to the latest iOS 15.4 Beta 
-- Tested on the iPhone 12 for all IPSW from the iOS 15.2 floor for the iPhone 12 up to the latest iOS 15.4 Beta
-- Tested on macOS 11.6.x using SRT 20C80, macOS 12.x using 21C39 and Cryptex Manager from X86_64 and M1 T8101 Platforms
+# SRD DMG Testing
+- Universal SRD DMG Example Cryptex for iPhone 11 and iPhone 12 SRD Models 
+- Tested on the iPhone 11 for all IPSW from the iOS 14.3 floor for the iPhone 11 up to the latest iOS 16 Beta 
+- Tested on the iPhone 12 for all IPSW from the iOS 15.2 floor for the iPhone 12 up to the latest iOS 16 Beta
+- Tested on macOS 11.6.x using SRT 20C80, macOS 12.x & 13 Beta using X86_64 and M1 T8101 Platforms 
+- Open an Issue if you have _any_ questions!
 
-## SRD Cryptex Log Collector
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/srd-cryptex-logcollector.sh)"
-```
-### SRD Cryptex Log Collector Example
-```
-Sat Feb  5 07:04:42 EST 2022
-kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
-kern.osversion: 21D49
-kern.iossupportversion: 15.3
-kern.osproductversion: 12.2
-kern.osproductversioncompat: 10.16
-kern.osproductversioncompat: 10.16
-/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
-udid                           name       build      BORD       CHIP       ECID
-00008030-001538D03C40012E      SRD0009    19E5209h   0x4        0x8030     0x1538d03c40012e
-00008101-001418DA3CC0013A      SRD0037    19E5209h   0xc        0x8101     0x1418da3cc0013a
-Apple clang version 13.1.6 (clang-1316.0.19.2)
-Target: x86_64-apple-darwin21.3.0
-Thread model: posix
-InstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-Darwin Cryptex Management Interface Version 2.0.0: Sun Dec 19 22:28:12 PST 2021; root:libcryptex_executables-169.80.2~9/cryptexctl/WEN_ETA_X86_64
-machdep.cpu.brand_string: Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz
-System Integrity Protection status: disabled.
-cryptexctl: flags = [none]
-cryptexctl: will re-exec: /usr/local/bin/cryptexctl.research
-cryptexctl.research: path = /usr/local/bin/cryptexctl.research
-MobileDevice version = 1368.60.4
-cryptexctl.research: argv[_main] =
-cryptexctl.research:   [0] = cryptexctl
-cryptexctl.research:   [1] = -v2
-cryptexctl.research:   [2] = -d2
-cryptexctl.research:   [3] = install
-cryptexctl.research:   [4] = --variant=research
-cryptexctl.research:   [5] = --persist
-cryptexctl.research:   [6] = --print-info
-cryptexctl.research:   [7] = ./com.example.cryptex.cxbd.signed
-```
-## How To Build SRD Universal Cryptex DMG with frida, toybox unstripped, debugserver and Install to SRD
-```
-cd example-cryptex
-make clean
-make all
-chmod 775 src/toybox/toybox-src/generated/unstripped/toybox
-sudo cp src/toybox/toybox-src/generated/unstripped/toybox com.example.cryptex.dstroot/usr/bin
-codesign --force -s -  com.example.cryptex.dstroot/usr/bin/toybox
-codesign --force -s - --entitlements src/toybox/entitlements.plist com.example.cryptex.dstroot/usr/bin/toybox
-hdiutil create -fs hfs+ -srcfolder com.example.cryptex.dstroot srd-universal-cryptex.dmg
-cryptexctl ${CRYPTEXCTL_FLAGS} create --research --replace ${CRYPTEXCTL_CREATE_FLAGS} --identifier=com.example.cryptex --version=1.3.3.7 --variant=research srd-universal-cryptex.dmg
-cryptexctl ${CRYPTEXCTL_PERSONALIZE_FLAGS} personalize --replace  --variant=research com.example.cryptex.cxbd
-cryptexctl uninstall com.example.cryptex
-cryptexctl install --variant=research --persist com.example.cryptex.cxbd.signed
-cryptexctl list
-```
 ## How to Install an example cryptex DMG to the SRD
 ```
 cd example-cryptex
@@ -104,24 +79,8 @@ com.example.cryptex
   device = /dev/disk3s1
   mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.nJlkxj
 ```
-## How to Notarize a DMG
-```
-codesign --timestamp --force -s "DEVELOPER_ID" srd-universal-cryptex.dmg
-xcrun notarytool submit srd-universal-cryptex.dmg --credz
-xcrun stapler staple srd-universal-cryptex.dmg
-```
-## How to Validate Notarization of DMG
-```
-xcrun stapler validate  srd-universal-cryptex.dmg
-Processing: /Users/xss/security-research-device-main/example-cryptex/srd-universal-cryptex.dmg
-The validate action worked!
-codesign -vvvv -R="notarized"  srd-universal-cryptex.dmg
-srd-universal-cryptex.dmg: valid on disk
-srd-universal-cryptex.dmg: satisfies its Designated Requirement
-srd-universal-cryptex.dmg: explicit requirement satisfied
-```
 
-# frida-ps Example Listing
+## frida-ps Example Listing
 ```
 frida-ps -Uai
 PID  Name                Identifier
@@ -169,28 +128,6 @@ PID  Name                Identifier
 ```
 ### Frida History
 Frida built from Commit in https://github.com/apple/security-research-device/issues/13
-
-### How to Confirm the SRD Example DMG Install | Audit Trail
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
-```
-```
---2022-01-17 14:12:26--  https://xss.cx/srd/dmg/srd-universal-cryptex.dmg
-Resolving xss.cx (xss.cx)... 50.62.160.45
-Connecting to xss.cx (xss.cx)|50.62.160.45|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 27295841 (26M) [application/x-zip-compressed]
-Saving to: ‘srd-universal-cryptex.dmg’
-
-srd-universal-cryptex.dmg                                                                                100%[=================================================================================================================================================================================================================================================================================>]  26.03M  3.32MB/s    in 8.3s
-
-2022-01-17 14:12:35 (3.12 MB/s) - ‘srd-universal-cryptex.dmg’ saved [27295841/27295841]
-
-com.example.cryptex
-  version = 1.3.3.7
-  device = /dev/disk2s1
-  mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.yobZuo
-  ```
 
 ## SRD ASAN & UBSAN Installation Information | Drilling Down
 ###  iPhone 12 - TSS ASAN Cryptex Example HTTP Response of Success for Personalization
@@ -358,6 +295,44 @@ ofile=~/${1:-ipc.raw}
 ps -Ac | sed 's,\s*\([0-9][0-9]*\) .*[0-9]*:[0-9]*\.[0-9]* \(.*\), 00000000.0  0.0(0.0)  proc_exec  \1 0 0 0 0 0  \2,' > "${ofile}.txt"
 
 ```
+## SRD Cryptex Log Collector
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/srd-cryptex-logcollector.sh)"
+```
+### SRD Cryptex Log Collector Example
+```
+Sat Feb  5 07:04:42 EST 2022
+kern.version: Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_X86_64
+kern.osversion: 21D49
+kern.iossupportversion: 15.3
+kern.osproductversion: 12.2
+kern.osproductversioncompat: 10.16
+kern.osproductversioncompat: 10.16
+/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+udid                           name       build      BORD       CHIP       ECID
+00008030-001538D03C40012E      SRD0009    19E5209h   0x4        0x8030     0x1538d03c40012e
+00008101-001418DA3CC0013A      SRD0037    19E5209h   0xc        0x8101     0x1418da3cc0013a
+Apple clang version 13.1.6 (clang-1316.0.19.2)
+Target: x86_64-apple-darwin21.3.0
+Thread model: posix
+InstalledDir: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+Darwin Cryptex Management Interface Version 2.0.0: Sun Dec 19 22:28:12 PST 2021; root:libcryptex_executables-169.80.2~9/cryptexctl/WEN_ETA_X86_64
+machdep.cpu.brand_string: Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz
+System Integrity Protection status: disabled.
+cryptexctl: flags = [none]
+cryptexctl: will re-exec: /usr/local/bin/cryptexctl.research
+cryptexctl.research: path = /usr/local/bin/cryptexctl.research
+MobileDevice version = 1368.60.4
+cryptexctl.research: argv[_main] =
+cryptexctl.research:   [0] = cryptexctl
+cryptexctl.research:   [1] = -v2
+cryptexctl.research:   [2] = -d2
+cryptexctl.research:   [3] = install
+cryptexctl.research:   [4] = --variant=research
+cryptexctl.research:   [5] = --persist
+cryptexctl.research:   [6] = --print-info
+cryptexctl.research:   [7] = ./com.example.cryptex.cxbd.signed
+```
 
 #### Comments
 When using a regexp to find Console Log Messages, these Files may be helpful:
@@ -388,16 +363,15 @@ com.example.cryptex.dstroot
     │   ├── [ -> toybox
     │   ├── a.out
     │   ├── ascii -> toybox
-    │   ├── aslr
+    │   ├── base32 -> toybox
     │   ├── base64 -> toybox
     │   ├── basename -> toybox
     │   ├── bash -> toybox
-    │   ├── binbag
+    │   ├── bzcat -> toybox
     │   ├── c1.exr
     │   ├── c2.exr
     │   ├── cal -> toybox
     │   ├── cat -> toybox
-    │   ├── catv -> toybox
     │   ├── chain3
     │   ├── chgrp -> toybox
     │   ├── chmod -> toybox
@@ -414,6 +388,7 @@ com.example.cryptex.dstroot
     │   ├── cryptex-run
     │   ├── cut -> toybox
     │   ├── date -> toybox
+    │   ├── dd
     │   ├── debugserver
     │   ├── df -> toybox
     │   ├── dirname -> toybox
@@ -441,21 +416,18 @@ com.example.cryptex.dstroot
     │   ├── groups -> toybox
     │   ├── head -> toybox
     │   ├── hello
-    │   ├── hello-code-cov
-    │   ├── hello_world
-    │   ├── hellosan
     │   ├── help -> toybox
     │   ├── hexedit -> toybox
     │   ├── hostname -> toybox
+    │   ├── httpd -> toybox
     │   ├── iconv -> toybox
     │   ├── id -> toybox
     │   ├── image.jpeg
+    │   ├── install -> toybox
     │   ├── ioclass
     │   ├── ioprint
     │   ├── ioreg
-    │   ├── ios-13_voucher_leak
     │   ├── ios-14-voucher_leak
-    │   ├── ios-command-line-tool
     │   ├── ioscan
     │   ├── kill -> toybox
     │   ├── killall5 -> toybox
@@ -463,11 +435,11 @@ com.example.cryptex.dstroot
     │   ├── libarchive.a
     │   ├── libmemctl_core.a
     │   ├── link -> toybox
-    │   ├── lister
     │   ├── ln -> toybox
     │   ├── logger -> toybox
     │   ├── logname -> toybox
     │   ├── ls -> toybox
+    │   ├── mcookie -> toybox
     │   ├── md5sum -> toybox
     │   ├── memctl
     │   ├── microcom -> toybox
@@ -482,8 +454,9 @@ com.example.cryptex.dstroot
     │   ├── nohup -> toybox
     │   ├── nvram
     │   ├── od -> toybox
-    │   ├── optool
     │   ├── orig.tif
+    │   ├── p0-1974-arm64e
+    │   ├── p0-1974-arm64e-asan
     │   ├── paste -> toybox
     │   ├── patch -> toybox
     │   ├── prinfkernversion
@@ -491,6 +464,8 @@ com.example.cryptex.dstroot
     │   ├── printf -> toybox
     │   ├── pwd -> toybox
     │   ├── pwdx -> toybox
+    │   ├── pwgen -> toybox
+    │   ├── readelf -> toybox
     │   ├── readlink -> toybox
     │   ├── realpath -> toybox
     │   ├── register-tests.sh
@@ -570,7 +545,6 @@ com.example.cryptex.dstroot
     │   ├── s3_6_c15_c1_6-read
     │   ├── s3_6_c15_c1_7-flip
     │   ├── s3_6_c15_c1_7-read
-    │   ├── s3_6_c15_c2_5-read
     │   ├── s3_6_c15_c3_0-flip
     │   ├── s3_6_c15_c3_0-read
     │   ├── s3_6_c15_c3_1-flip
@@ -586,6 +560,12 @@ com.example.cryptex.dstroot
     │   ├── setsid -> toybox
     │   ├── sh -> toybox
     │   ├── sha1sum -> toybox
+    │   ├── sha224sum -> toybox
+    │   ├── sha256sum -> toybox
+    │   ├── sha384sum -> toybox
+    │   ├── sha3sum -> toybox
+    │   ├── sha512sum -> toybox
+    │   ├── shred -> toybox
     │   ├── simple-server
     │   ├── simple-shell
     │   ├── sleep -> toybox
@@ -603,13 +583,6 @@ com.example.cryptex.dstroot
     │   ├── template-flip
     │   ├── template-read
     │   ├── test -> toybox
-    │   ├── test1
-    │   ├── test2
-    │   ├── test3
-    │   ├── test4
-    │   ├── test6
-    │   ├── test7
-    │   ├── test8
     │   ├── time -> toybox
     │   ├── timeout -> toybox
     │   ├── touch -> toybox
@@ -619,6 +592,7 @@ com.example.cryptex.dstroot
     │   ├── truncate -> toybox
     │   ├── tty -> toybox
     │   ├── uname -> toybox
+    │   ├── unicode -> toybox
     │   ├── uniq -> toybox
     │   ├── unix2dos -> toybox
     │   ├── unlink -> toybox
@@ -627,7 +601,6 @@ com.example.cryptex.dstroot
     │   ├── uuencode -> toybox
     │   ├── uuidgen -> toybox
     │   ├── vi -> toybox
-    │   ├── vs_cli
     │   ├── w -> toybox
     │   ├── watch -> toybox
     │   ├── wc -> toybox
@@ -638,10 +611,11 @@ com.example.cryptex.dstroot
     │   ├── whoami -> toybox
     │   ├── xargs -> toybox
     │   ├── xxd -> toybox
-    │   └── yes -> toybox
+    │   ├── yes -> toybox
+    │   └── zcat -> toybox
     └── lib
         └── frida
             └── frida-agent.dylib
 
-6 directories, 262 files
+6 directories, 261 files
 ```

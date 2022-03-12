@@ -1,59 +1,26 @@
+(AppleMobileFileIntegrity_research) Invalid denylist
+(os/kern)
+(os/kern) failure (0x5)
+/private/var/
+/private/var/root
+0.0.0.0
+17.
+==> debugserver
+@rpath
+AMFI
+AMSupportPlatformCreateBufferFromNativeFilePath
+ASI found
 ASLR:
 ASLRsec:
-crypt:
-error:
-SIGRTMEM:
-DMA error:
-pow:
-platf:
-psi:
-memcpy_s:
-core:
-sec:
-strncpy_s:
-trace:
-sensor:
-radr:
-kernel: 
-(AppleMobileFileIntegrity_research) Invalid denylist
-internal event: PETRIFIED, code = 0
-Successfully loaded a new image4 v1 trust cache
-(os/kern)
-(os/kern) failure (0x5)
-/private/var/
-/private/var/root
-0.0.0.0
-17.
-==> debugserver
-@rpath
-AMFI
-AMSupportPlatformCreateBufferFromNativeFilePath
-ASI found
-ASSERT
-(os/kern)
-(os/kern) failure (0x5)
-/private/var/
-/private/var/root
-0.0.0.0
-17.
-==> debugserver
-@rpath
-AMFI
-(AppleMobileFileIntegrity_research) Invalid denylist
-AMSupportPlatformCreateBufferFromNativeFilePath
-ASI found
 ASSERT
 About to ptrace
 Age verification state
-apply-protobox
 AppleImage4
 AppleMobileFileIntegrity_research
 Assert
 Attempting excessively
 Attempting to write dictionary
 Attempting to write jetsam report
-because inefficient
-because incomplete work
 BAD mmap base metadata
 BREAK
 BSD Name
@@ -63,6 +30,8 @@ Bundle info cannot be fetched
 CFOpenDirectory
 CFSM dynamic blacklist
 CMPOSIXUser
+CSSymbolOwnerForEachStackFrameAtAddress
+CSSymbolicatorCreateWithTaskFlagsAndNotification
 Cache
 Client has neither
 Committing user settings
@@ -79,30 +48,30 @@ Couldn't open parent path
 Created new POSIX user
 DARWIN
 DATA
+DMA error:
 DTFetchSymbols
 Darwin Image4 Validator Version
 Decode HEIC request
 Details:
 Device connection interrupted
+Dispatch continuations
 EXC_
 EXC_BAD_ACCESS
 EXC_BAD_ACCESSSIGBUSKERN_MEMORY_ERROR
 EXC_RESOURCE
 EXITED
-exited due to
-exited with exit reason
+Enabling Probabilistic Guard Malloc
 Encountered an invalid header
 Error Domain
 Error while reading
 Error while writing verifier file
-exceeded mem limit
 Explicitly trapping into debugger
-fatal
-failed to frob plist
 Fail
 Failed
+failed to
 Failed to convert signature from
 Failed to fetch
+failed to pass date test
 Failed to resolve
 Falling back to regular open()
 Fault hit memory shortage
@@ -110,6 +79,7 @@ File system sandbox blocked
 Formulating
 Formulating fatal
 Full mode capture 0 0 d 0 t 1 f_f 0 f_r 0
+GAP
 Got xpc error message
 HEAP Stats
 Hit the server for a process handle
@@ -117,23 +87,23 @@ Host connection
 IDENTITY_ATTRIBUTION
 IMG4
 IODeviceTree
-InactiveHard
 IPConfiguration
 ISP FD netorks remmapped surface
 If this is expected behavior
 If you run under the debugger
+InactiveHard
 Invalid
 Invalid argument
 Invalid denylist
 Is this a developer issue? Please file a radar...
 JETSAM_REASON_MEMORY_PERPROCESSLIMIT
-kernel: (AppleMobileFileIntegrity_research) Invalid denylist
 Kernel Triage
-kernel(Sandbox)
 LOAD
 Library not loaded:
 Log limit exceeded
+MALLOC_LARGE
 MIDeveloperDiskImageTracker
+MSupportPlatformCreateBufferFromNativeFilePath
 Method
 Missing Description
 MissingIntermediate
@@ -143,11 +113,16 @@ NSThread
 NVRAM
 NVRAM variable
 No match
+NonEmptySubject
+ON_STATE
+ON_STATE->ON_STATE
 OS_REASON
 OS_REASON_DYLD
 OS_REASON_EXEC
 Object
+Object is not alive
 PETRIFIED
+PMRD:
 PROGRAM:
 PROJECT:
 PT_ATTACHEXC
@@ -158,18 +133,19 @@ Please migrate to
 Please specify the bundleID
 Reason
 Refusing executable path
+Removing all cached process handles
 Removing nag
 Report Crash
 Report of type
 ReportMemoryException
 ReportMemoryException client connection
 Runtime violation
-Sandbox
 SDK
 SFP Assert
 SIGBUS
 SIGBUSKERN_MEMORY_ERROR
 SIGKILLed
+SIGRTMEM:
 SIGTERM
 SIGTERMed
 SOURCE_ATTACH
@@ -184,6 +160,7 @@ Starting OTACrashCopier
 Successfully loaded a new image4 v1 trust cache
 SystemCache
 TARGETED_DEVICE_FAMILY
+Terminated
 The optional requiredEntitlements method was implemented, but no entitlements were provided.
 Trying to create CR directory structure as root
 Unable to get short BSD proc info
@@ -191,6 +168,7 @@ Unable to obtain
 Unable to obtain a task name port right for
 Unable to resolve candidate path based on calling process entitlement
 Using fixed (injected) offsets
+VM
 VOC
 VREF
 ValidityPeriodMaximums
@@ -210,12 +188,15 @@ about to
 about to task_for_pid
 adhoc signed
 application-identifier
+apply-protobox
 appsandbox.cold
 aslr_offset
 asm
 assert
 bad base
 bad file
+because incomplete work
+because inefficient
 bind
 break
 bt all
@@ -233,9 +214,10 @@ com.apple.security.cryptexd
 com.example.cryptex
 complies with restrictions
 copy_parent_certificates
+core:
 create_symbol_owner_data
+crypt:
 cryptex mount point
-Client has neither
 debugserver
 definition
 deny(1) file-map-executable
@@ -252,23 +234,28 @@ dyld_shared_cache_arm64e
 dyld_shared_cache_arm64e.symbols
 elided platform fast path
 entitlements
+error:
 esr
 exceeded
 exceeded mem limit
 exception
 exited
+exited due to
 exited due to SIGBUS
 exited with exit reason
 failed to
 failed to assign builtin profile
 failed to find research
+failed to frob plist
 failed to read nvram property
 failed to warn
 failed to warn the current task
 failed with resource shortage
 failure
+failure in
 falling back on naive access() check
 far
+fatal
 file
 file-map-executable
 file-read-data
@@ -276,6 +263,7 @@ file-read-metadata
 for pid
 fp
 hfs
+hfs:
 homeDirectoryURL
 hook..execve()
 iBoot version
@@ -286,8 +274,12 @@ input buffer bad size
 internal event
 internal event: PETRIFIED, code = 0
 is adhoc signed
+kIOMessageSystemCapabilityChange
 kauth_membership_check
 kernel
+kernel(Sandbox)
+kernel: 
+kernel: (AppleMobileFileIntegrity_research) Invalid denylist
 key
 keychain-access-groups
 killed by jetsam reason per-process-limit
@@ -300,10 +292,14 @@ listen
 lr
 mach
 mach-lookup
+mach_msg_server_once
 main_block_invoke
+mapped_file
 mask.hash
+memcpy_s:
 memorystatus_available_pages
 memorystatus_on_ledger_footprint_exceeded
+missing bundleID
 mmap buffer
 mmap failed
 mmap()
@@ -313,17 +309,21 @@ namespace
 ncmhost
 no match
 no-op
-NonEmptySubject
 numberOfErrorsDeep
 open failed
 os/kern
 passcode
 pc
+platf:
 platform/device
 pmap_enter 
 pmap_enter failed with resource shortage
 port right
+pow:
+power event
 process exited in a dirty state
+psi:
+radr:
 rdar://
 re re --all
 reading plist directly
@@ -334,8 +334,10 @@ replacing non ev reject score
 resolves to factor pack set
 result FAILED
 sdk
+sec:
 send failed
 sensitive
+sensor:
 service has crashed
 service state
 servicePublished done
@@ -343,6 +345,7 @@ signaled service
 sp
 spawn_xpc_service_block_invoke
 stop reason
+strncpy_s:
 subsystem
 successfully task_for_pid
 sweeping
@@ -350,10 +353,10 @@ system-wide
 target-id
 task name
 task_for_pid
-Terminated
 terminationReasonExceptionCode
 terminationReasonNamespace
 times in a row
+trace:
 tss request
 uncorking domain
 uncorking exec source upfront

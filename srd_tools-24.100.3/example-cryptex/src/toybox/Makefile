@@ -78,5 +78,7 @@ install: toybox-bin
 			LDFLAGS="$(LDFLAGS)" \
 			ARCH="$(ARCH)" \
 			PREFIX="$(CRYPTEX_BIN_DIR)"
+	rm -f $(CRYPTEX_BIN_DIR)/toybox
+	cp toybox-bin $(CRYPTEX_BIN_DIR)/toybox
 
 gather-headers: sdk-graft

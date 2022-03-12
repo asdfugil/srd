@@ -17,15 +17,6 @@ clang -v >> srd-cryptex-troubleshooter.log 2>&1
 cryptexctl version >> srd-cryptex-troubleshooter.log 2>&1
 sysctl -a | grep brand >> srd-cryptex-troubleshooter.log 2>&1
 csrutil status >> srd-cryptex-troubleshooter.log 2>&1
-echo "Install cryptex to SRD"
-cryptexctl -v9 -d9 -ldt install --variant=research --persist --print-info ./com.example.cryptex.cxbd.signed >> srd-cryptex-troubleshooter.log 2>&1
-echo "====================================="
-echo "Check for cryptex install on SRD"
-cryptexctl list 2>&1
-echo "====================================="
-echo "SRD Cryptex Troubleshooter Log Info"
-echo "====================================="
-cat srd-cryptex-troubleshooter.log
-echo "Check for cryptex install on SRD"
-cryptexctl list
-echo "SRD Cryptex Log Collector Stop"
+echo "starting... \n lldb -- cryptexctl install -p -l  --variant=research --persist com.example.cryptex.cxbd.signed"
+echo "\n then type run, example: (lldb) run"
+lldb -- cryptexctl install -p -l  --variant=research --persist com.example.cryptex.cxbd.signed

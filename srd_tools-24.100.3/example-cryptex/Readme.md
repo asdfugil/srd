@@ -1,30 +1,68 @@
 # SRD Example Cryptex & DMG Source Build Repo for SRT 24.100.3
----
-This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple/security-research-device/pull/42 _ahead_ of https://github.com/apple/security-research-device/tree/main/example-cryptex.
 
-## Prerequisites
-- Security Research Tools https://github.com/apple/security-research-device
+Build & Install the ./example-cryptex/ in this Repo
+-----
+- Building an up to date cryptex is easy with this Repo
+- https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex.zip
+- https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex-plus-compiled-binaries.zip
+- Fully working ./example-cryptex/ with binaries built with XNU-8019.41.5      
+- Reproduction in a GIF https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex.gif
+- Reproduction in a MOV https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex.mov
+- Open an Issue if you have _any_ questions!
+- arm64e ./example-cryptex/ https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex-plus-compiled-binaries-arm64e.zip
+## START HERE
 
-### Resources
-- Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
-- DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
-- Install: https://github.com/xsscx/srd/tree/main/dmg#readme
-- Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
-
-## Last Known Good Working Configuration(s)
-- SIP Enabled
-- macOS 12.2.1 (21D62) X86_64 or M1 T8101 macOS 12.3 (21E230)
-- Xcode Version 13.3 (13E113)
-- Security Research Tools https://github.com/apple/security-research-device
-- brew install gnu-sed automake
-
-# SRD Source Build example-cryptex with toybox unstripped using this Repo
-- Step 1: Download this Repo that builds with xnu-7195.141.2
-- Step 2: Run build.sh as shown below
+Get the Working Cryptex for X86_64
+------
+- wget https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex.zip
+- unzip hoyt-working-example-cryptex.zip
+- cd public-domain
+- make install 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh" 
+[public-domain] - Creating disk image com.example.cryptex.dmg from distribution root /Users/xss/validate/public-domain/com.example.cryptex.dstroot
+....................................................................................................................................................................................................................................................................................
+created: /Users/xss/validate/public-domain/com.example.cryptex.dmg
+[public-domain] - Creating cryptex /Users/xss/validate/public-domain/com.example.cryptex.cxbd - 1.3.3.7 from the disk image com.example.cryptex.dmg
 ```
-## SRT Canned Instructions 
+Confirmation
+```
+# uname -a
+Darwin SRD0009 21.6.0 Darwin Kernel Version 21.6.0: Mon May  9 00:43:43 PDT 2022; root:xnu-8020.140.20.0.4~16/RELEASE_ARM64_T8030 iPhone12,1 Toybox
+# date
+Tue May 31 18:10:33 EDT 2022
+```
+- Open an Issue if you have _any_ questions!
+
+## SRD DMG Install
+M1 T8101
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/dmg/install.sh)"
+```
+X86_64 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/cryptexmanager-install.sh)" 
+```
+
+## SRD Source Build example-cryptex with toybox unstripped using this Repo
+
+### Prerequisites
+- Security Research Tools https://github.com/apple/security-research-device
+- cd ./example-cryptex/ 
+- brew install gnu-sed automake hg git-lfs
+- wget https://xss.cx/srd/example-cryptex/hoyt-working-example-cryptex.zip
+- make install
+
+Automagic Build Pipeline
+----------
+- M1: Run build.sh as shown below on M1 T8101
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh)" 
+```
+- X86_64: Run cryptexmanager-build.sh as shown below on X86_64
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/cryptexmanager-build.sh)" 
+```
+## Security Research Tools (SRT) 24.100.3 Canned Instructions 
 
 0. Install the prerequisites and select your Xcode with `xcode-select(1)`.
 1. Plug in your Security Research Device
@@ -158,16 +196,15 @@ Please note, you will need to keep the cryptex nonce in sync. The nonce hash is 
 with the `--BNCH` flag on `cryptexctl create`, and can be retrieved from the device
 with the `cryptexctl nonce` subcommand.
 
-#@ Troubleshooting
-##@ Log Collection
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/SecurityResearchTools_21C39/example-cryptex/srd-cryptex-troubleshooter.sh)"
-```
+### Troubleshooting
+
+The SRD Build Pipeline is robust, but like all other 'live build' systems there can be transitory Network issues that prevent a successful Build & Installation.
+
+Take for example that over US Memorial Day Weekend Holiday in 2021 there were points in time where GateKeeper, CoreTrust. AMFI and the Tatsu Signing Server were unavailable. No cryptex build; Researcher needs to always have Backup DMG's for when the Build Pipeline fails.
+
 ### Enable verbose logging with -v, -d and redirect from the system log to stderr with -ldt
-```
-cryptexctl -v9 -d9 -ldt install --print-info ./com.example.cryptex.cptx (20C80)
-OR 
-cryptexctl -v4 -d4  install --variant=research --persist --print-info ./com.example.cryptex.cxbd.signed (21C39)
+``` 
+cryptexctl -v4 -d4 -ldt install --variant=research --persist --print-info ./com.example.cryptex.cxbd.signed (srd_tools-24.100.3)
 ```
 ### Collect logs from the device. The -E is so we capture the CRYPTEXCTL_UDID env var.
 ```
@@ -176,6 +213,20 @@ sudo -E cryptexctl log collect
 ### View the logs from the archive
 ```
 cryptexctl log show -- --archive ./system_logs.logarchive
+```
+#### Log Collection & cat TXT File
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/srd-cryptex-logcollector.sh)"
+```
+
+#### Log Collection & drop to lldb
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/srd-cryptex-troubleshooter.sh)"
+```
+
+#### Log Collection & drop to Xcode
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/srd-cryptex-xcdebug.sh)" 
 ```
 
 ## Building
@@ -203,6 +254,7 @@ com.example.cryptex
   device = /dev/disk2s1
   mount point = /private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.yobZuo
   ```
+### Other Resources for Crashes, PAC Fail, Regexp & Analysis
 
 When using a regexp to find Console Log Messages, these Files may be helpful:
 - https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
@@ -211,3 +263,4 @@ When using a regexp to find Console Log Messages, these Files may be helpful:
 If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
 - https://srd.cx/possible-pointer-authentication-failure-data-abort/
 - https://srd.cx/debugserver-installation-configuration/
+- https://srd.cx/xnu-crash-analysis/
