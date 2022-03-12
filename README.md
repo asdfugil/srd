@@ -15,6 +15,22 @@ SUMMARY
 - If you see unsuitable CT policy .. for this platform/device, rejecting signature
 - Do make clean; make install and AMFI Research should stop complaining
 
+## SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
+| Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
+| -------------------------------- | ------------- | ------------- | ------------- | -------------
+| macOS 12.2.1 (21D62) X86_64      | PASS          | PASS          | PASS          | PASS          
+| Build macOS 12.3 (21E230) T8101  | PASS          | PASS          | PASS          | PASS 
+| Install to iPhone 11 19E241    | PASS          | PASS          | PASS          | PASS
+| Install to iPhone 12 19E241    | PASS          | PASS          | PASS          | PASS 
+
+### Lastest IPSW + Cryptex Installations 
+```
+Signed File: iPhone11,8,iPhone12,1_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)' 
+Signed File: iPhone13,2,iPhone13,3_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)'
+Signed File: iPhone12,8,iPhone12,1_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
+Signed File: iPhone13,2,iPhone13,3_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
+```
+
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
 
@@ -57,14 +73,6 @@ SRD Cryptex Log Collector
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/SecurityResearchTools_21C39/example-cryptex/srd-cryptex-troubleshooter.sh)"
 ```
-# Lastest IPSW + Cryptex Installations 
-```
-Signed File: iPhone11,8,iPhone12,1_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)' 
-Signed File: iPhone13,2,iPhone13,3_15.4_19E241_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Customer Erase Install (IPSW)'
-Signed File: iPhone12,8,iPhone12,1_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
-Signed File: iPhone13,2,iPhone13,3_15.4_19E5241a_Restore.ipsw | defaults write com.apple.AMPDevicesAgent ipsw-variant -string 'Research Developer Erase Install (IPSW)'
-```
-The above means that from X86_64 and/or M1 ARM the SRD IPSW has been installed with cryptex personalization verified as shown below.
 
 Makefile
 -----
