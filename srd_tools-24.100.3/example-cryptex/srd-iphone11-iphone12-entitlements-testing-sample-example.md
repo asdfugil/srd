@@ -462,3 +462,5 @@ default	07:55:22.268399-0500	kernel	AMFI: '/private/var/run/com.apple.security.c
 error	07:55:37.586630-0500	simple-server	A client has connected!
 error	07:55:37.587091-0500	simple-server	Waiting for a client to connect...
 ```
+### iPhone 12 Console Log | toybox: unsuitable CT policy
+<img src="https://xss.cx/2022/03/12/img/srd0037-coretrust-amfi-research-unsuitable-ct-policy-signature-rejected-sample-001.png" alt="CoreTrust, AMFI research, Signature Rejection, Apple Security Research Device, iPhone 12" style="height: 800px; width:1000px;"/>
