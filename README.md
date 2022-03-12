@@ -11,7 +11,9 @@ SUMMARY
 - This Repo is __ahead__ of the Apple Repo 
 - This Repo corrects older Documentation used for Monterey and iOS 14
 - This Repo updates the XNU and other Settings for iOS 15
-- This Repo aka PR42 https://github.com/apple/security-research-device/pull/42 
+- This Repo aka PR42 https://github.com/apple/security-research-device/pull/42
+- If you see unsuitable CT policy .. for this platform/device, rejecting signature
+- Do make clean; make install and AMFI Research should stop complaining
 
 ### SRD Example DMG, Build & Installation Status w/ XNU-8019.41.5 
 | Build OS & Device Info           | Example DMG   |  debugserver DMG  |  ASAN DMG     | UBSAN DMG 
