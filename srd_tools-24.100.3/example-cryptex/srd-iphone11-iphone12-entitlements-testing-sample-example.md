@@ -450,3 +450,15 @@ default	10:10:45.755254-0500	debugserver	debugserver's process monitoring thread
 default	10:10:45.755379-0500	debugserver	debugserver about to shut down packet communications to lldb.
 default	10:10:45.755552-0500	debugserver	3 +0.001083 sec [0334/1807]: error: ::read ( 8, 0x16b386b18, 1024 ) => -1 err = Bad file descriptor (0x00000009)
 ```
+
+### DATAPOINT SAT 12 MAR 2022
+```
+default	07:55:19.820102-0500	dropbear	Password auth succeeded for 'root' from 192.168.3.47:49380
+default	07:55:22.262186-0500	dropbear	CRYPTEX_SHELL specified. User shell is now '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/usr/bin/sh'
+default	07:55:22.264880-0500	dropbear	Setting PATH to '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/sbin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/bin:/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/usr/bin:/sbin:/bin:/usr/bin'
+default	07:55:22.266797-0500	dropbear	Starting shell: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/usr/bin/sh'
+default	07:55:22.268325-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/usr/bin/toybox' is adhoc signed.
+default	07:55:22.268399-0500	kernel	AMFI: '/private/var/run/com.apple.security.cryptexd/mnt/com.example.cryptex.ngoqXx/usr/bin/toybox': unsuitable CT policy 0 for this platform/device, rejecting signature.
+error	07:55:37.586630-0500	simple-server	A client has connected!
+error	07:55:37.587091-0500	simple-server	Waiting for a client to connect...
+```
