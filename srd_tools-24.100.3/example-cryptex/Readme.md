@@ -4,19 +4,25 @@ This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple
 
 ## Prerequisites
 - Security Research Tools https://github.com/apple/security-research-device
+
 ### Resources
 - Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
 - DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
 - Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 
-## Prerequisites
+## Last Known Good Working Configuration(s)
 - SIP Enabled
 - macOS 12.2.1 (21D62) X86_64 or M1 T8101 macOS 12.3 (21E230)
 - Xcode Version 13.3 (13E113)
 - Security Research Tools https://github.com/apple/security-research-device
 - brew install gnu-sed automake
-# SRD Source Build example-cryptex with toybox unstripped
+- 
+# SRD Source Build example-cryptex with toybox unstripped using this Repo
+- Step 1: Download this Repo
+- Step 2: Read build_env.mk 
+- Step 3: Install latest XNU Sources for iOS15
+- Run build.sh as shown below
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh" 
 ```
