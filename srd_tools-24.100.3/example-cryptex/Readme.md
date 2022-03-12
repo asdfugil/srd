@@ -17,12 +17,10 @@ This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple
 - Xcode Version 13.3 (13E113)
 - Security Research Tools https://github.com/apple/security-research-device
 - brew install gnu-sed automake
-- 
+
 # SRD Source Build example-cryptex with toybox unstripped using this Repo
 - Step 1: Download this Repo
-- Step 2: Read build_env.mk 
-- Step 3: Install latest XNU Sources for iOS15
-- Run build.sh as shown below
+- Step 2: Run build.sh
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh" 
 ```
