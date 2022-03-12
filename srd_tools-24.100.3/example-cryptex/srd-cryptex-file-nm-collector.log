@@ -1,3 +1,6 @@
+==========================================
+cryptex-run
+==========================================
                  U ___error
 0000000100007dbc t ___os_log_helper_16_0_0
 0000000100007d7c t ___os_log_helper_16_2_1_8_32
@@ -18,6 +21,9 @@
                  U _os_log_type_enabled
                  U _setenv
                  U _strerror
+==========================================
+debugserver
+==========================================
 
 com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64):
 000000010005e2f0 s GCC_except_table0
@@ -3403,6 +3409,9 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
                  U _vm_page_size
                  U _waitpid
                  U _write
+==========================================
+dropbear
+==========================================
 000000010000c118 t _A
 000000010003fc50 s _D
 000000010003fdd0 s _D2
@@ -4273,17 +4282,401 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
 00000001000175bc t _writechannel_writev
                  U _writev
 000000010002c604 T _zeromem
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: com.example.cryptex.dstroot/usr/bin/frida: No such file or directory
-0000000100007edc t ___os_log_helper_16_0_1_4_0
+==========================================
+frida
+==========================================
+                 U _CCRandomGenerateBytes
+                 U _CC_SHA1
+                 U _CFLog
+                 U _CFRelease
+                 U _CFRunLoopStop
+                 U _CFStringCreateWithCString
+                 U _NDR_record
+                 U _NSDefaultRunLoopMode
+                 U _OBJC_CLASS_$_NSAutoreleasePool
+                 U _OBJC_CLASS_$_NSDate
+                 U _OBJC_CLASS_$_NSDictionary
+                 U _OBJC_CLASS_$_NSMutableArray
+                 U _OBJC_CLASS_$_NSMutableDictionary
+                 U _OBJC_CLASS_$_NSNumber
+                 U _OBJC_CLASS_$_NSRunLoop
+                 U _OBJC_CLASS_$_NSString
+                 U _OBJC_CLASS_$_NSURL
+                 U __Block_object_assign
+                 U __Block_object_dispose
+                 U __DefaultRuneLocale
+                 U __NSConcreteStackBlock
+                 U __NSGetExecutablePath
+                 U ___CFConstantStringClassReference
+                 U ____mb_cur_max_l
+                 U ___error
+                 U ___maskrune
+                 U ___mb_cur_max
+                 U ___memcpy_chk
+                 U ___memmove_chk
+                 U ___memset_chk
+                 U ___proc_info
+                 U ___srget
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U ___stderrp
+                 U ___stdinp
+                 U ___stdoutp
+                 U ___strcat_chk
+                 U ___strcpy_chk
+                 U ___strncpy_chk
+                 U ___tolower
+                 U ___udivti3
+                 U __dispatch_source_type_mach_recv
+                 U __dispatch_source_type_mach_send
+                 U __exit
+                 U _abort
+                 U _accept
+                 U _access
+                 U _atexit
+                 U _atof
+                 U _atoi
+                 U _bind
+                 U _bootstrap_check_in
+                 U _bootstrap_look_up
+                 U _bootstrap_port
+                 U _bsearch
+                 U _bzero
+                 U _calloc
+                 U _chdir
+                 U _chmod
+                 U _chown
+                 U _close
+                 U _closedir
+                 U _connect
+                 U _dispatch_async
+                 U _dispatch_get_global_queue
+                 U _dispatch_queue_create
+                 U _dispatch_release
+                 U _dispatch_resume
+                 U _dispatch_set_context
+                 U _dispatch_source_create
+                 U _dispatch_source_set_event_handler_f
+                 U _dlclose
+                 U _dlerror
+                 U _dlopen
+                 U _dlsym
+                 U _dup
+                 U _dup2
+                 U _endfsent
+                 U _endservent
+                 U _environ
+                 U _execv
+                 U _execve
+                 U _exit
+                 U _fchmod
+                 U _fchown
+                 U _fclose
+                 U _fcntl
+                 U _fdopen
+                 U _fdopendir
+                 U _feof
+                 U _ferror
+                 U _fflush
+                 U _fgets
+                 U _fileno
+                 U _fileport_makefd
+                 U _fileport_makeport
+                 U _fnmatch
+                 U _fopen
+                 U _fork
+                 U _fprintf
+                 U _fputc
+                 U _fputs
+                 U _fread
+                 U _free
+                 U _freeaddrinfo
+                 U _frexp
+                 U _frexpl
+                 U _fscanf
+                 U _fseek
+                 U _fstat
+                 U _fstatat
+                 U _fsync
+                 U _ftell
+                 U _ftruncate
+                 U _fwrite
+                 U _gai_strerror
+                 U _getaddrinfo
+                 U _getc
+                 U _getcwd
+                 U _getegid
+                 U _getenv
+                 U _geteuid
+                 U _getfsent
+                 U _getfsstat
+                 U _getgid
+                 U _getgrgid_r
+                 U _getnameinfo
+                 U _getpagesize
+                 U _getpeername
+                 U _getpid
+                 U _getppid
+                 U _getpwnam_r
+                 U _getpwuid
+                 U _getpwuid_r
+                 U _getservbyname
+                 U _getsockname
+                 U _getsockopt
+                 U _gettimeofday
+                 U _getuid
+                 U _gmtime_r
+                 U _h_errno
+                 U _host_get_special_port
+                 U _in6addr_any
+                 U _in6addr_loopback
+                 U _inet_aton
+                 U _inet_ntop
+                 U _inet_pton
+                 U _isatty
+                 U _issetugid
+                 U _kevent
+                 U _kill
+                 U _kqueue
+                 U _lchmod
+                 U _lchown
+                 U _link
+                 U _listen
+                 U _localeconv
+                 U _localtime
+                 U _lseek
+                 U _lstat
+                 U _mach_absolute_time
+                 U _mach_error_string
+                 U _mach_host_self
+                 U _mach_msg
+                 U _mach_msg_destroy
+                 U _mach_msg_receive
+                 U _mach_msg_send
+                 U _mach_port_allocate
+                 U _mach_port_deallocate
+                 U _mach_port_extract_right
+                 U _mach_port_insert_right
+                 U _mach_port_mod_refs
+                 U _mach_port_type
+                 U _mach_task_self_
+                 U _mach_thread_self
+                 U _mach_timebase_info
+                 U _mach_vm_allocate
+                 U _mach_vm_copy
+                 U _mach_vm_deallocate
+                 U _mach_vm_protect
+                 U _mach_vm_read_overwrite
+                 U _mach_vm_region_recurse
+                 U _mach_vm_remap
+                 U _mach_vm_write
+                 U _malloc
+                 U _mbrtowc
+                 U _memchr
+                 U _memcmp
+                 U _memcpy
+                 U _memmove
+                 U _memorystatus_control
+                 U _memset
+                 U _mig_dealloc_reply_port
+                 U _mig_get_reply_port
+                 U _mig_put_reply_port
+                 U _mkdir
+                 U _mmap
+                 U _munmap
+                 U _nanosleep
+                 U _nl_langinfo
+                 U _objc_alloc
+                 U _objc_autorelease
+                 U _objc_enumerationMutation
+                 U _objc_msgSend
+                 U _objc_release
+                 U _open
+                 U _openat
+                 U _opendir
+                 U _openpty
+                 U _pid_for_task
+                 U _pipe
+                 U _poll
+                 U _posix_memalign
+                 U _posix_spawn
+                 U _posix_spawn_file_actions_addclose
+                 U _posix_spawn_file_actions_adddup2
+                 U _posix_spawn_file_actions_destroy
+                 U _posix_spawn_file_actions_init
+                 U _posix_spawnattr_destroy
+                 U _posix_spawnattr_init
+                 U _posix_spawnattr_setflags
+                 U _posix_spawnattr_setsigdefault
+                 U _posix_spawnattr_setsigmask
+                 U _posix_spawnp
+                 U _proc_pidpath
+                 U _pthread_atfork
+                 U _pthread_attr_destroy
+                 U _pthread_attr_init
+                 U _pthread_attr_setinheritsched
+                 U _pthread_attr_setstacksize
+                 U _pthread_cond_broadcast
+                 U _pthread_cond_destroy
+                 U _pthread_cond_init
+                 U _pthread_cond_signal
+                 U _pthread_cond_timedwait_relative_np
+                 U _pthread_cond_wait
+                 U _pthread_condattr_destroy
+                 U _pthread_condattr_init
+                 U _pthread_create
+                 U _pthread_detach
+                 U _pthread_equal
+                 U _pthread_getspecific
+                 U _pthread_join
+                 U _pthread_key_create
+                 U _pthread_key_delete
+                 U _pthread_mach_thread_np
+                 U _pthread_mutex_destroy
+                 U _pthread_mutex_init
+                 U _pthread_mutex_lock
+                 U _pthread_mutex_trylock
+                 U _pthread_mutex_unlock
+                 U _pthread_mutexattr_destroy
+                 U _pthread_mutexattr_init
+                 U _pthread_mutexattr_settype
+                 U _pthread_once
+                 U _pthread_rwlock_destroy
+                 U _pthread_rwlock_init
+                 U _pthread_rwlock_rdlock
+                 U _pthread_rwlock_unlock
+                 U _pthread_rwlock_wrlock
+                 U _pthread_self
+                 U _pthread_setname_np
+                 U _pthread_setspecific
+                 U _pthread_sigmask
+                 U _ptrace
+                 U _qsort
+                 U _raise
+                 U _read
+                 U _readdir
+                 U _readlink
+                 U _realloc
+                 U _recv
+                 U _recvmsg
+                 U _remove
+                 U _rename
+                 U _res_9_dn_expand
+                 U _res_9_init
+                 U _res_9_ndestroy
+                 U _res_9_ninit
+                 U _res_9_nquery
+                 U _sched_yield
+                 U _send
+                 U _sendmsg
+                 U _setfsent
+                 U _setlocale
+                 U _setsid
+                 U _setsockopt
+                 U _setvbuf
+                 U _shutdown
+                 U _sigaction
+                 U _signal
+                 U _socket
+                 U _socketpair
+                 U _sprintf
+                 U _sscanf
+                 U _stat
+                 U _statfs
+                 U _stpcpy
+                 U _strcasecmp
+                 U _strcat
+                 U _strchr
+                 U _strcmp
+                 U _strcpy
+                 U _strcspn
+                 U _strerror
+                 U _strerror_r
+                 U _strftime
+                 U _strlen
+                 U _strncasecmp
+                 U _strncmp
+                 U _strncpy
+                 U _strnlen
+                 U _strnstr
+                 U _strpbrk
+                 U _strrchr
+                 U _strspn
+                 U _strstr
+                 U _strtod
+                 U _strtol
+                 U _strtoul
+                 U _symlink
+                 U _sysconf
+                 U _sysctl
+                 U _sysctlbyname
+                 U _task_for_pid
+                 U _task_get_special_port
+                 U _task_info
+                 U _task_resume
+                 U _task_threads
+                 U _tcgetattr
+                 U _tcsetattr
+                 U _thread_create
+                 U _thread_get_state
+                 U _thread_info
+                 U _thread_resume
+                 U _thread_set_exception_ports
+                 U _thread_set_state
+                 U _thread_swap_exception_ports
+                 U _time
+                 U _ungetc
+                 U _unlink
+                 U _uselocale
+                 U _utimes
+                 U _vfprintf
+                 U _vm_deallocate
+                 U _vm_kernel_page_size
+                 U _voucher_mach_msg_set
+                 U _vsnprintf
+                 U _waitpid
+                 U _wcrtomb
+                 U _wcslen
+                 U _write
+                 U _writev
+0000000005614542 - 00 0000   OPT radr://5614542
+==========================================
+hello
+==========================================
+0000000100007ec0 s _.str
+0000000100007f00 s _.str.1
+0000000100007f40 s _.str.2
+00000001000100f0 s ____asan_globals_registered
+00000001000100c0 s ___asan_binder_.str
+00000001000100d0 s ___asan_binder_.str.1
+00000001000100e0 s ___asan_binder_.str.2
+0000000100010000 s ___asan_global_.str
+0000000100010040 s ___asan_global_.str.1
+0000000100010080 s ___asan_global_.str.2
+                 U ___asan_init
+                 U ___asan_option_detect_stack_use_after_return
+                 U ___asan_register_image_globals
+                 U ___asan_report_store1
+                 U ___asan_report_store4
+                 U ___asan_shadow_memory_dynamic_address
+                 U ___asan_stack_malloc_0
+                 U ___asan_unregister_image_globals
+                 U ___asan_version_mismatch_check_apple_clang_1316
+0000000100007bd4 t ___os_log_helper_16_0_1_4_0
                  U ___stack_chk_fail
                  U ___stack_chk_guard
 0000000100000000 T __mh_execute_header
                  U __os_log_impl
+0000000100007d9c t _asan.module_ctor
+0000000100007dd0 t _asan.module_dtor
                  U _getpid
-0000000100007de0 T _main
+000000010000796c T _main
                  U _os_log_create
                  U _os_log_type_enabled
                  U _printf
+==========================================
+nvram
+==========================================
                  U _CFBooleanGetTypeID
                  U _CFBooleanGetValue
                  U _CFDataCreateWithBytesNoCopy
@@ -4371,6 +4764,9 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
                  U _strtol
                  U _toupper
                  U _warnx
+==========================================
+simple-server
+==========================================
                  U ___error
 0000000100007d30 t ___os_log_helper_16_0_0
 0000000100007d4c t ___os_log_helper_16_0_1_4_0
@@ -4396,6 +4792,9 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
                  U _perror
                  U _socket
                  U _strerror
+==========================================
+simple-shell
+==========================================
                  U ___error
 0000000100007bd4 t ___os_log_helper_16_0_0
 0000000100007bf0 t ___os_log_helper_16_0_1_4_0
@@ -4429,6 +4828,9 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
                  U _setenv
                  U _socket
                  U _strerror
+==========================================
+toybox
+==========================================
                  U __DefaultRuneLocale
                  U ____mb_cur_max
                  U ___chkstk_darwin
@@ -5298,3 +5700,4 @@ com.example.cryptex.dstroot/usr/bin/debugserver (for architecture arm64e):
 0000000100014f40 T _yes_main
 0000000100009454 T _yesno
 000000010002f218 t _zprint
+EOF
