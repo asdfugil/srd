@@ -13,6 +13,8 @@
 macOS 12.2.1 (21D62) X86_64 or M1 T8101 macOS 12.3 (21E230)
 Xcode Version 13.3 (13E113)
 ```
+If you experience unsuitable CT policy 0x8 for this platform/device, rejecting signature, just do make clean; make install
+
 ### SRD Build Unit Tests for ./example-cryptex/ and the *SAN Dylibs
 
 #### Case 1: Build ./example/cryptex/ which includes PR48 + PR49 {updated entitlements and debugserver}
