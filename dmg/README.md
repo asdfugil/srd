@@ -23,11 +23,8 @@ Signed File: iPhone13,2,iPhone13,3_15.4_19E5241a_Restore.ipsw | defaults write c
 - Security Research Tools https://github.com/apple/security-research-device
 
 ### Resources
-- Source: https://github.com/apple/security-research-device/tree/main/example-cryptex
-- PR42: https://github.com/apple/security-research-device/pull/42
 - DMG: https://github.com/xsscx/srd/raw/main/dmg/srd-universal-cryptex.dmg
 - Install: https://github.com/xsscx/srd/tree/main/dmg#readme
-- Discussion: nvram settings disabling KTRR, CTRR and kASLR https://github.com/apple/security-research-device/discussions/2
 
 ## SRD DMG Testing
 - Universal cryptex for iPhone 11 and iPhone 12 SRD Models 
@@ -540,6 +537,7 @@ ps -Ac | sed 's,\s*\([0-9][0-9]*\) .*[0-9]*:[0-9]*\.[0-9]* \(.*\), 00000000.0  0
 
 ```
 
+#### Comments
 When using a regexp to find Console Log Messages, these Files may be helpful:
 - https://github.com/xsscx/srd/blob/main/code/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-001.txt
 - https://github.com/xsscx/Commodity-Injection-Signatures/blob/master/meta/xnu-os-cli-regexp-small-applesecurityresearchdevice-runtarget-002.txt
@@ -547,3 +545,5 @@ When using a regexp to find Console Log Messages, these Files may be helpful:
 If you experience a Crash when using cryptexctl or com.apple.cryptex*, these URL's may be helpful:
 - https://srd.cx/possible-pointer-authentication-failure-data-abort/
 - https://srd.cx/debugserver-installation-configuration/
+
+Installation for XNU 8019.41.5 with example build_env.mk: https://github.com/xsscx/srd/blob/main/srd_tools-24.100.3/example-cryptex/build_env_test-xnu-8019.41.5.mk.
