@@ -98,6 +98,7 @@ Error while writing verifier file
 exceeded mem limit
 Explicitly trapping into debugger
 fatal
+failed to frob plist
 Fail
 Failed
 Failed to convert signature from
