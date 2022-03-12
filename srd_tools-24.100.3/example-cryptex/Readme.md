@@ -19,7 +19,7 @@ This SRT 24.100.3 Example DMG Repo is at least __1 PR__ https://github.com/apple
 - brew install gnu-sed automake
 
 # SRD Source Build example-cryptex with toybox unstripped using this Repo
-- Step 1: Download this Repo that automaticall builds with xnu-7195.141.2
+- Step 1: Download this Repo that builds with xnu-7195.141.2
 - Step 2: Run build.sh as shown below
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/xsscx/srd/main/srd_tools-24.100.3/example-cryptex/build.sh" 
