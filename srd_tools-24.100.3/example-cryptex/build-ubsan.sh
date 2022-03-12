@@ -13,7 +13,7 @@ echo "Check the entitlements in the src/"
 codesign --display --entitlements - --xml src/frida/frida-agent.dylib > /private/tmp/src-frida-agent.xml
 codesign --display --entitlements - --xml src/frida/frida-server > /private/tmp/src-frida-server.xml
 codesign --display --entitlements - --xml src/dropbear/dropbear > /private/tmp/src-dropbear.xml
-codesign --display --entitlements - --xml /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.ubsan_ios_dynamic.dylib > /private/tmp/src-libclang_rt.ubsan_ios_dynamic.dylib.xml
+codesign --display --entitlements - --xml /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.ubsan_ios_dynamic.dylib > /private/tmp/src-libclang_rt.ubsan_ios_dynamic.dylib.xml
 echo "Changing to toybox unstripped, this is ugly and TODO but makes AMFI complain less"
 chmod 775 src/toybox/toybox-src/generated/unstripped/toybox src/toybox/toybox-src/generated/unstripped/toybox
 codesign --force -s - --entitlements src/toybox/entitlements.plist src/toybox/toybox-src/generated/unstripped/toybox
