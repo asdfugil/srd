@@ -1,13 +1,12 @@
 # Welcome to Hoyt's SRD Repo
-```
-Hi! 
-I am David Hoyt. 
-I was in the Apple Security Research Device Program for 2021 & 2022.
-Apple sent me an iPhone 11 & iPhone 12 for A/B testing, very helpful. 
-I still update various Code, Tooling, Script, Crashes and PoC's etc..
-I am still processing over 100Tb of Data generated during those 2 years with thousands of Crashes. 
-Some of the Code and Goodies are in this Repo
-```
+<img src="https://xss.cx/2024/05/20/img/hoyts-apple-security-research-device-project-image.jpeg" alt="Hoyt's Apple Security Research Device Project Repository" style="height:1024px; width:1024px;"/>
+
+## whoami
+I am David Hoyt.
+  - https://hoyt.net
+  - https://srd.cx
+  - https://xss.cx
+
 ## SUMMARY
 - This Repo was __ahead__ of the Apple Repo as of December 15, 2022 when I returned my Devices
 - Built on macOS 13.x X86_64 & arm64e
